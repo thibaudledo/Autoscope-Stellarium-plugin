@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/Autoscope">
+    <file>telescope_on.png</file>
+    <file>telescope_off.png</file>
+  </qresource>
+</RCC>
