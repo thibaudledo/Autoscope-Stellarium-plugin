@@ -16,10 +16,11 @@
  * Foundation, Inc., 51 Franklin Street, Suite 500, Boston, MA  02110-1335, USA.
  */
 
-#ifndef HELLOSTELMODULE_HPP
-#define HELLOSTELMODULE_HPP
+#ifndef AUTOSCOPE_HPP
+#define AUTOSCOPE_HPP
 
 #include "StelModule.hpp"
+#include "StelGui.hpp"
 #include "VecMath.hpp"
 #include "StelFader.hpp"
 #include <QFont>
@@ -30,6 +31,7 @@
 
 class StelButton;
 class QPixmap;
+class AutoscopeWindowForm;
 
 //! This is an example of a plug-in which can be dynamically loaded into stellarium
 class Autoscope : public StelModule
@@ -45,6 +47,7 @@ public:
     virtual void update(double);
 	virtual void draw(StelCore* core);
 	virtual double getCallOrder(StelModuleActionName actionName) const;
+    virtual bool configureGui(bool show);
 
     void loadConfiguration();
     void restoreDefaultConfiguration();
@@ -61,15 +64,19 @@ public:
     QList<StelObjectP> newSelected;
 private:
 	// Font used for displaying our text
+    QSettings* conf;
+    StelGui* gui;
+    AutoscopeWindowForm* mainWindow;
 
     StelCore* m_core;
-    QSettings* conf;
     Vec3f markColor;
     LinearFader markFader;
     bool displayedAtStartup;
 
     StelButton* toolBarButton;
 	QFont font;
+
+
 
 public slots:
     void trackObjectChanged(void);

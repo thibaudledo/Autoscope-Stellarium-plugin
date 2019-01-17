@@ -35,6 +35,8 @@
 #include <QPixmap>
 #include <QSettings>
 
+#include "AutoscopeWindowForm.hpp"
+
 #include <QDebug>
 
 /*************************************************************************
@@ -68,6 +70,8 @@ Autoscope::Autoscope()
     setObjectName("Autoscope");
     font.setPixelSize(25);
     conf = StelApp::getInstance().getSettings();
+    gui = dynamic_cast<StelGui*>(StelApp::getInstance().getGui());
+    mainWindow = new AutoscopeWindowForm();
 }
 
 /*************************************************************************
@@ -75,6 +79,7 @@ Autoscope::Autoscope()
 *************************************************************************/
 Autoscope::~Autoscope()
 {
+    delete mainWindow;
 }
 
 /*************************************************************************
@@ -85,6 +90,15 @@ double Autoscope::getCallOrder(StelModuleActionName actionName) const
     if (actionName==StelModule::ActionDraw)
         return StelApp::getInstance().getModuleMgr().getModule("NebulaMgr")->getCallOrder(actionName)+10.;
     return 0;
+}
+
+bool Autoscope::configureGui(bool show)
+{
+    if(show)
+    {
+        mainWindow->setVisible(true);
+    }
+    return true;
 }
 
 /*************************************************************************
@@ -110,8 +124,6 @@ void Autoscope::init()
 
     try
     {
-
-        StelGui* gui = dynamic_cast<StelGui*>(StelApp::getInstance().getGui());
         if (gui != Q_NULLPTR)
         {
 
