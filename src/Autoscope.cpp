@@ -72,6 +72,7 @@ Autoscope::Autoscope()
     conf = StelApp::getInstance().getSettings();
     gui = dynamic_cast<StelGui*>(StelApp::getInstance().getGui());
     mainWindow = new AutoscopeWindowForm();
+    //mainWindow->setwin
 }
 
 /*************************************************************************
@@ -169,6 +170,15 @@ void Autoscope::trackObjectChanged()
 {
     qDebug() << "clicked!!";
 
+    if(guiIsVisible)
+    {
+        mainWindow->setVisible(false);
+        guiIsVisible = false;
+    }else{
+        mainWindow->setVisible(true);
+        guiIsVisible = true;
+    }
+/*
     newSelected = objectMgr->getSelectedObject();
 
     if(!newSelected.isEmpty())
@@ -178,7 +188,7 @@ void Autoscope::trackObjectChanged()
             qDebug() << "is tracking";
             trackObject = newSelected[0];
         }
-    }
+    }*/
 
 }
 

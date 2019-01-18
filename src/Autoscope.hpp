@@ -72,6 +72,7 @@ private:
     Vec3f markColor;
     LinearFader markFader;
     bool displayedAtStartup;
+    bool guiIsVisible = false;
 
     StelButton* toolBarButton;
 	QFont font;
