@@ -71,8 +71,7 @@ Autoscope::Autoscope()
     font.setPixelSize(25);
     conf = StelApp::getInstance().getSettings();
     gui = dynamic_cast<StelGui*>(StelApp::getInstance().getGui());
-    mainWindow = new AutoscopeWindowForm();
-    //mainWindow->setwin
+    mainWindow = new AutoscopeWindowForm(nullptr, this);
 }
 
 /*************************************************************************
@@ -135,7 +134,7 @@ void Autoscope::init()
                                            "actionTracking");
             gui->getButtonBar()->addButton(toolBarButton, "065-pluginsGroup");
         }
-        connect(toolBarButton, SIGNAL(triggered()), this, SLOT(trackObjectChanged()));
+        connect(toolBarButton, SIGNAL(triggered()), this, SLOT(showGui()));
     }
     catch (std::runtime_error& e)
     {
@@ -166,7 +165,7 @@ void Autoscope::restoreDefaultConfiguration()
     conf->endGroup();
 }
 
-void Autoscope::trackObjectChanged()
+void Autoscope::showGui()
 {
     qDebug() << "clicked!!";
 
@@ -178,18 +177,6 @@ void Autoscope::trackObjectChanged()
         mainWindow->setVisible(true);
         guiIsVisible = true;
     }
-/*
-    newSelected = objectMgr->getSelectedObject();
-
-    if(!newSelected.isEmpty())
-    {
-        if(newSelected[0]->getEnglishName()!=StelApp::getInstance().getCore()->getCurrentLocation().planetName)
-        {
-            qDebug() << "is tracking";
-            trackObject = newSelected[0];
-        }
-    }*/
-
 }
 
 void Autoscope::getAltAzi(Vec3d Position)
@@ -207,11 +194,77 @@ void Autoscope::getAltAzi(Vec3d Position)
     cxt = StelUtils::radToDecDegStr(cy);
     cyt = StelUtils::radToDecDegStr(cx);
 
-    qDebug() << newSelected[0]->getEnglishName() << " Az./Alt. : " << cxt << "  " << cyt;
+    qDebug() << trackObject->getEnglishName() << " Az./Alt. : " << cxt << "  " << cyt;
+}
+
+// ne fonctionne pas encore
+QString Autoscope::searchAnObject(QString objectName)
+{
+    searchedObject = objectMgr->searchByName(objectName);
+
+    if(searchedObject.isNull())
+    {
+        searchObjectFound = false;
+        return QString("Unable to find it!");
+    }else {
+        searchObjectFound = true;
+        return QString("Found it!");
+    }
+}
+
+void Autoscope::setTrackObject(StelObjectP object)
+{
+    if(!object.isNull())
+    {
+        if(object->getEnglishName()!=StelApp::getInstance().getCore()->getCurrentLocation().planetName)
+        {
+            qDebug() << "Autoscope is tracking " << object->getEnglishName();
+            trackObject = object;
+        }
+    }
+}
+
+void Autoscope::trackSelectedObject()
+{
+    newSelected = objectMgr->getSelectedObject();
+
+    if(!newSelected.isEmpty())
+    {
+        selectedObject = newSelected[0];
+        setTrackObject(selectedObject);
+    }
+}
+
+QString Autoscope::trackSearchedObject(void)
+{
+    if(searchObjectFound)
+    {
+        setTrackObject(searchedObject);
+        moveObserverToObject(searchedObject);
+        return "Searching";
+    }else{
+        return "This object doesn't exist";
+    }
+}
+
+void Autoscope::clearTrackedObject()
+{
+    trackObject = nullptr;
+}
+
+void Autoscope::moveObserverToObject(StelObjectP object)
+{
+    mvMgr->moveToObject(object, mvMgr->getAutoMoveDuration());
+    mvMgr->setFlagTracking(true);
 }
 
 void Autoscope::update(double t)
 {
+    if((mainWindow->x()!=mainWindow->getGuiHorizontalPosition())||(mainWindow->y()!=mainWindow->getGuiVerticalPosition()))
+    {
+        mainWindow->move(mainWindow->getGuiHorizontalPosition(), mainWindow->getGuiVerticalPosition());
+    }
+
     if(!trackObject.isNull())
     {
         getAltAzi(trackObject->getJ2000EquatorialPos(m_core));

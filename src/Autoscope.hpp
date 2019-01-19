@@ -53,15 +53,19 @@ public:
     void restoreDefaultConfiguration();
 
     void getAltAzi(Vec3d Position);
+    QString searchAnObject(QString objectName);
 
-    QString oldSelected = "";
+    void setTrackObject(StelObjectP object);
+    void trackSelectedObject(void);
+    QString trackSearchedObject(void);
+
+    void clearTrackedObject(void);
+
+    void moveObserverToObject(StelObjectP object);
 
     StelMovementMgr* mvMgr;
     StelObjectMgr* objectMgr;
-    StelObjectP Sun;
-    StelObjectP trackObject;
-    Vec3d objectPosition;
-    QList<StelObjectP> newSelected;
+
 private:
 	// Font used for displaying our text
     QSettings* conf;
@@ -77,10 +81,18 @@ private:
     StelButton* toolBarButton;
 	QFont font;
 
+    StelObjectP Sun;
+    StelObjectP trackObject;
+    Vec3d objectPosition;
+    QList<StelObjectP> newSelected;
+    StelObjectP selectedObject;
+
+    StelObjectP searchedObject;
+    bool searchObjectFound = false;
 
 
 public slots:
-    void trackObjectChanged(void);
+    void showGui(void);
 };
 
 
