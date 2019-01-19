@@ -22,12 +22,12 @@ AutoscopePictureWindowForm::AutoscopePictureWindowForm(QWidget *parent, Autoscop
 
     qDebug() << "size :" << m_width << " "  << m_height;
 
-    m_guiHorizontalPosition = m_screenWidth - m_width;
+    m_guiHorizontalPosition = m_screenWidth;
     m_guiVerticalPosition = 10;
 
     qDebug() << "position :" << m_guiHorizontalPosition << " "  << m_guiVerticalPosition;
 
-    move(m_guiHorizontalPosition, m_guiVerticalPosition);
+    updateGuiPosition();
 
     setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
 
@@ -88,5 +88,5 @@ void AutoscopePictureWindowForm::setGuiOpacity(double opacity)
 
 void AutoscopePictureWindowForm::updateGuiPosition(void)
 {
-    move(int(m_guiHorizontalPosition), int(m_guiVerticalPosition));
+    move(int(m_guiHorizontalPosition-m_width), int(m_guiVerticalPosition));
 }

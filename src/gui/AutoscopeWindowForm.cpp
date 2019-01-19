@@ -174,12 +174,13 @@ void AutoscopeWindowForm::displaySizeChanged(int percent)
 {
     qDebug() << "displaySizeChanged";
     m_autoscopePictureWindow->setGuiSize(percent);
+
+    ui->horizontalDisplayPositionEditor->setMaximum(int(m_screenWidth-(m_autoscopePictureWindow->getGuiWidth())));
+    ui->verticalDisplayPositionEditor->setMaximum(int(m_screenHeight-(m_autoscopePictureWindow->getGuiHeight())));
     /*
-    ui->horizontalDisplayPositionEditor->setMaximum(int(m_screenWidth-(m_autoscopePictureWindow->getGuiWidth()/2)));
-    ui->verticalDisplayPositionEditor->setMaximum(int(m_screenHeight-(m_autoscopePictureWindow->getGuiHeight()/2)));
-    ui->horizontalDisplayPositionEditor->setValue(int(m_screenWidth-(m_autoscopePictureWindow->getGuiWidth()/2)));
-    ui->verticalDisplayPositionEditor->setValue(int(m_screenHeight-(m_autoscopePictureWindow->getGuiHeight()/2)));
-    */
+    ui->horizontalDisplayPositionEditor->setValue(m_autoscopePictureWindow->getGuiHorizontalPosition());
+    ui->verticalDisplayPositionEditor->setValue(m_autoscopePictureWindow->getGuiVerticalPosition());
+*/
 }
 
 void AutoscopeWindowForm::horizontalDisplayPositionChanged(int x)
