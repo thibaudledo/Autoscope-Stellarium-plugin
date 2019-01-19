@@ -4,8 +4,10 @@
 #include <QWidget>
 
 #include "Autoscope.hpp"
+#include "AutoscopePictureWindowForm.hpp"
 
 class Autoscope;
+class AutoscopePictureWindowForm;
 
 namespace Ui {
 class AutoscopeWindowForm;
@@ -22,6 +24,8 @@ public:
     int getGuiHorizontalPosition(void);
     int getGuiVerticalPosition(void);
 
+    int getScreenSizePercent(void);
+
 private:
 
     Ui::AutoscopeWindowForm *ui;
@@ -29,10 +33,18 @@ private:
     int m_width = 600;
     int m_height = 300;
 
+    int m_screenWidth;
+    int m_screenHeight;
+
     int m_guiHorizontalPosition;
     int m_guiVerticalPosition;
 
+    int screenSizePercent;
+
+    bool pictureWindowIsVisible = false;
+
     Autoscope* m_autoscope;
+    AutoscopePictureWindowForm* m_autoscopePictureWindow;
 
     QString picturedirectoryPath = "";
 

@@ -4,6 +4,7 @@
 #include <QDebug>
 
 #include <QFileDialog>
+#include "AutoscopePictureWindowForm.hpp"
 
 class Autoscope;
 
@@ -17,8 +18,13 @@ AutoscopeWindowForm::AutoscopeWindowForm(QWidget *parent, Autoscope* autoscope) 
     QDesktopWidget screen;
     QRect screenSize = screen.screenGeometry();
 
-    m_guiHorizontalPosition = screenSize.width()- m_width;
-    m_guiVerticalPosition = screenSize.height()- m_height;
+    m_screenWidth = screenSize.width();
+    m_screenHeight = screenSize.height();
+
+    m_autoscopePictureWindow = new AutoscopePictureWindowForm(nullptr, m_autoscope, this, m_screenWidth, m_screenHeight);
+
+    m_guiHorizontalPosition = m_screenWidth - m_width;
+    m_guiVerticalPosition = m_screenHeight - m_height;
 
     move(m_guiHorizontalPosition, m_guiVerticalPosition);
 
@@ -26,11 +32,11 @@ AutoscopeWindowForm::AutoscopeWindowForm(QWidget *parent, Autoscope* autoscope) 
 
     ui->setupUi(this);
 
-    ui->verticalDisplayPositionEditor->setMaximum(screenSize.height());
-    ui->verticalDisplayPositionEditor->setValue(screenSize.height() - m_height);
+    ui->verticalDisplayPositionEditor->setMaximum(m_screenHeight);
+    ui->verticalDisplayPositionEditor->setValue(m_autoscopePictureWindow->getGuiVerticalPosition());
 
-    ui->horizontalDisplayPositionEditor->setMaximum(screenSize.width());
-    ui->horizontalDisplayPositionEditor->setValue(screenSize.width()- m_width);
+    ui->horizontalDisplayPositionEditor->setMaximum(m_screenWidth);
+    ui->horizontalDisplayPositionEditor->setValue(m_autoscopePictureWindow->getGuiHorizontalPosition());
 
     ui->picurePathButton->setIcon(QPixmap(":/Autoscope/dossier.png"));
 
@@ -72,6 +78,11 @@ int AutoscopeWindowForm::getGuiVerticalPosition(void)
     return m_guiVerticalPosition;
 }
 
+int AutoscopeWindowForm::getScreenSizePercent(void)
+{
+    return ui->displaySizeEditor->value();
+}
+
 //  Public slots:
 
 void AutoscopeWindowForm::startButtonPressed(void)
@@ -99,6 +110,15 @@ void AutoscopeWindowForm::takePictureButtonPressed(void)
 void AutoscopeWindowForm::toggleDisplayButtonPressed(void)
 {
     qDebug() << "toggleDisplayButtonPressed";
+
+    if(pictureWindowIsVisible)
+    {
+        m_autoscopePictureWindow->setVisible(false);
+        pictureWindowIsVisible = false;
+    }else{
+        m_autoscopePictureWindow->setVisible(true);
+        pictureWindowIsVisible = true;
+    }
 }
 
 //  Private slots:
@@ -127,7 +147,6 @@ void AutoscopeWindowForm::searchObjectChanged(QString s)
     }else{
         ui->searchEditorMessenger->setText("");
     }
-
 }
 
 void AutoscopeWindowForm::searchButtonPressed(void)
@@ -151,24 +170,34 @@ void AutoscopeWindowForm::numberOfPictureChanged(int i)
     qDebug() << "numberOfPictureChanged";
 }
 
-void AutoscopeWindowForm::displaySizeChanged(int i)
+void AutoscopeWindowForm::displaySizeChanged(int percent)
 {
     qDebug() << "displaySizeChanged";
+    m_autoscopePictureWindow->setGuiSize(percent);
+    /*
+    ui->horizontalDisplayPositionEditor->setMaximum(int(m_screenWidth-(m_autoscopePictureWindow->getGuiWidth()/2)));
+    ui->verticalDisplayPositionEditor->setMaximum(int(m_screenHeight-(m_autoscopePictureWindow->getGuiHeight()/2)));
+    ui->horizontalDisplayPositionEditor->setValue(int(m_screenWidth-(m_autoscopePictureWindow->getGuiWidth()/2)));
+    ui->verticalDisplayPositionEditor->setValue(int(m_screenHeight-(m_autoscopePictureWindow->getGuiHeight()/2)));
+    */
 }
 
-void AutoscopeWindowForm::horizontalDisplayPositionChanged(int i)
+void AutoscopeWindowForm::horizontalDisplayPositionChanged(int x)
 {
     qDebug() << "horizontalDisplayPositionChanged";
+    m_autoscopePictureWindow->setGuiHorizontalPosition(x);
 }
 
-void AutoscopeWindowForm::verticalDisplayPositionChanged(int i)
+void AutoscopeWindowForm::verticalDisplayPositionChanged(int y)
 {
     qDebug() << "verticalDisplayPositionChanged";
+    m_autoscopePictureWindow->setGuiVerticalPosition(y);
 }
 
-void AutoscopeWindowForm::displayOpacityChanged(double d)
+void AutoscopeWindowForm::displayOpacityChanged(double opacity)
 {
     qDebug() << "displayOpacityChanged";
+    m_autoscopePictureWindow->setGuiOpacity(opacity);
 }
 
 void AutoscopeWindowForm::outputPictureDirectoryChanged(void)

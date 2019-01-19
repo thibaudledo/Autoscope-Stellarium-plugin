@@ -13,10 +13,13 @@ SET(Autoscope_SRCS
      	Autoscope.cpp
 	gui/AutoscopeWindowForm.hpp
 	gui/AutoscopeWindowForm.cpp
+        gui/AutoscopePictureWindowForm.hpp
+        gui/AutoscopePictureWindowForm.cpp
 )
 
 SET(AUTOSCOPE_UIS
 	gui/AutoscopeWindowForm.ui
+        gui/AutoscopePictureWindowForm.ui
 )
 
 QT5_WRAP_UI(AUTOSCOPE_UIS_H ${AUTOSCOPE_UIS})

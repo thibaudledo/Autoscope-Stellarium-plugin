@@ -35,7 +35,7 @@
       <enum>QTabWidget::Rounded</enum>
      </property>
      <property name="currentIndex">
-      <number>2</number>
+      <number>0</number>
      </property>
      <property name="movable">
       <bool>false</bool>
@@ -398,7 +398,7 @@
             <number>100</number>
            </property>
            <property name="value">
-            <number>15</number>
+            <number>10</number>
            </property>
           </widget>
          </item>
@@ -496,6 +496,9 @@
            </property>
            <property name="singleStep">
             <double>0.010000000000000</double>
+           </property>
+           <property name="value">
+            <double>1.000000000000000</double>
            </property>
           </widget>
          </item>
