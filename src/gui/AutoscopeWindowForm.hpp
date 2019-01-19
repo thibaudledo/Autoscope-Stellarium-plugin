@@ -16,6 +16,8 @@ public:
     ~AutoscopeWindowForm();
 
 private:
+    QString getStyleSheet(void);
+
     Ui::AutoscopeWindowForm *ui;
 };
 
