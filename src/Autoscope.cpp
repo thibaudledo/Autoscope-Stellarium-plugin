@@ -269,6 +269,9 @@ void Autoscope::update(double t)
     {
         getAltAzi(trackObject->getJ2000EquatorialPos(m_core));
     }
+
+    //this is shit
+    //mainWindow->update();
 }
 
 /*************************************************************************

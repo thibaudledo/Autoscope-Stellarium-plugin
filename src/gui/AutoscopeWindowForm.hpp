@@ -1,4 +1,4 @@
-#ifndef AUTOSCOPEWINDOWFORM_H
+﻿#ifndef AUTOSCOPEWINDOWFORM_H
 #define AUTOSCOPEWINDOWFORM_H
 
 #include <QWidget>
@@ -25,6 +25,8 @@ public:
     int getGuiVerticalPosition(void);
 
     int getScreenSizePercent(void);
+
+    virtual void update();
 
 private:
 

@@ -91,6 +91,7 @@ private:
     bool searchObjectFound = false;
 
 
+
 public slots:
     void showGui(void);
 };

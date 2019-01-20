@@ -22,8 +22,8 @@ AutoscopePictureWindowForm::AutoscopePictureWindowForm(QWidget *parent, Autoscop
 
     qDebug() << "size :" << m_width << " "  << m_height;
 
-    m_guiHorizontalPosition = m_screenWidth;
-    m_guiVerticalPosition = 10;
+    m_guiHorizontalPosition = 0;
+    m_guiVerticalPosition = 0;
 
     qDebug() << "position :" << m_guiHorizontalPosition << " "  << m_guiVerticalPosition;
 
@@ -77,6 +77,7 @@ void AutoscopePictureWindowForm::setGuiSize(int percent)
     m_width = int((m_screenWidth * percent)/100);
     m_height = int((m_screenHeight * percent)/100);
     qDebug() << "size :" << m_width << " "  << m_height;
+
     resize(m_width, m_height);
     updateGuiPosition();
 }
@@ -88,5 +89,10 @@ void AutoscopePictureWindowForm::setGuiOpacity(double opacity)
 
 void AutoscopePictureWindowForm::updateGuiPosition(void)
 {
-    move(int(m_guiHorizontalPosition-m_width), int(m_guiVerticalPosition));
+    move(int(m_screenWidth-m_width-m_guiHorizontalPosition), int(m_guiVerticalPosition));
+}
+
+void AutoscopePictureWindowForm::updateImage(QPixmap image)
+{
+    ui->pictureDisplayLabel->setPixmap(image.scaled(m_width, m_height, Qt::KeepAspectRatio));
 }

@@ -177,10 +177,6 @@ void AutoscopeWindowForm::displaySizeChanged(int percent)
 
     ui->horizontalDisplayPositionEditor->setMaximum(int(m_screenWidth-(m_autoscopePictureWindow->getGuiWidth())));
     ui->verticalDisplayPositionEditor->setMaximum(int(m_screenHeight-(m_autoscopePictureWindow->getGuiHeight())));
-    /*
-    ui->horizontalDisplayPositionEditor->setValue(m_autoscopePictureWindow->getGuiHorizontalPosition());
-    ui->verticalDisplayPositionEditor->setValue(m_autoscopePictureWindow->getGuiVerticalPosition());
-*/
 }
 
 void AutoscopeWindowForm::horizontalDisplayPositionChanged(int x)
@@ -216,5 +212,35 @@ void AutoscopeWindowForm::outputPictureDirectoryButtonPressed(void)
 void AutoscopeWindowForm::downloadPictureButtonPressed(void)
 {
     qDebug() << "downloadPictureButtonPressed";
+
+    m_autoscopePictureWindow->updateImage(QPixmap(":/Autoscope/dossier.png"));
 }
 
+void AutoscopeWindowForm::update()
+{
+    QPoint mousePosition = QCursor::pos();
+    QPoint displayTopLeftPosition = m_autoscopePictureWindow->pos();
+    QPoint displayBottomRightPosition;
+    displayBottomRightPosition.setX(displayTopLeftPosition.x()+m_autoscopePictureWindow->getGuiWidth());
+    displayBottomRightPosition.setY(displayTopLeftPosition.y()+m_autoscopePictureWindow->getGuiHeight());
+
+        qDebug() << "xy: " << mousePosition.x() << " " << mousePosition.y();
+
+    if( (( (mousePosition.x()<displayTopLeftPosition.x()) | (mousePosition.x()>displayBottomRightPosition.x()) | (mousePosition.y()<displayTopLeftPosition.y()) | (mousePosition.y()>displayBottomRightPosition.y()) )))
+    {
+        qDebug() << "ko1";
+        ui->displayOpacityEditor->setValue(.25);
+    }else{
+        qDebug() << "ok1";
+        ui->displayOpacityEditor->setValue(.75);
+    }
+
+    if( (((mousePosition.x()<(m_screenWidth-m_width)) | (mousePosition.y()<(m_screenHeight-m_height)))))
+    {
+        qDebug() << "ko2";
+        this->setWindowOpacity(.5);
+    }else{
+        qDebug() << "ok2";
+        this->setWindowOpacity(1);
+    }
+}

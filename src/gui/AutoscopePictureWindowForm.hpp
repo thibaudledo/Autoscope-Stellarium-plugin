@@ -34,6 +34,8 @@ public:
 
     void updateGuiPosition(void);
 
+    void updateImage(QPixmap image);
+
 private:
     Ui::AutoscopePictureWindowForm *ui;
 
