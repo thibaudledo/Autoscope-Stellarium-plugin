@@ -6,31 +6,43 @@
 #include <QFileDialog>
 #include "AutoscopePictureWindowForm.hpp"
 
+#include "StelModule.hpp"
+#include "StelModuleMgr.hpp"
+
 class Autoscope;
 
-AutoscopeWindowForm::AutoscopeWindowForm(QWidget *parent, Autoscope* autoscope) :
-    QWidget(parent),
-    ui(new Ui::AutoscopeWindowForm)
+AutoscopeWindowForm::AutoscopeWindowForm()
+    : StelDialog("Autoscope"),
+      m_autoscope(Q_NULLPTR)
 {
-    m_autoscope = autoscope;
+    ui = new Ui_AutoscopeWindowForm();
+    m_autoscopePictureWindow = new AutoscopePictureWindowForm(this);
+}
 
-    resize(m_width, m_height);
+AutoscopeWindowForm::~AutoscopeWindowForm()
+{
+    delete ui;
+}
+
+void AutoscopeWindowForm::createDialogContent()
+{
+    m_autoscope = GETSTELMODULE(Autoscope);
+
+    ui->setupUi(dialog);
+
+    dialog->resize(m_width, m_height);
     QDesktopWidget screen;
     QRect screenSize = screen.screenGeometry();
 
     m_screenWidth = screenSize.width();
     m_screenHeight = screenSize.height();
 
-    m_autoscopePictureWindow = new AutoscopePictureWindowForm(nullptr, m_autoscope, this, m_screenWidth, m_screenHeight);
-
     m_guiHorizontalPosition = m_screenWidth - m_width;
     m_guiVerticalPosition = m_screenHeight - m_height;
 
-    move(m_guiHorizontalPosition, m_guiVerticalPosition);
+    dialog->move(m_guiHorizontalPosition, m_guiVerticalPosition);
 
-    setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
-
-    ui->setupUi(this);
+    dialog->setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
 
     ui->verticalDisplayPositionEditor->setMaximum(m_screenHeight);
     ui->verticalDisplayPositionEditor->setValue(m_autoscopePictureWindow->getGuiVerticalPosition());
@@ -63,9 +75,9 @@ AutoscopeWindowForm::AutoscopeWindowForm(QWidget *parent, Autoscope* autoscope) 
     connect(ui->pictureDownloadButton, SIGNAL(clicked()), this, SLOT(downloadPictureButtonPressed(void)));
 }
 
-AutoscopeWindowForm::~AutoscopeWindowForm()
+void AutoscopeWindowForm::retranslate()
 {
-    delete ui;
+
 }
 
 int AutoscopeWindowForm::getGuiHorizontalPosition(void)
@@ -217,7 +229,7 @@ void AutoscopeWindowForm::downloadPictureButtonPressed(void)
 }
 
 void AutoscopeWindowForm::update()
-{
+{/*
     QPoint mousePosition = QCursor::pos();
     QPoint displayTopLeftPosition = m_autoscopePictureWindow->pos();
     QPoint displayBottomRightPosition;
@@ -238,9 +250,9 @@ void AutoscopeWindowForm::update()
     if( (((mousePosition.x()<(m_screenWidth-m_width)) | (mousePosition.y()<(m_screenHeight-m_height)))))
     {
         qDebug() << "ko2";
-        this->setWindowOpacity(.5);
+        dialog->setWindowOpacity(.5);
     }else{
         qDebug() << "ok2";
-        this->setWindowOpacity(1);
-    }
+        dialog->setWindowOpacity(1);
+    }*/
 }

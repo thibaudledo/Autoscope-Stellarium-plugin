@@ -56,7 +56,7 @@ StelPluginInfo AutoscopeStelPluginInterface::getPluginInfo() const
     info.id = "Autoscope";
     info.displayedName = "Autoscope plugin";
     info.authors = "Thibaud Le Doledec";
-    info.contact = "thibauledo@gmail.com";
+    info.contact = "thibaudledo@gmail.com";
     info.description = "A plugin for the control of our version of open source telescope";
     return info;
 }
@@ -71,7 +71,7 @@ Autoscope::Autoscope()
     font.setPixelSize(25);
     conf = StelApp::getInstance().getSettings();
     gui = dynamic_cast<StelGui*>(StelApp::getInstance().getGui());
-    mainWindow = new AutoscopeWindowForm(nullptr, this);
+    mainWindow = new AutoscopeWindowForm();
 }
 
 /*************************************************************************
@@ -259,11 +259,11 @@ void Autoscope::moveObserverToObject(StelObjectP object)
 }
 
 void Autoscope::update(double t)
-{
+{/*
     if((mainWindow->x()!=mainWindow->getGuiHorizontalPosition())||(mainWindow->y()!=mainWindow->getGuiVerticalPosition()))
     {
         mainWindow->move(mainWindow->getGuiHorizontalPosition(), mainWindow->getGuiVerticalPosition());
-    }
+    }*/
 
     if(!trackObject.isNull())
     {

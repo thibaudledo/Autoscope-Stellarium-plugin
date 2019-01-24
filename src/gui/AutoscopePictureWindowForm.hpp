@@ -3,20 +3,24 @@
 
 #include <QWidget>
 
+#include "StelDialog.hpp"
+
 #include "Autoscope.hpp"
+#include "ui_AutoscopePictureWindowForm.h"
+//#include "AutoscopeWindowForm.hpp"
 
 class Autoscope;
-
+/*
 namespace Ui {
 class AutoscopePictureWindowForm;
-}
+}*/
 
-class AutoscopePictureWindowForm : public QWidget
+class AutoscopePictureWindowForm : public StelDialog
 {
     Q_OBJECT
 
 public:
-    explicit AutoscopePictureWindowForm(QWidget *parent = nullptr, Autoscope* autoscope = nullptr, AutoscopeWindowForm* autoscopeWindow = nullptr, int screenWidth = 1920, int screenHeight = 1080);
+    AutoscopePictureWindowForm(AutoscopeWindowForm* autoscopeWindowForm);
     ~AutoscopePictureWindowForm();
 
     int getGuiHorizontalPosition(void);
@@ -30,14 +34,19 @@ public:
 
     void setGuiSize(int);
 
+    void updateGuiSize(void);
+
     void setGuiOpacity(double);
 
     void updateGuiPosition(void);
 
     void updateImage(QPixmap image);
 
+protected:
+    void createDialogContent();
+
 private:
-    Ui::AutoscopePictureWindowForm *ui;
+    Ui_AutoscopePictureWindowForm* ui;
 
     Autoscope* m_autoscope;
     AutoscopeWindowForm* m_autoscopeWindow;
@@ -51,8 +60,11 @@ private:
     int m_guiHorizontalPosition;
     int m_guiVerticalPosition;
 
-    int m_guiUserHorizontalPosition;
-    int m_guiUserVerticalPosition;
+    int m_guiUserHorizontalPosition = 0;
+    int m_guiUserVerticalPosition = 0;
+
+public slots:
+    void retranslate();
 };
 
 #endif // AUTOSCOPEPICTUREWINDOWFORM_HPP

@@ -11,14 +11,17 @@ LINK_DIRECTORIES(${BUILD_DIR}/src)
 SET(Autoscope_SRCS
      	Autoscope.hpp
      	Autoscope.cpp
-	gui/AutoscopeWindowForm.hpp
-	gui/AutoscopeWindowForm.cpp
+        #gui/AutoscopeWindow.hpp
+        #gui/AutoscopeWindow.cpp
+        gui/AutoscopeWindowForm.hpp
+        gui/AutoscopeWindowForm.cpp
         gui/AutoscopePictureWindowForm.hpp
         gui/AutoscopePictureWindowForm.cpp
 )
 
 SET(AUTOSCOPE_UIS
-	gui/AutoscopeWindowForm.ui
+        #gui/AutoscopeWindow.ui
+        gui/AutoscopeWindowForm.ui
         gui/AutoscopePictureWindowForm.ui
 )
 

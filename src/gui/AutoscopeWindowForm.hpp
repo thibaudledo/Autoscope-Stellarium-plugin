@@ -3,22 +3,25 @@
 
 #include <QWidget>
 
+#include "StelDialog.hpp"
+
 #include "Autoscope.hpp"
+#include "ui_AutoscopeWindowForm.h"
 #include "AutoscopePictureWindowForm.hpp"
 
 class Autoscope;
 class AutoscopePictureWindowForm;
-
+/*
 namespace Ui {
 class AutoscopeWindowForm;
-}
+}*/
 
-class AutoscopeWindowForm : public QWidget
+class AutoscopeWindowForm : public StelDialog
 {
     Q_OBJECT
 
 public:
-    explicit AutoscopeWindowForm(QWidget *parent = nullptr, Autoscope* autoscope = nullptr);
+    AutoscopeWindowForm();
     ~AutoscopeWindowForm();
 
     int getGuiHorizontalPosition(void);
@@ -26,11 +29,17 @@ public:
 
     int getScreenSizePercent(void);
 
+    int getScreenWidth(void){return m_screenWidth;}
+    int getScreenHeight(void){return m_screenHeight;}
+
     virtual void update();
+
+protected:
+    void createDialogContent();
 
 private:
 
-    Ui::AutoscopeWindowForm *ui;
+    Ui_AutoscopeWindowForm* ui;
 
     int m_width = 600;
     int m_height = 300;
@@ -51,6 +60,7 @@ private:
     QString picturedirectoryPath = "";
 
 public slots:
+    void retranslate();
     void startButtonPressed(void);
     void trackButtonPressed(void);
     void untrackButtonPressed(void);

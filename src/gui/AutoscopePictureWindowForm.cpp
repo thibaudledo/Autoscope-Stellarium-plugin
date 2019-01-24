@@ -2,41 +2,48 @@
 #include "ui_AutoscopePictureWindowForm.h"
 #include "AutoscopeWindowForm.hpp"
 
+#include "StelModule.hpp"
+#include "StelModuleMgr.hpp"
+
 #include <QDebug>
 
-AutoscopePictureWindowForm::AutoscopePictureWindowForm(QWidget *parent, Autoscope* autoscope, AutoscopeWindowForm* autoscopeWindow, int screenWidth, int screenHeight) :
-    QWidget(parent),
-    ui(new Ui::AutoscopePictureWindowForm)
+AutoscopePictureWindowForm::AutoscopePictureWindowForm(AutoscopeWindowForm* autoscopeWindowForm)
+    : StelDialog ("Autoscope"),
+    m_autoscope(Q_NULLPTR),
+    m_autoscopeWindow(Q_NULLPTR)
 {
-    m_autoscope = autoscope;
-    m_autoscopeWindow = autoscopeWindow;
-
-    ui->setupUi(this);
-
-    m_screenWidth = screenWidth;
-    m_screenHeight = screenHeight;
-
-    resize(m_width, m_height);
-
-    qDebug() << "size:" << m_screenWidth << " "  << m_screenHeight;
-
-    qDebug() << "size :" << m_width << " "  << m_height;
-
-    m_guiHorizontalPosition = 0;
-    m_guiVerticalPosition = 0;
-
-    qDebug() << "position :" << m_guiHorizontalPosition << " "  << m_guiVerticalPosition;
-
-    updateGuiPosition();
-
-    setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
-
-
+    ui = new Ui_AutoscopePictureWindowForm();
+    m_autoscopeWindow = autoscopeWindowForm;
 }
 
 AutoscopePictureWindowForm::~AutoscopePictureWindowForm()
 {
     delete ui;
+}
+
+void AutoscopePictureWindowForm::createDialogContent()
+{
+    m_autoscope = GETSTELMODULE(Autoscope);
+    //m_autoscopeWindow = GETSTELMODULE(AutoscopeWindowForm);
+
+    m_screenWidth = m_autoscopeWindow->getScreenWidth();
+    m_screenHeight = m_autoscopeWindow->getScreenHeight();
+
+    dialog->resize(m_width, m_height);
+
+    m_guiHorizontalPosition = 0;
+    m_guiVerticalPosition = 0;
+
+    updateGuiPosition();
+
+    dialog->setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
+
+
+}
+
+void AutoscopePictureWindowForm::retranslate()
+{
+
 }
 
 int AutoscopePictureWindowForm::getGuiHorizontalPosition(void)
@@ -78,18 +85,23 @@ void AutoscopePictureWindowForm::setGuiSize(int percent)
     m_height = int((m_screenHeight * percent)/100);
     qDebug() << "size :" << m_width << " "  << m_height;
 
-    resize(m_width, m_height);
+    updateGuiSize();
+}
+
+void AutoscopePictureWindowForm::updateGuiSize(void)
+{
+    dialog->resize(m_width, m_height);
     updateGuiPosition();
 }
 
 void AutoscopePictureWindowForm::setGuiOpacity(double opacity)
 {
-    setWindowOpacity(opacity);
+    dialog->setWindowOpacity(opacity);
 }
 
 void AutoscopePictureWindowForm::updateGuiPosition(void)
 {
-    move(int(m_screenWidth-m_width-m_guiHorizontalPosition), int(m_guiVerticalPosition));
+    dialog->move(int(m_screenWidth-m_width-m_guiHorizontalPosition), int(m_guiVerticalPosition));
 }
 
 void AutoscopePictureWindowForm::updateImage(QPixmap image)
