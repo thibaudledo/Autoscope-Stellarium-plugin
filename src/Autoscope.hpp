@@ -16,10 +16,11 @@
  * Foundation, Inc., 51 Franklin Street, Suite 500, Boston, MA  02110-1335, USA.
  */
 
-#ifndef HELLOSTELMODULE_HPP
-#define HELLOSTELMODULE_HPP
+#ifndef AUTOSCOPE_HPP
+#define AUTOSCOPE_HPP
 
 #include "StelModule.hpp"
+#include "StelGui.hpp"
 #include "VecMath.hpp"
 #include "StelFader.hpp"
 #include <QFont>
@@ -30,6 +31,7 @@
 
 class StelButton;
 class QPixmap;
+class AutoscopeWindowForm;
 
 //! This is an example of a plug-in which can be dynamically loaded into stellarium
 class Autoscope : public StelModule
@@ -45,34 +47,53 @@ public:
     virtual void update(double);
 	virtual void draw(StelCore* core);
 	virtual double getCallOrder(StelModuleActionName actionName) const;
+    virtual bool configureGui(bool show);
 
     void loadConfiguration();
     void restoreDefaultConfiguration();
 
     void getAltAzi(Vec3d Position);
+    QString searchAnObject(QString objectName);
 
-    QString oldSelected = "";
+    void setTrackObject(StelObjectP object);
+    void trackSelectedObject(void);
+    QString trackSearchedObject(void);
+
+    void clearTrackedObject(void);
+
+    void moveObserverToObject(StelObjectP object);
 
     StelMovementMgr* mvMgr;
     StelObjectMgr* objectMgr;
-    StelObjectP Sun;
-    StelObjectP trackObject;
-    Vec3d objectPosition;
-    QList<StelObjectP> newSelected;
+
 private:
 	// Font used for displaying our text
+    QSettings* conf;
+    StelGui* gui;
+    AutoscopeWindowForm* m_autoscopeWindow;
 
     StelCore* m_core;
-    QSettings* conf;
     Vec3f markColor;
     LinearFader markFader;
     bool displayedAtStartup;
+    bool guiIsVisible = false;
 
     StelButton* toolBarButton;
 	QFont font;
 
+    StelObjectP Sun;
+    StelObjectP trackObject;
+    Vec3d objectPosition;
+    QList<StelObjectP> newSelected;
+    StelObjectP selectedObject;
+
+    StelObjectP searchedObject;
+    bool searchObjectFound = false;
+
+
+
 public slots:
-    void trackObjectChanged(void);
+    void showGui(void);
 };
 
 

@@ -35,6 +35,8 @@
 #include <QPixmap>
 #include <QSettings>
 
+#include "AutoscopeWindowForm.hpp"
+
 #include <QDebug>
 
 /*************************************************************************
@@ -54,7 +56,7 @@ StelPluginInfo AutoscopeStelPluginInterface::getPluginInfo() const
     info.id = "Autoscope";
     info.displayedName = "Autoscope plugin";
     info.authors = "Thibaud Le Doledec";
-    info.contact = "thibauledo@gmail.com";
+    info.contact = "thibaudledo@gmail.com";
     info.description = "A plugin for the control of our version of open source telescope";
     return info;
 }
@@ -68,6 +70,8 @@ Autoscope::Autoscope()
     setObjectName("Autoscope");
     font.setPixelSize(25);
     conf = StelApp::getInstance().getSettings();
+    gui = dynamic_cast<StelGui*>(StelApp::getInstance().getGui());
+    m_autoscopeWindow = new AutoscopeWindowForm();
 }
 
 /*************************************************************************
@@ -75,6 +79,7 @@ Autoscope::Autoscope()
 *************************************************************************/
 Autoscope::~Autoscope()
 {
+    delete m_autoscopeWindow;
 }
 
 /*************************************************************************
@@ -85,6 +90,15 @@ double Autoscope::getCallOrder(StelModuleActionName actionName) const
     if (actionName==StelModule::ActionDraw)
         return StelApp::getInstance().getModuleMgr().getModule("NebulaMgr")->getCallOrder(actionName)+10.;
     return 0;
+}
+
+bool Autoscope::configureGui(bool show)
+{
+    if(show)
+    {
+        m_autoscopeWindow->setVisible(true);
+    }
+    return true;
 }
 
 /*************************************************************************
@@ -110,8 +124,6 @@ void Autoscope::init()
 
     try
     {
-
-        StelGui* gui = dynamic_cast<StelGui*>(StelApp::getInstance().getGui());
         if (gui != Q_NULLPTR)
         {
 
@@ -122,7 +134,7 @@ void Autoscope::init()
                                            "actionTracking");
             gui->getButtonBar()->addButton(toolBarButton, "065-pluginsGroup");
         }
-        connect(toolBarButton, SIGNAL(triggered()), this, SLOT(trackObjectChanged()));
+        connect(toolBarButton, SIGNAL(triggered()), this, SLOT(showGui()));
     }
     catch (std::runtime_error& e)
     {
@@ -153,21 +165,18 @@ void Autoscope::restoreDefaultConfiguration()
     conf->endGroup();
 }
 
-void Autoscope::trackObjectChanged()
+void Autoscope::showGui()
 {
     qDebug() << "clicked!!";
 
-    newSelected = objectMgr->getSelectedObject();
-
-    if(!newSelected.isEmpty())
+    if(guiIsVisible)
     {
-        if(newSelected[0]->getEnglishName()!=StelApp::getInstance().getCore()->getCurrentLocation().planetName)
-        {
-            qDebug() << "is tracking";
-            trackObject = newSelected[0];
-        }
+        m_autoscopeWindow->setVisible(false);
+        guiIsVisible = false;
+    }else{
+        m_autoscopeWindow->setVisible(true);
+        guiIsVisible = true;
     }
-
 }
 
 void Autoscope::getAltAzi(Vec3d Position)
@@ -185,15 +194,96 @@ void Autoscope::getAltAzi(Vec3d Position)
     cxt = StelUtils::radToDecDegStr(cy);
     cyt = StelUtils::radToDecDegStr(cx);
 
-    qDebug() << newSelected[0]->getEnglishName() << " Az./Alt. : " << cxt << "  " << cyt;
+    qDebug() << trackObject->getEnglishName() << " Az./Alt. : " << cxt << "  " << cyt;
+}
+
+// ne fonctionne pas encore
+QString Autoscope::searchAnObject(QString objectName)
+{
+    searchedObject = objectMgr->searchByName(objectName);
+
+    if(searchedObject.isNull())
+    {
+        searchObjectFound = false;
+        return QString("Unable to find it!");
+    }else {
+        searchObjectFound = true;
+        return QString("Found it!");
+    }
+}
+
+void Autoscope::setTrackObject(StelObjectP object)
+{
+    if(!object.isNull())
+    {
+        if(object->getEnglishName()!=StelApp::getInstance().getCore()->getCurrentLocation().planetName)
+        {
+            qDebug() << "Autoscope is tracking " << object->getEnglishName();
+            trackObject = object;
+        }
+    }
+}
+
+void Autoscope::trackSelectedObject()
+{
+    newSelected = objectMgr->getSelectedObject();
+
+    if(!newSelected.isEmpty())
+    {
+        selectedObject = newSelected[0];
+        setTrackObject(selectedObject);
+    }
+}
+
+QString Autoscope::trackSearchedObject(void)
+{
+    if(searchObjectFound)
+    {
+        setTrackObject(searchedObject);
+        moveObserverToObject(searchedObject);
+        return "Searching";
+    }else{
+        return "This object doesn't exist";
+    }
+}
+
+void Autoscope::clearTrackedObject()
+{
+    trackObject = nullptr;
+}
+
+void Autoscope::moveObserverToObject(StelObjectP object)
+{
+    mvMgr->moveToObject(object, mvMgr->getAutoMoveDuration());
+    mvMgr->setFlagTracking(true);
 }
 
 void Autoscope::update(double t)
 {
+    m_autoscopeWindow->update();
+    m_autoscopeWindow->getAutoscopePictureWindowForm()->update();
+
+    if(guiIsVisible)
+    {
+        m_autoscopeWindow->updateGuiSize();
+        m_autoscopeWindow->updateGuiPosition();
+    }
+
+
+
+    /*
+    if((m_autoscopeWindow->x()!=m_autoscopeWindow->getGuiHorizontalPosition())||(m_autoscopeWindow->y()!=m_autoscopeWindow->getGuiVerticalPosition()))
+    {
+        m_autoscopeWindow->move(m_autoscopeWindow->getGuiHorizontalPosition(), m_autoscopeWindow->getGuiVerticalPosition());
+    }*/
+
     if(!trackObject.isNull())
     {
         getAltAzi(trackObject->getJ2000EquatorialPos(m_core));
     }
+
+    //this is shit
+    //m_autoscopeWindow->update();
 }
 
 /*************************************************************************
