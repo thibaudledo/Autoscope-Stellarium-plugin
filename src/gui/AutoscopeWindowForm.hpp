@@ -24,6 +24,10 @@ public:
     AutoscopeWindowForm();
     ~AutoscopeWindowForm();
 
+    void update();
+
+    AutoscopePictureWindowForm* getAutoscopePictureWindowForm(void){if(m_autoscopePictureWindow!=nullptr)return m_autoscopePictureWindow;}
+
     int getGuiHorizontalPosition(void);
     int getGuiVerticalPosition(void);
 
@@ -32,7 +36,8 @@ public:
     int getScreenWidth(void){return m_screenWidth;}
     int getScreenHeight(void){return m_screenHeight;}
 
-    virtual void update();
+    void updateGuiSize(void);
+    void updateGuiPosition(void);
 
 protected:
     void createDialogContent();

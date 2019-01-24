@@ -23,6 +23,8 @@ public:
     AutoscopePictureWindowForm(AutoscopeWindowForm* autoscopeWindowForm);
     ~AutoscopePictureWindowForm();
 
+    void update();
+
     int getGuiHorizontalPosition(void);
     int getGuiVerticalPosition(void);
 

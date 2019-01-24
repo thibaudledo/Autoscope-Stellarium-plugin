@@ -70,7 +70,7 @@ private:
 	// Font used for displaying our text
     QSettings* conf;
     StelGui* gui;
-    AutoscopeWindowForm* mainWindow;
+    AutoscopeWindowForm* m_autoscopeWindow;
 
     StelCore* m_core;
     Vec3f markColor;

@@ -21,6 +21,11 @@ AutoscopePictureWindowForm::~AutoscopePictureWindowForm()
     delete ui;
 }
 
+void AutoscopePictureWindowForm::update()
+{
+
+}
+
 void AutoscopePictureWindowForm::createDialogContent()
 {
     m_autoscope = GETSTELMODULE(Autoscope);

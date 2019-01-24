@@ -17,7 +17,7 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget{background-color: #24282B;}</string>
+   <string notr="true"/>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
@@ -25,8 +25,14 @@
      <property name="enabled">
       <bool>true</bool>
      </property>
+     <property name="baseSize">
+      <size>
+       <width>600</width>
+       <height>300</height>
+      </size>
+     </property>
      <property name="styleSheet">
-      <string notr="true">QWidget{background-color: #494A4C;}</string>
+      <string notr="true"/>
      </property>
      <property name="tabPosition">
       <enum>QTabWidget::North</enum>
@@ -35,14 +41,14 @@
       <enum>QTabWidget::Rounded</enum>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>2</number>
      </property>
      <property name="movable">
       <bool>false</bool>
      </property>
      <widget class="QWidget" name="controlTab">
       <property name="styleSheet">
-       <string notr="true">QWidget{background-color: #494A4C;}</string>
+       <string notr="true"/>
       </property>
       <attribute name="title">
        <string>Control</string>
@@ -53,7 +59,7 @@
          <item row="0" column="4">
           <widget class="QDoubleSpinBox" name="altitudeEditor">
            <property name="styleSheet">
-            <string notr="true">QWidget{background-color: #838586;}</string>
+            <string notr="true"/>
            </property>
            <property name="suffix">
             <string>°</string>
@@ -69,7 +75,7 @@
          <item row="0" column="2">
           <widget class="QDoubleSpinBox" name="azimuthEditor">
            <property name="styleSheet">
-            <string notr="true">QWidget{background-color: #838586;}</string>
+            <string notr="true"/>
            </property>
            <property name="suffix">
             <string>°</string>
@@ -85,7 +91,7 @@
          <item row="0" column="1">
           <widget class="QLabel" name="azimuthLabel">
            <property name="styleSheet">
-            <string notr="true">QWidget{color: #838586;}</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>Az. :</string>
@@ -98,7 +104,7 @@
          <item row="0" column="3">
           <widget class="QLabel" name="altitudeLabel">
            <property name="styleSheet">
-            <string notr="true">QWidget{color: #838586;}</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>Alt. :</string>
@@ -111,7 +117,7 @@
          <item row="0" column="0">
           <widget class="QPushButton" name="moveToButton">
            <property name="styleSheet">
-            <string notr="true">QWidget{background-color: #838586;}</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>Move to</string>
@@ -125,7 +131,7 @@
          <item row="0" column="1">
           <widget class="QLabel" name="label_2">
            <property name="styleSheet">
-            <string notr="true">QWidget{color: #838586;}</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string> : </string>
@@ -135,7 +141,7 @@
          <item row="0" column="0">
           <widget class="QPushButton" name="searchButton">
            <property name="styleSheet">
-            <string notr="true">QWidget{background-color: #838586;}</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>Search</string>
@@ -145,7 +151,7 @@
          <item row="0" column="2">
           <widget class="QLineEdit" name="searchEditor">
            <property name="styleSheet">
-            <string notr="true">QWidget{background-color: #838586;}</string>
+            <string notr="true"/>
            </property>
           </widget>
          </item>
@@ -206,7 +212,7 @@
            <item>
             <widget class="QSpinBox" name="zoomEditor">
              <property name="styleSheet">
-              <string notr="true">QWidget{background-color: #838586;}</string>
+              <string notr="true"/>
              </property>
              <property name="minimum">
               <number>61</number>
@@ -225,7 +231,7 @@
          <item row="0" column="0">
           <widget class="QPushButton" name="startButton">
            <property name="styleSheet">
-            <string notr="true">QWidget{background-color: #838586;}</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>Start</string>
@@ -235,7 +241,7 @@
          <item row="0" column="1">
           <widget class="QPushButton" name="trackButton">
            <property name="styleSheet">
-            <string notr="true">QWidget{background-color: #838586;}</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>Track</string>
@@ -245,7 +251,7 @@
          <item row="0" column="2">
           <widget class="QPushButton" name="untrackButton">
            <property name="styleSheet">
-            <string notr="true">QWidget{background-color: #838586;}</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>Untrack</string>
@@ -255,7 +261,7 @@
          <item row="0" column="4">
           <widget class="QPushButton" name="toggleDisplayButton">
            <property name="styleSheet">
-            <string notr="true">QWidget{background-color: #838586;}</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>Toggle Display</string>
@@ -265,7 +271,7 @@
          <item row="0" column="3">
           <widget class="QPushButton" name="takePictureButton">
            <property name="styleSheet">
-            <string notr="true">QWidget{background-color: #838586;}</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>Take Picture</string>
@@ -278,7 +284,7 @@
      </widget>
      <widget class="QWidget" name="pictureTab">
       <property name="styleSheet">
-       <string notr="true">QWidget{background-color: #494A4C;}</string>
+       <string notr="true"/>
       </property>
       <attribute name="title">
        <string>Picture</string>
@@ -289,7 +295,7 @@
          <item row="0" column="1">
           <widget class="QDoubleSpinBox" name="exposureTimeEditor">
            <property name="styleSheet">
-            <string notr="true">QWidget{background-color: #838586;}</string>
+            <string notr="true"/>
            </property>
            <property name="suffix">
             <string>s</string>
@@ -308,7 +314,7 @@
          <item row="0" column="0">
           <widget class="QLabel" name="exposureTimeLabel">
            <property name="styleSheet">
-            <string notr="true">QWidget{color: #838586;}</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>Exposure time :</string>
@@ -335,7 +341,7 @@
          <item row="0" column="1">
           <widget class="QSpinBox" name="numberPictureEditor">
            <property name="styleSheet">
-            <string notr="true">QWidget{background-color: #838586;}</string>
+            <string notr="true"/>
            </property>
            <property name="maximum">
             <number>100</number>
@@ -358,7 +364,7 @@
          <item row="0" column="0">
           <widget class="QLabel" name="numberPictureLabel">
            <property name="styleSheet">
-            <string notr="true">QWidget{color: #838586;}</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>Number of picture taken :</string>
@@ -379,7 +385,7 @@
          <item>
           <widget class="QLabel" name="sizePictureLabel">
            <property name="styleSheet">
-            <string notr="true">QWidget{color: #838586;}</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>Size of the display :</string>
@@ -389,7 +395,7 @@
          <item>
           <widget class="QSpinBox" name="displaySizeEditor">
            <property name="styleSheet">
-            <string notr="true">QWidget{background-color: #838586;}</string>
+            <string notr="true"/>
            </property>
            <property name="suffix">
             <string>%</string>
@@ -452,7 +458,7 @@
          <item>
           <widget class="QLabel" name="verticalLabel">
            <property name="styleSheet">
-            <string notr="true">QWidget{color: #838586;}</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>y :</string>
@@ -476,7 +482,7 @@
          <item>
           <widget class="QLabel" name="pictureOpacityLabel">
            <property name="styleSheet">
-            <string notr="true">QWidget{color: #838586;}</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>Opacity of the display :</string>
@@ -486,7 +492,7 @@
          <item>
           <widget class="QDoubleSpinBox" name="displayOpacityEditor">
            <property name="styleSheet">
-            <string notr="true">QWidget{background-color: #838586;}</string>
+            <string notr="true"/>
            </property>
            <property name="minimum">
             <double>0.010000000000000</double>
@@ -532,14 +538,14 @@
          <item>
           <widget class="QLineEdit" name="picturePathEditor">
            <property name="styleSheet">
-            <string notr="true">QWidget{background-color: #838586;}</string>
+            <string notr="true"/>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QPushButton" name="picurePathButton">
            <property name="styleSheet">
-            <string notr="true">QWidget{background-color: #838586;}</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string/>
@@ -566,7 +572,7 @@
          <item>
           <widget class="QPushButton" name="pictureDownloadButton">
            <property name="styleSheet">
-            <string notr="true">QWidget{background-color: #838586;}</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>Download picture</string>

@@ -71,7 +71,7 @@ Autoscope::Autoscope()
     font.setPixelSize(25);
     conf = StelApp::getInstance().getSettings();
     gui = dynamic_cast<StelGui*>(StelApp::getInstance().getGui());
-    mainWindow = new AutoscopeWindowForm();
+    m_autoscopeWindow = new AutoscopeWindowForm();
 }
 
 /*************************************************************************
@@ -79,7 +79,7 @@ Autoscope::Autoscope()
 *************************************************************************/
 Autoscope::~Autoscope()
 {
-    delete mainWindow;
+    delete m_autoscopeWindow;
 }
 
 /*************************************************************************
@@ -96,7 +96,7 @@ bool Autoscope::configureGui(bool show)
 {
     if(show)
     {
-        mainWindow->setVisible(true);
+        m_autoscopeWindow->setVisible(true);
     }
     return true;
 }
@@ -171,10 +171,10 @@ void Autoscope::showGui()
 
     if(guiIsVisible)
     {
-        mainWindow->setVisible(false);
+        m_autoscopeWindow->setVisible(false);
         guiIsVisible = false;
     }else{
-        mainWindow->setVisible(true);
+        m_autoscopeWindow->setVisible(true);
         guiIsVisible = true;
     }
 }
@@ -259,10 +259,22 @@ void Autoscope::moveObserverToObject(StelObjectP object)
 }
 
 void Autoscope::update(double t)
-{/*
-    if((mainWindow->x()!=mainWindow->getGuiHorizontalPosition())||(mainWindow->y()!=mainWindow->getGuiVerticalPosition()))
+{
+    m_autoscopeWindow->update();
+    m_autoscopeWindow->getAutoscopePictureWindowForm()->update();
+
+    if(guiIsVisible)
     {
-        mainWindow->move(mainWindow->getGuiHorizontalPosition(), mainWindow->getGuiVerticalPosition());
+        m_autoscopeWindow->updateGuiSize();
+        m_autoscopeWindow->updateGuiPosition();
+    }
+
+
+
+    /*
+    if((m_autoscopeWindow->x()!=m_autoscopeWindow->getGuiHorizontalPosition())||(m_autoscopeWindow->y()!=m_autoscopeWindow->getGuiVerticalPosition()))
+    {
+        m_autoscopeWindow->move(m_autoscopeWindow->getGuiHorizontalPosition(), m_autoscopeWindow->getGuiVerticalPosition());
     }*/
 
     if(!trackObject.isNull())
@@ -271,7 +283,7 @@ void Autoscope::update(double t)
     }
 
     //this is shit
-    //mainWindow->update();
+    //m_autoscopeWindow->update();
 }
 
 /*************************************************************************

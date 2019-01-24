@@ -24,6 +24,14 @@ AutoscopeWindowForm::~AutoscopeWindowForm()
     delete ui;
 }
 
+void AutoscopeWindowForm::update()
+{
+    if(pictureWindowIsVisible)
+    {
+        m_autoscopePictureWindow->updateGuiSize();
+    }
+}
+
 void AutoscopeWindowForm::createDialogContent()
 {
     m_autoscope = GETSTELMODULE(Autoscope);
@@ -70,14 +78,27 @@ void AutoscopeWindowForm::createDialogContent()
     connect(ui->picturePathEditor, SIGNAL(returnPressed()), this, SLOT(outputPictureDirectoryChanged(void)));
     connect(ui->picurePathButton, SIGNAL(clicked()), this, SLOT(outputPictureDirectoryButtonPressed(void)));
     connect(ui->pictureDownloadButton, SIGNAL(clicked()), this, SLOT(downloadPictureButtonPressed(void)));
-
-    dialog->resize(m_width, m_height);
-    dialog->move(m_guiHorizontalPosition, m_guiVerticalPosition);
 }
 
 void AutoscopeWindowForm::retranslate()
 {
 
+}
+
+void AutoscopeWindowForm::updateGuiSize(void)
+{
+    if((dialog->size().width()!=m_width) || (dialog->size().height()!=m_height))
+    {
+        dialog->resize(m_width, m_height);
+    }
+}
+
+void AutoscopeWindowForm::updateGuiPosition(void)
+{
+    if((dialog->pos().x()!=m_guiHorizontalPosition) || (dialog->pos().y()!=m_guiVerticalPosition))
+    {
+        dialog->move(m_guiHorizontalPosition, m_guiVerticalPosition);
+    }
 }
 
 int AutoscopeWindowForm::getGuiHorizontalPosition(void)
@@ -226,33 +247,4 @@ void AutoscopeWindowForm::downloadPictureButtonPressed(void)
     qDebug() << "downloadPictureButtonPressed";
 
     m_autoscopePictureWindow->updateImage(QPixmap(":/Autoscope/dossier.png"));
-}
-
-void AutoscopeWindowForm::update()
-{/*
-    QPoint mousePosition = QCursor::pos();
-    QPoint displayTopLeftPosition = m_autoscopePictureWindow->pos();
-    QPoint displayBottomRightPosition;
-    displayBottomRightPosition.setX(displayTopLeftPosition.x()+m_autoscopePictureWindow->getGuiWidth());
-    displayBottomRightPosition.setY(displayTopLeftPosition.y()+m_autoscopePictureWindow->getGuiHeight());
-
-        qDebug() << "xy: " << mousePosition.x() << " " << mousePosition.y();
-
-    if( (( (mousePosition.x()<displayTopLeftPosition.x()) | (mousePosition.x()>displayBottomRightPosition.x()) | (mousePosition.y()<displayTopLeftPosition.y()) | (mousePosition.y()>displayBottomRightPosition.y()) )))
-    {
-        qDebug() << "ko1";
-        ui->displayOpacityEditor->setValue(.25);
-    }else{
-        qDebug() << "ok1";
-        ui->displayOpacityEditor->setValue(.75);
-    }
-
-    if( (((mousePosition.x()<(m_screenWidth-m_width)) | (mousePosition.y()<(m_screenHeight-m_height)))))
-    {
-        qDebug() << "ko2";
-        dialog->setWindowOpacity(.5);
-    }else{
-        qDebug() << "ok2";
-        dialog->setWindowOpacity(1);
-    }*/
 }
