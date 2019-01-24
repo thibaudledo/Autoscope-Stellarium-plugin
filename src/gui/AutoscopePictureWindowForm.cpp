@@ -8,7 +8,7 @@
 #include <QDebug>
 
 AutoscopePictureWindowForm::AutoscopePictureWindowForm(AutoscopeWindowForm* autoscopeWindowForm)
-    : StelDialog ("Autoscope"),
+    : StelDialog ("AutoscopePicture"),
     m_autoscope(Q_NULLPTR),
     m_autoscopeWindow(Q_NULLPTR)
 {
@@ -26,19 +26,19 @@ void AutoscopePictureWindowForm::createDialogContent()
     m_autoscope = GETSTELMODULE(Autoscope);
     //m_autoscopeWindow = GETSTELMODULE(AutoscopeWindowForm);
 
+    ui->setupUi(dialog);
+
     m_screenWidth = m_autoscopeWindow->getScreenWidth();
     m_screenHeight = m_autoscopeWindow->getScreenHeight();
-
-    dialog->resize(m_width, m_height);
 
     m_guiHorizontalPosition = 0;
     m_guiVerticalPosition = 0;
 
-    updateGuiPosition();
-
     dialog->setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
 
+    dialog->resize(m_width, m_height);
 
+    updateGuiPosition();
 }
 
 void AutoscopePictureWindowForm::retranslate()

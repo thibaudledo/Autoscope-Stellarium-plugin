@@ -30,7 +30,6 @@ void AutoscopeWindowForm::createDialogContent()
 
     ui->setupUi(dialog);
 
-    dialog->resize(m_width, m_height);
     QDesktopWidget screen;
     QRect screenSize = screen.screenGeometry();
 
@@ -39,8 +38,6 @@ void AutoscopeWindowForm::createDialogContent()
 
     m_guiHorizontalPosition = m_screenWidth - m_width;
     m_guiVerticalPosition = m_screenHeight - m_height;
-
-    dialog->move(m_guiHorizontalPosition, m_guiVerticalPosition);
 
     dialog->setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
 
@@ -73,6 +70,9 @@ void AutoscopeWindowForm::createDialogContent()
     connect(ui->picturePathEditor, SIGNAL(returnPressed()), this, SLOT(outputPictureDirectoryChanged(void)));
     connect(ui->picurePathButton, SIGNAL(clicked()), this, SLOT(outputPictureDirectoryButtonPressed(void)));
     connect(ui->pictureDownloadButton, SIGNAL(clicked()), this, SLOT(downloadPictureButtonPressed(void)));
+
+    dialog->resize(m_width, m_height);
+    dialog->move(m_guiHorizontalPosition, m_guiVerticalPosition);
 }
 
 void AutoscopeWindowForm::retranslate()
