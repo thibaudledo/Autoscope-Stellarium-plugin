@@ -254,6 +254,7 @@ void Autoscope::clearTrackedObject()
 
 void Autoscope::moveObserverToObject(StelObjectP object)
 {
+    objectMgr->setSelectedObject(object);
     mvMgr->moveToObject(object, mvMgr->getAutoMoveDuration());
     mvMgr->setFlagTracking(true);
 }
@@ -269,21 +270,10 @@ void Autoscope::update(double t)
         m_autoscopeWindow->updateGuiPosition();
     }
 
-
-
-    /*
-    if((m_autoscopeWindow->x()!=m_autoscopeWindow->getGuiHorizontalPosition())||(m_autoscopeWindow->y()!=m_autoscopeWindow->getGuiVerticalPosition()))
-    {
-        m_autoscopeWindow->move(m_autoscopeWindow->getGuiHorizontalPosition(), m_autoscopeWindow->getGuiVerticalPosition());
-    }*/
-
     if(!trackObject.isNull())
     {
         getAltAzi(trackObject->getJ2000EquatorialPos(m_core));
     }
-
-    //this is shit
-    //m_autoscopeWindow->update();
 }
 
 /*************************************************************************

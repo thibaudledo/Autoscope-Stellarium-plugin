@@ -41,7 +41,7 @@
       <enum>QTabWidget::Rounded</enum>
      </property>
      <property name="currentIndex">
-      <number>2</number>
+      <number>0</number>
      </property>
      <property name="movable">
       <bool>false</bool>
@@ -449,9 +449,9 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="horizontalDisplayPositionEditor">
-           <property name="maximum">
-            <number>1080</number>
+          <widget class="QSlider" name="horizontalDisplayPositionSlider">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
            </property>
           </widget>
          </item>
@@ -469,9 +469,9 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="verticalDisplayPositionEditor">
-           <property name="maximum">
-            <number>1920</number>
+          <widget class="QSlider" name="verticalDisplayPositionSlider">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
            </property>
           </widget>
          </item>

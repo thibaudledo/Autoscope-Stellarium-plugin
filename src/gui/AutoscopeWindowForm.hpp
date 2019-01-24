@@ -64,6 +64,8 @@ private:
 
     QString picturedirectoryPath = "";
 
+    void updateMaxMinSlider(void);
+
 public slots:
     void retranslate();
     void startButtonPressed(void);
