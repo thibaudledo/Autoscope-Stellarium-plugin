@@ -139,7 +139,11 @@ void AutoscopeWindowForm::takePictureButtonPressed(void)
 void AutoscopeWindowForm::toggleDisplayButtonPressed(void)
 {
     qDebug() << "toggleDisplayButtonPressed";
+    toggleDisplay();
+}
 
+void AutoscopeWindowForm::toggleDisplay(void)
+{
     if(pictureWindowIsVisible)
     {
         m_autoscopePictureWindow->setVisible(false);

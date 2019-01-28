@@ -1,7 +1,13 @@
 <RCC>
   <qresource prefix="/Autoscope">
-    <file>telescope_on.png</file>
-    <file>telescope_off.png</file>
-    <file>dossier.png</file>
+    	<file>telescope_on.png</file>
+    	<file>telescope_off.png</file>
+	<file>cible_on.png</file>
+	<file>cible_off.png</file>
+    	<file>dossier.png</file>
+	<file>photo.png</file>
+	<file>display_off.png</file>
+	<file>display_on.png</file>
+	<file>DeathStar.png</file>
   </qresource>
 </RCC>

@@ -39,6 +39,8 @@ public:
     void updateGuiSize(void);
     void updateGuiPosition(void);
 
+    void toggleDisplay(void);
+
 protected:
     void createDialogContent();
 

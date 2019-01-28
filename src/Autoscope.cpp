@@ -36,6 +36,7 @@
 #include <QSettings>
 
 #include "AutoscopeWindowForm.hpp"
+#include "network/tcp_client.hpp"
 
 #include <QDebug>
 
@@ -127,14 +128,50 @@ void Autoscope::init()
         if (gui != Q_NULLPTR)
         {
 
-            toolBarButton = new StelButton(Q_NULLPTR,
-                                           QPixmap(":/Autoscope/telescope_on.png"),
-                                           QPixmap(":/Autoscope/telescope_off.png"),
-                                           QPixmap(":/graphicGui/glow32x32.png"),
-                                           "actionTracking");
-            gui->getButtonBar()->addButton(toolBarButton, "065-pluginsGroup");
+            menuButton = new StelButton(Q_NULLPTR,
+                                        QPixmap(":/Autoscope/telescope_on.png"),
+                                        QPixmap(":/Autoscope/telescope_off.png"),
+                                        QPixmap(":/graphicGui/glow32x32.png"),
+                                        "actionMenu");
+            gui->getButtonBar()->addButton(menuButton, "065-pluginsGroup");
+
+            trackButton = new StelButton(Q_NULLPTR,
+                                         QPixmap(":/Autoscope/cible_on.png"),
+                                         QPixmap(":/Autoscope/cible_on.png"),
+                                         QPixmap(":/graphicGui/glow32x32.png"),
+                                         "actionTracking");
+            gui->getButtonBar()->addButton(trackButton, "065-pluginsGroup");
+
+            unTrackButton = new StelButton(Q_NULLPTR,
+                                         QPixmap(":/Autoscope/cible_off.png"),
+                                         QPixmap(":/Autoscope/cible_off.png"),
+                                         QPixmap(":/graphicGui/glow32x32.png"),
+                                         "actionUnTracking");
+            gui->getButtonBar()->addButton(unTrackButton, "065-pluginsGroup");
+
+            EnablePictureDisplay = new StelButton(Q_NULLPTR,
+                                         QPixmap(":/Autoscope/display_on.png"),
+                                         QPixmap(":/Autoscope/display_off.png"),
+                                         QPixmap(":/graphicGui/glow32x32.png"),
+                                         "actionEnableDisplay");
+            gui->getButtonBar()->addButton(EnablePictureDisplay, "065-pluginsGroup");
+
+            takePicture = new StelButton(Q_NULLPTR,
+                                         QPixmap(":/Autoscope/photo.png"),
+                                         QPixmap(":/Autoscope/photo.png"),
+                                         QPixmap(":/graphicGui/glow32x32.png"),
+                                         "actionTakePicture");
+            gui->getButtonBar()->addButton(takePicture, "065-pluginsGroup");
         }
-        connect(toolBarButton, SIGNAL(triggered()), this, SLOT(showGui()));
+        connect(menuButton, SIGNAL(triggered()), this, SLOT(showGui()));
+
+        connect(trackButton, SIGNAL(triggered()), this, SLOT(slotTrackObject()));
+
+        connect(unTrackButton, SIGNAL(triggered()), this, SLOT(slotUnTrackOject()));
+
+        connect(EnablePictureDisplay, SIGNAL(triggered()), this, SLOT(slotEnablePictureDispaly()));
+
+        connect(takePicture, SIGNAL(triggered()), this, SLOT(slotTakePicture()));
     }
     catch (std::runtime_error& e)
     {
@@ -179,8 +216,31 @@ void Autoscope::showGui()
     }
 }
 
-void Autoscope::getAltAzi(Vec3d Position)
+void Autoscope::slotTrackObject(void)
 {
+    qDebug() << "slotTrackObject";
+    trackSelectedObject();
+}
+
+void Autoscope::slotUnTrackOject(void)
+{
+    qDebug() << "slotUnTrackOject";
+    clearTrackedObject();
+}
+
+void Autoscope::slotEnablePictureDispaly(void)
+{
+    m_autoscopeWindow->toggleDisplay();
+}
+
+void Autoscope::slotTakePicture(void)
+{
+
+}
+
+void Autoscope::getAltAzi(StelObjectP object)
+{
+    Vec3d Position = object->getJ2000EquatorialPos(m_core);
     QString cxt,cyt;
     double cx, cy;
 
@@ -272,7 +332,7 @@ void Autoscope::update(double t)
 
     if(!trackObject.isNull())
     {
-        getAltAzi(trackObject->getJ2000EquatorialPos(m_core));
+        getAltAzi(trackObject);
     }
 }
 

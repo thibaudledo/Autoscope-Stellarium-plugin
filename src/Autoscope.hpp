@@ -52,7 +52,7 @@ public:
     void loadConfiguration();
     void restoreDefaultConfiguration();
 
-    void getAltAzi(Vec3d Position);
+    void getAltAzi(StelObjectP object);
     QString searchAnObject(QString objectName);
 
     void setTrackObject(StelObjectP object);
@@ -78,7 +78,12 @@ private:
     bool displayedAtStartup;
     bool guiIsVisible = false;
 
-    StelButton* toolBarButton;
+    StelButton* menuButton;
+    StelButton* trackButton;
+    StelButton* unTrackButton;
+    StelButton* EnablePictureDisplay;
+    StelButton* takePicture;
+
 	QFont font;
 
     StelObjectP Sun;
@@ -94,6 +99,10 @@ private:
 
 public slots:
     void showGui(void);
+    void slotTrackObject(void);
+    void slotUnTrackOject(void);
+    void slotEnablePictureDispaly(void);
+    void slotTakePicture(void);
 };
 
 
