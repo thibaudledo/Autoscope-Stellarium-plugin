@@ -393,6 +393,19 @@
           </widget>
          </item>
          <item>
+          <widget class="QSlider" name="displaySizeSlider">
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="value">
+            <number>10</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
           <widget class="QSpinBox" name="displaySizeEditor">
            <property name="styleSheet">
             <string notr="true"/>
@@ -490,21 +503,34 @@
           </widget>
          </item>
          <item>
-          <widget class="QDoubleSpinBox" name="displayOpacityEditor">
-           <property name="styleSheet">
-            <string notr="true"/>
-           </property>
-           <property name="minimum">
-            <double>0.010000000000000</double>
-           </property>
+          <widget class="QSlider" name="displayOpacitySlider">
            <property name="maximum">
-            <double>1.000000000000000</double>
+            <number>100</number>
            </property>
            <property name="singleStep">
-            <double>0.010000000000000</double>
+            <number>1</number>
+           </property>
+           <property name="pageStep">
+            <number>10</number>
            </property>
            <property name="value">
-            <double>1.000000000000000</double>
+            <number>70</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="displayOpacityEditor">
+           <property name="suffix">
+            <string>%</string>
+           </property>
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="value">
+            <number>70</number>
            </property>
           </widget>
          </item>
@@ -631,6 +657,70 @@
     <hint type="destinationlabel">
      <x>296</x>
      <y>163</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>displayOpacitySlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>displayOpacityEditor</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>260</x>
+     <y>163</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>380</x>
+     <y>162</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>displayOpacityEditor</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>displayOpacitySlider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>380</x>
+     <y>162</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>260</x>
+     <y>163</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>displaySizeSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>displaySizeEditor</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>241</x>
+     <y>67</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>367</x>
+     <y>67</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>displaySizeEditor</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>displaySizeSlider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>367</x>
+     <y>67</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>241</x>
+     <y>67</y>
     </hint>
    </hints>
   </connection>

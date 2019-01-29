@@ -13,7 +13,7 @@ AutoscopePictureWindowForm::AutoscopePictureWindowForm(AutoscopeWindowForm* auto
     m_autoscopeWindow(Q_NULLPTR)
 {
     ui = new Ui_AutoscopePictureWindowForm();
-    m_autoscopeWindow = autoscopeWindowForm;
+    //m_autoscopeWindow = autoscopeWindowForm;
 }
 
 AutoscopePictureWindowForm::~AutoscopePictureWindowForm()
@@ -95,17 +95,22 @@ void AutoscopePictureWindowForm::setGuiSize(int percent)
 
 void AutoscopePictureWindowForm::updateGuiSize(void)
 {
+    qDebug() << "updateGuiSize";
     dialog->resize(m_width, m_height);
     updateGuiPosition();
 }
 
 void AutoscopePictureWindowForm::setGuiOpacity(double opacity)
 {
+    qDebug() << "setGuiOpacity";
     dialog->setWindowOpacity(opacity);
 }
 
 void AutoscopePictureWindowForm::updateGuiPosition(void)
 {
+    qDebug() << "updateGuiPosition";
+    qDebug() << m_guiHorizontalPosition << " " << m_guiVerticalPosition;
+
     dialog->move(int(m_screenWidth-m_guiHorizontalPosition), int(m_guiVerticalPosition));
 }
 

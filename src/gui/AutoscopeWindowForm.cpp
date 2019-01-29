@@ -16,7 +16,6 @@ AutoscopeWindowForm::AutoscopeWindowForm()
       m_autoscope(Q_NULLPTR)
 {
     ui = new Ui_AutoscopeWindowForm();
-    m_autoscopePictureWindow = new AutoscopePictureWindowForm(this);
 }
 
 AutoscopeWindowForm::~AutoscopeWindowForm()
@@ -34,7 +33,9 @@ void AutoscopeWindowForm::update()
 
 void AutoscopeWindowForm::createDialogContent()
 {
+    qDebug() << "createDialogContent";
     m_autoscope = GETSTELMODULE(Autoscope);
+    m_autoscopePictureWindow = m_autoscope->getAutoscopePictureWindow();
 
     ui->setupUi(dialog);
 
@@ -65,13 +66,19 @@ void AutoscopeWindowForm::createDialogContent()
     connect(ui->toggleDisplayButton, SIGNAL(clicked()), this, SLOT(toggleDisplayButtonPressed(void)));
     connect(ui->exposureTimeEditor, SIGNAL(valueChanged(double)), this, SLOT(exposureTimeChanged(double)));
     connect(ui->numberPictureEditor, SIGNAL(valueChanged(int)), this, SLOT(numberOfPictureChanged(int)));
-    connect(ui->displaySizeEditor, SIGNAL(valueChanged(int)), this, SLOT(displaySizeChanged(int)));
     connect(ui->horizontalDisplayPositionSlider, SIGNAL(valueChanged(int)), this, SLOT(horizontalDisplayPositionChanged(int)));
     connect(ui->verticalDisplayPositionSlider, SIGNAL(valueChanged(int)), this, SLOT(verticalDisplayPositionChanged(int)));
-    connect(ui->displayOpacityEditor, SIGNAL(valueChanged(double)), this, SLOT(displayOpacityChanged(double)));
     connect(ui->picturePathEditor, SIGNAL(returnPressed()), this, SLOT(outputPictureDirectoryChanged(void)));
     connect(ui->picurePathButton, SIGNAL(clicked()), this, SLOT(outputPictureDirectoryButtonPressed(void)));
     connect(ui->pictureDownloadButton, SIGNAL(clicked()), this, SLOT(downloadPictureButtonPressed(void)));
+
+    connect(ui->displaySizeEditor, SIGNAL(valueChanged(int)), this, SLOT(displaySizeChanged(int)));
+    connect(ui->displaySizeSlider, SIGNAL(valueChanged(int)), this, SLOT(displaySizeChanged(int)));
+
+    connect(ui->displayOpacityEditor, SIGNAL(valueChanged(int)), this, SLOT(displayOpacityChanged(int)));
+    connect(ui->displayOpacitySlider, SIGNAL(valueChanged(int)), this, SLOT(displayOpacityChanged(int)));
+
+
 
     updateMaxMinSlider();
 }
@@ -149,10 +156,11 @@ void AutoscopeWindowForm::toggleDisplay(void)
         m_autoscopePictureWindow->setVisible(false);
         pictureWindowIsVisible = false;
     }else{
+        qDebug() << "ok1";
         m_autoscopePictureWindow->setVisible(true);
         pictureWindowIsVisible = true;
+        qDebug() << "ok2";
         m_autoscopePictureWindow->updateGuiPosition();
-
     }
 }
 
@@ -212,6 +220,7 @@ void AutoscopeWindowForm::displaySizeChanged(int percent)
     if(pictureWindowIsVisible)
     {
         m_autoscopePictureWindow->setGuiSize(percent);
+        //m_autoscopePictureWindow->updateGuiPosition();
         updateMaxMinSlider();
     }
 }
@@ -236,17 +245,19 @@ void AutoscopeWindowForm::verticalDisplayPositionChanged(int y)
     }
 }
 
-void AutoscopeWindowForm::displayOpacityChanged(double opacity)
+void AutoscopeWindowForm::displayOpacityChanged(int opacity)
 {
     qDebug() << "displayOpacityChanged";
     if(pictureWindowIsVisible)
     {
-        m_autoscopePictureWindow->setGuiOpacity(opacity);
+        double d_opacity = double(opacity/100);
+        m_autoscopePictureWindow->setGuiOpacity(d_opacity);
     }
 }
 
 void AutoscopeWindowForm::updateMaxMinSlider(void)
 {
+    qDebug() << "updateMaxMinSlider";
     ui->horizontalDisplayPositionSlider->setMaximum(int(m_screenWidth));
     ui->verticalDisplayPositionSlider->setMaximum(int(m_screenHeight-(m_autoscopePictureWindow->getGuiHeight())));
 

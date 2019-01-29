@@ -36,6 +36,7 @@
 #include <QSettings>
 
 #include "AutoscopeWindowForm.hpp"
+#include "AutoscopePictureWindowForm.hpp"
 #include "network/tcp_client.hpp"
 
 #include <QDebug>
@@ -73,6 +74,7 @@ Autoscope::Autoscope()
     conf = StelApp::getInstance().getSettings();
     gui = dynamic_cast<StelGui*>(StelApp::getInstance().getGui());
     m_autoscopeWindow = new AutoscopeWindowForm();
+    m_autoscopePictureWindow = new AutoscopePictureWindowForm(m_autoscopeWindow);
 }
 
 /*************************************************************************
@@ -81,6 +83,7 @@ Autoscope::Autoscope()
 Autoscope::~Autoscope()
 {
     delete m_autoscopeWindow;
+    delete m_autoscopePictureWindow;
 }
 
 /*************************************************************************

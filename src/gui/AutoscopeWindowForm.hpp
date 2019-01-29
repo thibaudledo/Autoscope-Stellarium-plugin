@@ -88,7 +88,7 @@ private slots:
     void displaySizeChanged(int);
     void horizontalDisplayPositionChanged(int);
     void verticalDisplayPositionChanged(int);
-    void displayOpacityChanged(double);
+    void displayOpacityChanged(int);
     void outputPictureDirectoryChanged(void);
     void outputPictureDirectoryButtonPressed(void);
     void downloadPictureButtonPressed(void);

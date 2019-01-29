@@ -32,6 +32,7 @@
 class StelButton;
 class QPixmap;
 class AutoscopeWindowForm;
+class AutoscopePictureWindowForm;
 
 //! This is an example of a plug-in which can be dynamically loaded into stellarium
 class Autoscope : public StelModule
@@ -63,6 +64,9 @@ public:
 
     void moveObserverToObject(StelObjectP object);
 
+    AutoscopeWindowForm* getAutoscopeWindow(void){if(m_autoscopeWindow!=nullptr)return m_autoscopeWindow;}
+    AutoscopePictureWindowForm* getAutoscopePictureWindow(void){if(m_autoscopePictureWindow!=nullptr)return m_autoscopePictureWindow;}
+
     StelMovementMgr* mvMgr;
     StelObjectMgr* objectMgr;
 
@@ -71,6 +75,7 @@ private:
     QSettings* conf;
     StelGui* gui;
     AutoscopeWindowForm* m_autoscopeWindow;
+    AutoscopePictureWindowForm* m_autoscopePictureWindow;
 
     StelCore* m_core;
     Vec3f markColor;
