@@ -29,6 +29,7 @@ private:
 
     /*!< server host address */
     QHostAddress m_host_address;
+
 };
 
 #endif // TCPCLIENT_H

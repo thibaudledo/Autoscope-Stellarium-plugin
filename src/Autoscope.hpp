@@ -76,6 +76,12 @@ public:
     int getScreenWidth(void){return m_screenWidth;}
     int getScreenHeight(void){return m_screenHeight;}
 
+    void setIpAddress(QString addr){m_autoscopeIp = QHostAddress(addr);}
+    void setPort(int port){m_autoscopePort = port;}
+
+    void connectToAutoscope(void);
+    void deconnectFromAutoscope(void);
+
 private:
 	// Font used for displaying our text
     QSettings* conf;
@@ -113,7 +119,7 @@ private:
 
     QHostAddress m_autoscopeIp;
 
-    int m_autoscopePort;
+    int m_autoscopePort = 4444;
 
 public slots:
     void showGui(void);
@@ -121,6 +127,7 @@ public slots:
     void slotUnTrackOject(void);
     void slotEnablePictureDispaly(void);
     void slotTakePicture(void);
+    void slotConnected(void);
 };
 
 

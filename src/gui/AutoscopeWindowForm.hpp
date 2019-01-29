@@ -42,6 +42,8 @@ public:
 
     void toggleDisplay(void);
 
+    void updateIpMessengerText(QString);
+
 protected:
     void createDialogContent();
 
@@ -93,6 +95,10 @@ private slots:
     void outputPictureDirectoryChanged(void);
     void outputPictureDirectoryButtonPressed(void);
     void downloadPictureButtonPressed(void);
+    void ipAddressChanged(QString);
+    void ipPortChanged(int);
+    void connectionButtonPressed(void);
+    void deconnectionButtonPressed(void);
 };
 
 #endif // AUTOSCOPEWINDOWFORM_H

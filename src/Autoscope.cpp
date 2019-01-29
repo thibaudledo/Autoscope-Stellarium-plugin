@@ -81,7 +81,7 @@ Autoscope::Autoscope()
     m_autoscopeWindow->setAutoscopePictureWindow(m_autoscopePictureWindow);
     m_autoscopePictureWindow->setAutoscopeWindow(m_autoscopeWindow);
 
-    m_autoscopeIp = QHostAddress("192.168.43.106");
+    m_autoscopeIp = QHostAddress("192.168.43.107");
     m_autoscopePort = 4444;
     m_client = new TcpClient(m_autoscopeIp, m_autoscopePort);
 }
@@ -184,6 +184,8 @@ void Autoscope::init()
         connect(EnablePictureDisplay, SIGNAL(triggered()), this, SLOT(slotEnablePictureDispaly()));
 
         connect(takePicture, SIGNAL(triggered()), this, SLOT(slotTakePicture()));
+
+        connect(m_client, SIGNAL(connected()), this, SLOT(slotConnected()));
     }
     catch (std::runtime_error& e)
     {
@@ -254,6 +256,21 @@ void Autoscope::slotEnablePictureDispaly(void)
 void Autoscope::slotTakePicture(void)
 {
 
+}
+
+void Autoscope::slotConnected(void)
+{
+    m_autoscopeWindow->updateIpMessengerText("Connected");
+}
+
+void Autoscope::connectToAutoscope(void)
+{
+    m_client->connectToHost(m_autoscopeIp, m_autoscopePort);
+}
+
+void Autoscope::deconnectFromAutoscope(void)
+{
+    m_client->close();
 }
 
 void Autoscope::getAltAzi(StelObjectP object)

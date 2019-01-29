@@ -75,12 +75,22 @@ void AutoscopeWindowForm::createDialogContent()
     connect(ui->displayOpacityEditor, SIGNAL(valueChanged(int)), this, SLOT(displayOpacityChanged(int)));
     connect(ui->displayOpacitySlider, SIGNAL(valueChanged(int)), this, SLOT(displayOpacityChanged(int)));
 
+    connect(ui->IpAddressEditor, SIGNAL(textChanged(QString)), this, SLOT(ipAddressChanged(QString)));
+    connect(ui->IpPortEditor, SIGNAL(valueChanged(int)), this, SLOT(ipPortChanged(int)));
+    connect(ui->ConnectionButton, SIGNAL(clicked()), this, SLOT(connectionButtonPressed(void)));
+    connect(ui->DeconnectionButton, SIGNAL(clicked()), this, SLOT(deconnectionButtonPressed(void)));
+
     updateMaxMinSlider();
 }
 
 void AutoscopeWindowForm::retranslate()
 {
 
+}
+
+void AutoscopeWindowForm::updateIpMessengerText(QString message)
+{
+    ui->IpMessenger->setText(message);
 }
 
 void AutoscopeWindowForm::updateGuiSize(void)
@@ -278,4 +288,28 @@ void AutoscopeWindowForm::downloadPictureButtonPressed(void)
     qDebug() << "downloadPictureButtonPressed";
 
     m_autoscopePictureWindow->updateImage(QPixmap(":/Autoscope/dossier.png"));
+}
+
+void AutoscopeWindowForm::ipAddressChanged(QString ipAddress)
+{
+    qDebug() << "ipAddressChanged";
+    m_autoscope->setIpAddress(ipAddress);
+}
+
+void AutoscopeWindowForm::ipPortChanged(int port)
+{
+    qDebug() << "ipPortChanged";
+    m_autoscope->setPort(port);
+}
+
+void AutoscopeWindowForm::connectionButtonPressed(void)
+{
+    qDebug() << "connectionButtonPressed";
+    m_autoscope->connectToAutoscope();
+}
+
+void AutoscopeWindowForm::deconnectionButtonPressed(void)
+{
+    qDebug() << "deconnectionButtonPressed";
+    m_autoscope->deconnectFromAutoscope();
 }
