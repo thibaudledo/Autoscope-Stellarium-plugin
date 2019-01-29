@@ -16,7 +16,7 @@ class TcpClient : public QTcpSocket {
     Q_OBJECT
 public:
     TcpClient(QTcpSocket *parent = 0);
-    TcpClient(QHostAddress host_address, quint16 port, QTcpSocket *parent = 0);
+    TcpClient(QHostAddress host_address, quint16 port);
     ~TcpClient();
 
 public slots:

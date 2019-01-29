@@ -29,10 +29,13 @@
 #include "StelObjectMgr.hpp"
 #include "StelObjectType.hpp"
 
+#include <QHostAddress>
+
 class StelButton;
 class QPixmap;
 class AutoscopeWindowForm;
 class AutoscopePictureWindowForm;
+class TcpClient;
 
 //! This is an example of a plug-in which can be dynamically loaded into stellarium
 class Autoscope : public StelModule
@@ -105,6 +108,12 @@ private:
 
     int m_screenWidth;
     int m_screenHeight;
+
+    TcpClient* m_client;
+
+    QHostAddress m_autoscopeIp;
+
+    int m_autoscopePort;
 
 public slots:
     void showGui(void);

@@ -8,7 +8,7 @@ TcpClient::TcpClient(QTcpSocket *parent) : QTcpSocket(parent){
     m_port = 4444;
 }
 
-TcpClient::TcpClient(QHostAddress host_address, quint16 port, QTcpSocket *parent)
+TcpClient::TcpClient(QHostAddress host_address, quint16 port)
   : m_host_address(host_address), m_port(port){
     connect(this, SIGNAL(hostFound()), this, SLOT(host_found_handler()));
     connect(this, SIGNAL(connected()), this, SLOT(connected_handler()));

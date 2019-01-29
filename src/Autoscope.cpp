@@ -80,6 +80,10 @@ Autoscope::Autoscope()
     m_autoscopePictureWindow = new AutoscopePictureWindowForm();
     m_autoscopeWindow->setAutoscopePictureWindow(m_autoscopePictureWindow);
     m_autoscopePictureWindow->setAutoscopeWindow(m_autoscopeWindow);
+
+    m_autoscopeIp = QHostAddress("192.168.43.106");
+    m_autoscopePort = 4444;
+    m_client = new TcpClient(m_autoscopeIp, m_autoscopePort);
 }
 
 /*************************************************************************
@@ -267,6 +271,10 @@ void Autoscope::getAltAzi(StelObjectP object)
 
     cxt = StelUtils::radToDecDegStr(cy);
     cyt = StelUtils::radToDecDegStr(cx);
+
+    QString str = trackObject->getEnglishName() + " Az./Alt. : " + cxt + "  " + cyt;
+
+    m_client->write(str.toStdString().c_str());
 
     qDebug() << trackObject->getEnglishName() << " Az./Alt. : " << cxt << "  " << cyt;
 }
