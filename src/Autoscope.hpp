@@ -70,6 +70,9 @@ public:
     StelMovementMgr* mvMgr;
     StelObjectMgr* objectMgr;
 
+    int getScreenWidth(void){return m_screenWidth;}
+    int getScreenHeight(void){return m_screenHeight;}
+
 private:
 	// Font used for displaying our text
     QSettings* conf;
@@ -100,7 +103,8 @@ private:
     StelObjectP searchedObject;
     bool searchObjectFound = false;
 
-
+    int m_screenWidth;
+    int m_screenHeight;
 
 public slots:
     void showGui(void);

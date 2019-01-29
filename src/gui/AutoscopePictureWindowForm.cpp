@@ -7,13 +7,12 @@
 
 #include <QDebug>
 
-AutoscopePictureWindowForm::AutoscopePictureWindowForm(AutoscopeWindowForm* autoscopeWindowForm)
+AutoscopePictureWindowForm::AutoscopePictureWindowForm()
     : StelDialog ("AutoscopePicture"),
     m_autoscope(Q_NULLPTR),
     m_autoscopeWindow(Q_NULLPTR)
 {
     ui = new Ui_AutoscopePictureWindowForm();
-    //m_autoscopeWindow = autoscopeWindowForm;
 }
 
 AutoscopePictureWindowForm::~AutoscopePictureWindowForm()
@@ -29,12 +28,11 @@ void AutoscopePictureWindowForm::update()
 void AutoscopePictureWindowForm::createDialogContent()
 {
     m_autoscope = GETSTELMODULE(Autoscope);
-    //m_autoscopeWindow = GETSTELMODULE(AutoscopeWindowForm);
 
     ui->setupUi(dialog);
 
-    m_screenWidth = m_autoscopeWindow->getScreenWidth();
-    m_screenHeight = m_autoscopeWindow->getScreenHeight();
+    m_screenWidth = m_autoscope->getScreenWidth();
+    m_screenHeight = m_autoscope->getScreenHeight();
 
     m_guiHorizontalPosition = m_width;
     m_guiVerticalPosition = 0;
@@ -109,7 +107,6 @@ void AutoscopePictureWindowForm::setGuiOpacity(double opacity)
 void AutoscopePictureWindowForm::updateGuiPosition(void)
 {
     qDebug() << "updateGuiPosition";
-    qDebug() << m_guiHorizontalPosition << " " << m_guiVerticalPosition;
 
     dialog->move(int(m_screenWidth-m_guiHorizontalPosition), int(m_guiVerticalPosition));
 }

@@ -1,6 +1,6 @@
 #include "AutoscopeWindowForm.hpp"
 #include "ui_AutoscopeWindowForm.h"
-#include <QDesktopWidget>
+
 #include <QDebug>
 
 #include <QFileDialog>
@@ -39,11 +39,8 @@ void AutoscopeWindowForm::createDialogContent()
 
     ui->setupUi(dialog);
 
-    QDesktopWidget screen;
-    QRect screenSize = screen.screenGeometry();
-
-    m_screenWidth = screenSize.width();
-    m_screenHeight = screenSize.height();
+    m_screenWidth = m_autoscope->getScreenWidth();
+    m_screenHeight = m_autoscope->getScreenHeight();
 
     m_guiHorizontalPosition = m_screenWidth - m_width;
     m_guiVerticalPosition = m_screenHeight - m_height;
@@ -77,8 +74,6 @@ void AutoscopeWindowForm::createDialogContent()
 
     connect(ui->displayOpacityEditor, SIGNAL(valueChanged(int)), this, SLOT(displayOpacityChanged(int)));
     connect(ui->displayOpacitySlider, SIGNAL(valueChanged(int)), this, SLOT(displayOpacityChanged(int)));
-
-
 
     updateMaxMinSlider();
 }
@@ -151,15 +146,16 @@ void AutoscopeWindowForm::toggleDisplayButtonPressed(void)
 
 void AutoscopeWindowForm::toggleDisplay(void)
 {
+
     if(pictureWindowIsVisible)
     {
         m_autoscopePictureWindow->setVisible(false);
         pictureWindowIsVisible = false;
     }else{
-        qDebug() << "ok1";
+
         m_autoscopePictureWindow->setVisible(true);
         pictureWindowIsVisible = true;
-        qDebug() << "ok2";
+
         m_autoscopePictureWindow->updateGuiPosition();
     }
 }

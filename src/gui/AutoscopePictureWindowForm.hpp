@@ -20,7 +20,7 @@ class AutoscopePictureWindowForm : public StelDialog
     Q_OBJECT
 
 public:
-    AutoscopePictureWindowForm(AutoscopeWindowForm* autoscopeWindowForm);
+    AutoscopePictureWindowForm();
     ~AutoscopePictureWindowForm();
 
     void update();
@@ -43,6 +43,8 @@ public:
     void updateGuiPosition(void);
 
     void updateImage(QPixmap image);
+
+    void setAutoscopeWindow(AutoscopeWindowForm* autoscopeWindow){m_autoscopeWindow = autoscopeWindow;}
 
 protected:
     void createDialogContent();

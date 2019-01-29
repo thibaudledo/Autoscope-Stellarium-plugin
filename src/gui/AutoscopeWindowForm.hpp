@@ -27,6 +27,7 @@ public:
     void update();
 
     AutoscopePictureWindowForm* getAutoscopePictureWindowForm(void){if(m_autoscopePictureWindow!=nullptr)return m_autoscopePictureWindow;}
+    void setAutoscopePictureWindow(AutoscopePictureWindowForm* autoscopePictureWindow){m_autoscopePictureWindow = autoscopePictureWindow;}
 
     int getGuiHorizontalPosition(void);
     int getGuiVerticalPosition(void);

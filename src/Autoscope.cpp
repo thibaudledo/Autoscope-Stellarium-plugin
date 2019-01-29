@@ -35,10 +35,13 @@
 #include <QPixmap>
 #include <QSettings>
 
+#include "StelDialog.hpp"
+
 #include "AutoscopeWindowForm.hpp"
 #include "AutoscopePictureWindowForm.hpp"
 #include "network/tcp_client.hpp"
 
+#include <QDesktopWidget>
 #include <QDebug>
 
 /*************************************************************************
@@ -74,7 +77,9 @@ Autoscope::Autoscope()
     conf = StelApp::getInstance().getSettings();
     gui = dynamic_cast<StelGui*>(StelApp::getInstance().getGui());
     m_autoscopeWindow = new AutoscopeWindowForm();
-    m_autoscopePictureWindow = new AutoscopePictureWindowForm(m_autoscopeWindow);
+    m_autoscopePictureWindow = new AutoscopePictureWindowForm();
+    m_autoscopeWindow->setAutoscopePictureWindow(m_autoscopePictureWindow);
+    m_autoscopePictureWindow->setAutoscopeWindow(m_autoscopeWindow);
 }
 
 /*************************************************************************
@@ -180,6 +185,12 @@ void Autoscope::init()
     {
         qWarning() << "WARNING: unable create toolbar button for CompassMarks plugin: " << e.what();
     }
+
+    QDesktopWidget screen;
+    QRect screenSize = screen.screenGeometry();
+
+    m_screenWidth = screenSize.width();
+    m_screenHeight = screenSize.height();
 }
 
 void Autoscope::loadConfiguration()
@@ -325,7 +336,7 @@ void Autoscope::moveObserverToObject(StelObjectP object)
 void Autoscope::update(double t)
 {
     m_autoscopeWindow->update();
-    m_autoscopeWindow->getAutoscopePictureWindowForm()->update();
+    m_autoscopePictureWindow->update();
 
     if(guiIsVisible)
     {
