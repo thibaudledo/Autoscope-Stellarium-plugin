@@ -22,21 +22,21 @@ This plugin depends on:
 ## Usage
   
 ### Download Stellarium sources:
-...
+```
 ~ $
     mkdir DEV
     cd DEV
     git clone https://github.com/Stellarium/stellarium.git
     cd stellarium
-...
+```
   
 ### Download Autoscope plugin sources:
   
-...
+```
 ~/DEV/stellarium/ $
     cd plugins
     git clone https://github.com/thibaudledo/Autoscope-Stellarium-plugin.git
-...
+```
   
 <br>
   
@@ -47,13 +47,13 @@ To open Stellarium, I recommand to use QtCreator with CMake. After the installat
   
 ### Adding Autoscope plugin to Stellarium
   
-* In the file CMakeLists.txt, append ADD_PLUGIN(Autoscope 1) at the line 323
+* In the file CMakeLists.txt, append ```ADD_PLUGIN(Autoscope 1)``` at the line 323
 * In the file StelApp.cpp, append the following lines at the line 96:
-...
+```
     #ifdef USE_STATIC_PLUGIN_AUTOSCOPE
     Q_IMPORT_PLUGIN(AutoscopeStelPluginInterface)
     #endif
-...
+```
   
 ### Build Stellarium
   
