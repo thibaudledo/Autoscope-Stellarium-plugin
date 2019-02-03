@@ -256,7 +256,7 @@ void AutoscopeWindowForm::displayOpacityChanged(int opacity)
     qDebug() << "displayOpacityChanged";
     if(pictureWindowIsVisible)
     {
-        double d_opacity = double(opacity/100);
+        double d_opacity = opacity/100.0;
         m_autoscopePictureWindow->setGuiOpacity(d_opacity);
     }
 }
