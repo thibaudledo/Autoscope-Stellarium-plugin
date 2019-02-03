@@ -264,11 +264,8 @@ void AutoscopeWindowForm::displayOpacityChanged(int opacity)
 void AutoscopeWindowForm::updateMaxMinSlider(void)
 {
     qDebug() << "updateMaxMinSlider";
-    ui->horizontalDisplayPositionSlider->setMaximum(int(m_screenWidth));
+    ui->horizontalDisplayPositionSlider->setMaximum(int(m_screenWidth-(m_autoscopePictureWindow->getGuiWidth())));
     ui->verticalDisplayPositionSlider->setMaximum(int(m_screenHeight-(m_autoscopePictureWindow->getGuiHeight())));
-
-    ui->horizontalDisplayPositionSlider->setMinimum(m_autoscopePictureWindow->getGuiWidth());
-    ui->verticalDisplayPositionSlider->setMinimum(0);
 }
 
 void AutoscopeWindowForm::outputPictureDirectoryChanged(void)

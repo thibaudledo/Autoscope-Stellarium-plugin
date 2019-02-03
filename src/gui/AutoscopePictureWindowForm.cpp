@@ -34,9 +34,6 @@ void AutoscopePictureWindowForm::createDialogContent()
     m_screenWidth = m_autoscope->getScreenWidth();
     m_screenHeight = m_autoscope->getScreenHeight();
 
-    m_guiHorizontalPosition = m_width;
-    m_guiVerticalPosition = 0;
-
     dialog->setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
 
     dialog->resize(m_width, m_height);
@@ -108,7 +105,7 @@ void AutoscopePictureWindowForm::updateGuiPosition(void)
 {
     qDebug() << "updateGuiPosition";
 
-    dialog->move(int(m_screenWidth-m_guiHorizontalPosition), int(m_guiVerticalPosition));
+    dialog->move(int(m_screenWidth-(m_guiHorizontalPosition+m_width)), int(m_guiVerticalPosition));
 }
 
 void AutoscopePictureWindowForm::updateImage(QPixmap image)

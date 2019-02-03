@@ -41,7 +41,7 @@
       <enum>QTabWidget::Rounded</enum>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>2</number>
      </property>
      <property name="movable">
       <bool>false</bool>
@@ -178,7 +178,7 @@
          <item row="0" column="0">
           <widget class="QLabel" name="zoomLabel">
            <property name="styleSheet">
-            <string notr="true">QWidget{color: #838586;}</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>Zoom :</string>
@@ -441,7 +441,7 @@
          <item>
           <widget class="QLabel" name="picturePositionLabel">
            <property name="styleSheet">
-            <string notr="true">QWidget{color: #838586;}</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>Position of the display :</string>
@@ -451,7 +451,7 @@
          <item>
           <widget class="QLabel" name="horizontalLabel">
            <property name="styleSheet">
-            <string notr="true">QWidget{color: #838586;}</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>x :</string>
@@ -554,7 +554,7 @@
          <item>
           <widget class="QLabel" name="picturePathLabel">
            <property name="styleSheet">
-            <string notr="true">QWidget{color: #838586;}</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>Output picture directory :</string>

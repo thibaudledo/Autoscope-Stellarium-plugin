@@ -131,8 +131,8 @@ private:
     int m_screenWidth;  /*!< The width of the screen */
     int m_screenHeight; /*!< The height of the screen */
 
-    int m_guiHorizontalPosition;    /*!< The horizontal position of the dialog box */
-    int m_guiVerticalPosition;      /*!< The vertical position of the dialog box */
+    int m_guiHorizontalPosition = 0;    /*!< The horizontal position of the dialog box */
+    int m_guiVerticalPosition = 0;      /*!< The vertical position of the dialog box */
 
 public slots:
 
