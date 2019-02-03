@@ -1,0 +1,111 @@
+\hypertarget{class_autoscope_stel_plugin_interface}{}\section{Autoscope\+Stel\+Plugin\+Interface Class Reference}
+\label{class_autoscope_stel_plugin_interface}\index{AutoscopeStelPluginInterface@{AutoscopeStelPluginInterface}}
+
+
+This class is used by Qt to manage a plug-\/in interface.  
+
+
+
+
+{\ttfamily \#include $<$Autoscope.\+hpp$>$}
+
+
+
+Inheritance diagram for Autoscope\+Stel\+Plugin\+Interface\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{d0/d73/class_autoscope_stel_plugin_interface__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Autoscope\+Stel\+Plugin\+Interface\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{d1/d41/class_autoscope_stel_plugin_interface__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual Stel\+Module $\ast$ \mbox{\hyperlink{class_autoscope_stel_plugin_interface_a681456cfd440703d70f3fbf1b5a07887}{get\+Stel\+Module}} () const
+\item 
+virtual Stel\+Plugin\+Info \mbox{\hyperlink{class_autoscope_stel_plugin_interface_a22c9f313b39683d3ec45523ac5cbc4e7}{get\+Plugin\+Info}} () const
+\item 
+virtual Q\+Object\+List \mbox{\hyperlink{class_autoscope_stel_plugin_interface_ad9cba957b6ed14aa666e18671881862a}{get\+Extension\+List}} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is used by Qt to manage a plug-\/in interface. 
+
+Definition at line 311 of file Autoscope.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_autoscope_stel_plugin_interface_ad9cba957b6ed14aa666e18671881862a}\label{class_autoscope_stel_plugin_interface_ad9cba957b6ed14aa666e18671881862a}} 
+\index{AutoscopeStelPluginInterface@{AutoscopeStelPluginInterface}!getExtensionList@{getExtensionList}}
+\index{getExtensionList@{getExtensionList}!AutoscopeStelPluginInterface@{AutoscopeStelPluginInterface}}
+\subsubsection{\texorpdfstring{getExtensionList()}{getExtensionList()}}
+{\footnotesize\ttfamily virtual Q\+Object\+List Autoscope\+Stel\+Plugin\+Interface\+::get\+Extension\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 319 of file Autoscope.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{319 \{ \textcolor{keywordflow}{return} QObjectList(); \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_autoscope_stel_plugin_interface_a22c9f313b39683d3ec45523ac5cbc4e7}\label{class_autoscope_stel_plugin_interface_a22c9f313b39683d3ec45523ac5cbc4e7}} 
+\index{AutoscopeStelPluginInterface@{AutoscopeStelPluginInterface}!getPluginInfo@{getPluginInfo}}
+\index{getPluginInfo@{getPluginInfo}!AutoscopeStelPluginInterface@{AutoscopeStelPluginInterface}}
+\subsubsection{\texorpdfstring{getPluginInfo()}{getPluginInfo()}}
+{\footnotesize\ttfamily Stel\+Plugin\+Info Autoscope\+Stel\+Plugin\+Interface\+::get\+Plugin\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 56 of file Autoscope.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{57 \{}
+\DoxyCodeLine{58     Q\_INIT\_RESOURCE(\mbox{\hyperlink{class_autoscope}{Autoscope}});}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60     StelPluginInfo info;}
+\DoxyCodeLine{61     info.id = \textcolor{stringliteral}{"Autoscope"};}
+\DoxyCodeLine{62     info.displayedName = \textcolor{stringliteral}{"Autoscope plugin"};}
+\DoxyCodeLine{63     info.authors = \textcolor{stringliteral}{"Thibaud Le Doledec"};}
+\DoxyCodeLine{64     info.contact = \textcolor{stringliteral}{"thibaudledo@gmail.com"};}
+\DoxyCodeLine{65     info.description = \textcolor{stringliteral}{"A plugin for the control of our version of open source telescope"};}
+\DoxyCodeLine{66     \textcolor{keywordflow}{return} info;}
+\DoxyCodeLine{67 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_autoscope_stel_plugin_interface_a681456cfd440703d70f3fbf1b5a07887}\label{class_autoscope_stel_plugin_interface_a681456cfd440703d70f3fbf1b5a07887}} 
+\index{AutoscopeStelPluginInterface@{AutoscopeStelPluginInterface}!getStelModule@{getStelModule}}
+\index{getStelModule@{getStelModule}!AutoscopeStelPluginInterface@{AutoscopeStelPluginInterface}}
+\subsubsection{\texorpdfstring{getStelModule()}{getStelModule()}}
+{\footnotesize\ttfamily Stel\+Module $\ast$ Autoscope\+Stel\+Plugin\+Interface\+::get\+Stel\+Module (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 51 of file Autoscope.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{52 \{}
+\DoxyCodeLine{53     \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{class_autoscope}{Autoscope}}();}
+\DoxyCodeLine{54 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_autoscope_8hpp}{Autoscope.\+hpp}}\item 
+\mbox{\hyperlink{_autoscope_8cpp}{Autoscope.\+cpp}}\end{DoxyCompactItemize}

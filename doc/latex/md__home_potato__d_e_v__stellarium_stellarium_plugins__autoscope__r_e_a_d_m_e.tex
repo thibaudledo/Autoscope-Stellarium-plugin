@@ -1,0 +1,73 @@
+This plugin is use by Stellarium for controlling or telescope called Autoscope.
+
+~\newline
+
+
+\subsection*{Description}
+
+This plugin allow the user to control the Autoscope through Stellarium. It\textquotesingle{}s use for positionning the Autoscope, take picture, and retreive them.
+
+~\newline
+
+
+\subsection*{Dependencies}
+
+This plugin depends on\+:
+
+
+\begin{DoxyItemize}
+\item U\+RI\+: \href{https://github.com/Stellarium/stellarium}{\texttt{ https\+://github.\+com/\+Stellarium/stellarium}}
+\begin{DoxyItemize}
+\item branch\+: master
+\end{DoxyItemize}
+
+~\newline
+
+\end{DoxyItemize}
+
+\subsection*{Usage}
+
+\#\#\# Download Stellarium sources\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{~ \$}
+\DoxyCodeLine{    mkdir DEV}
+\DoxyCodeLine{    cd DEV}
+\DoxyCodeLine{    git clone https://github.com/Stellarium/stellarium.git}
+\DoxyCodeLine{    cd stellarium}
+\end{DoxyCode}
+
+
+\subsubsection*{Download Autoscope plugin sources\+:}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{~/DEV/stellarium/ \$}
+\DoxyCodeLine{    cd plugins}
+\DoxyCodeLine{    git clone https://github.com/thibaudledo/Autoscope-Stellarium-plugin.git}
+\end{DoxyCode}
+
+
+~\newline
+
+
+\subsubsection*{Openning Stellarium}
+
+To open Stellarium, I recommand to use Qt\+Creator with C\+Make. After the installation, you can open Stellarium in Qt\+Creator with the following file\+: $\sim$/\+D\+E\+V/stellarium/\+C\+Make\+Lists.txt
+
+\subsubsection*{Adding Autoscope plugin to Stellarium}
+
+
+\begin{DoxyItemize}
+\item In the file C\+Make\+Lists.\+txt, append {\ttfamily A\+D\+D\+\_\+\+P\+L\+U\+G\+I\+N(\+Autoscope 1)} at the line 323
+\item In the file Stel\+App.\+cpp, append the following lines at the line 96\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#ifdef USE\_STATIC\_PLUGIN\_AUTOSCOPE}
+\DoxyCodeLine{Q\_IMPORT\_PLUGIN(AutoscopeStelPluginInterface)}
+\DoxyCodeLine{\#endif}
+\end{DoxyCode}
+
+\end{DoxyItemize}
+
+\subsubsection*{Build Stellarium}
+
+After all these steps, you can use Qt\+Creator to build and run Stellarium with the Autoscope plugin in it! 

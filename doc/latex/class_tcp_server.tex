@@ -1,0 +1,185 @@
+\hypertarget{class_tcp_server}{}\section{Tcp\+Server Class Reference}
+\label{class_tcp_server}\index{TcpServer@{TcpServer}}
+
+
+The \mbox{\hyperlink{class_tcp_server}{Tcp\+Server}} class allow to make usage of Q\+Tcp\+Server more suitable for development.  
+
+
+
+
+{\ttfamily \#include $<$tcp\+\_\+server.\+hpp$>$}
+
+
+
+Inheritance diagram for Tcp\+Server\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=149pt]{class_tcp_server__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tcp\+Server\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=149pt]{class_tcp_server__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_tcp_server_a90ee8945eb2ceec552f5f7a850fd9dce}{create\+\_\+socket}} (void)
+\begin{DoxyCompactList}\small\item\em create\+\_\+socket \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tcp_server_abc977059ef61f1c42f5fda1bc5945ab0}{Tcp\+Server}} ()
+\item 
+\mbox{\hyperlink{class_tcp_server_af43d51237b45ebb729911d829dfa7856}{Tcp\+Server}} (bool autostart=0)
+\item 
+\mbox{\hyperlink{class_tcp_server_a5242d1465353dd6e57bf556416021598}{Tcp\+Server}} (Q\+String \&host\+\_\+address, quint16 port=4444, bool autostart=0)
+\item 
+\mbox{\hyperlink{class_tcp_server_a728a9e31c53cf86887f1f6149b1c46dd}{$\sim$\+Tcp\+Server}} ()
+\item 
+void \mbox{\hyperlink{class_tcp_server_ab9a387d38fd311ae853b4b4006504096}{start}} (void)
+\begin{DoxyCompactList}\small\item\em start \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tcp_server_aaf6005b12641ab81bcf91099d9255437}{set\+\_\+port}} (quint16 port)
+\begin{DoxyCompactList}\small\item\em set\+\_\+port \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tcp_server_a3496c0dfa5e3c1cb5bf794739508eda4}{set\+\_\+address}} (const char $\ast$address)
+\begin{DoxyCompactList}\small\item\em set\+\_\+address \end{DoxyCompactList}\item 
+Q\+Tcp\+Socket $\ast$ \mbox{\hyperlink{class_tcp_server_a321f1064fd590efdeb1f9458b89afdca}{get\+\_\+client}} (void)
+\begin{DoxyCompactList}\small\item\em get\+\_\+client \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+quint16 \mbox{\hyperlink{class_tcp_server_a01d5a7bfe29ae6632180be7899d3740f}{m\+\_\+port}}
+\item 
+Q\+String \mbox{\hyperlink{class_tcp_server_aa8fd2e3eebacb69a7f785ffcc2a69eee}{m\+\_\+host\+\_\+address}}
+\item 
+Q\+Tcp\+Socket $\ast$ \mbox{\hyperlink{class_tcp_server_a34a159e3301900eac7bf08346fc3615b}{m\+\_\+tcp\+\_\+client}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{class_tcp_server}{Tcp\+Server}} class allow to make usage of Q\+Tcp\+Server more suitable for development. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tcp_server_abc977059ef61f1c42f5fda1bc5945ab0}\label{class_tcp_server_abc977059ef61f1c42f5fda1bc5945ab0}} 
+\index{TcpServer@{TcpServer}!TcpServer@{TcpServer}}
+\index{TcpServer@{TcpServer}!TcpServer@{TcpServer}}
+\subsubsection{\texorpdfstring{TcpServer()}{TcpServer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Tcp\+Server\+::\+Tcp\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{class_tcp_server_af43d51237b45ebb729911d829dfa7856}\label{class_tcp_server_af43d51237b45ebb729911d829dfa7856}} 
+\index{TcpServer@{TcpServer}!TcpServer@{TcpServer}}
+\index{TcpServer@{TcpServer}!TcpServer@{TcpServer}}
+\subsubsection{\texorpdfstring{TcpServer()}{TcpServer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Tcp\+Server\+::\+Tcp\+Server (\begin{DoxyParamCaption}\item[{bool}]{autostart = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_tcp_server_a5242d1465353dd6e57bf556416021598}\label{class_tcp_server_a5242d1465353dd6e57bf556416021598}} 
+\index{TcpServer@{TcpServer}!TcpServer@{TcpServer}}
+\index{TcpServer@{TcpServer}!TcpServer@{TcpServer}}
+\subsubsection{\texorpdfstring{TcpServer()}{TcpServer()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Tcp\+Server\+::\+Tcp\+Server (\begin{DoxyParamCaption}\item[{Q\+String \&}]{host\+\_\+address,  }\item[{quint16}]{port = {\ttfamily 4444},  }\item[{bool}]{autostart = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_tcp_server_a728a9e31c53cf86887f1f6149b1c46dd}\label{class_tcp_server_a728a9e31c53cf86887f1f6149b1c46dd}} 
+\index{TcpServer@{TcpServer}!````~TcpServer@{$\sim$TcpServer}}
+\index{````~TcpServer@{$\sim$TcpServer}!TcpServer@{TcpServer}}
+\subsubsection{\texorpdfstring{$\sim$TcpServer()}{~TcpServer()}}
+{\footnotesize\ttfamily Tcp\+Server\+::$\sim$\+Tcp\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tcp_server_a90ee8945eb2ceec552f5f7a850fd9dce}\label{class_tcp_server_a90ee8945eb2ceec552f5f7a850fd9dce}} 
+\index{TcpServer@{TcpServer}!create\_socket@{create\_socket}}
+\index{create\_socket@{create\_socket}!TcpServer@{TcpServer}}
+\subsubsection{\texorpdfstring{create\_socket}{create\_socket}}
+{\footnotesize\ttfamily void Tcp\+Server\+::create\+\_\+socket (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+create\+\_\+socket 
+
+\mbox{\Hypertarget{class_tcp_server_a321f1064fd590efdeb1f9458b89afdca}\label{class_tcp_server_a321f1064fd590efdeb1f9458b89afdca}} 
+\index{TcpServer@{TcpServer}!get\_client@{get\_client}}
+\index{get\_client@{get\_client}!TcpServer@{TcpServer}}
+\subsubsection{\texorpdfstring{get\_client()}{get\_client()}}
+{\footnotesize\ttfamily Q\+Tcp\+Socket $\ast$ Tcp\+Server\+::get\+\_\+client (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+get\+\_\+client 
+
+\begin{DoxyReturn}{Returns}
+client address for interacting with the client connected to the server 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tcp_server_a3496c0dfa5e3c1cb5bf794739508eda4}\label{class_tcp_server_a3496c0dfa5e3c1cb5bf794739508eda4}} 
+\index{TcpServer@{TcpServer}!set\_address@{set\_address}}
+\index{set\_address@{set\_address}!TcpServer@{TcpServer}}
+\subsubsection{\texorpdfstring{set\_address()}{set\_address()}}
+{\footnotesize\ttfamily void Tcp\+Server\+::set\+\_\+address (\begin{DoxyParamCaption}\item[{const char $\ast$}]{address }\end{DoxyParamCaption})}
+
+
+
+set\+\_\+address 
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tcp_server_aaf6005b12641ab81bcf91099d9255437}\label{class_tcp_server_aaf6005b12641ab81bcf91099d9255437}} 
+\index{TcpServer@{TcpServer}!set\_port@{set\_port}}
+\index{set\_port@{set\_port}!TcpServer@{TcpServer}}
+\subsubsection{\texorpdfstring{set\_port()}{set\_port()}}
+{\footnotesize\ttfamily void Tcp\+Server\+::set\+\_\+port (\begin{DoxyParamCaption}\item[{quint16}]{port }\end{DoxyParamCaption})}
+
+
+
+set\+\_\+port 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tcp_server_ab9a387d38fd311ae853b4b4006504096}\label{class_tcp_server_ab9a387d38fd311ae853b4b4006504096}} 
+\index{TcpServer@{TcpServer}!start@{start}}
+\index{start@{start}!TcpServer@{TcpServer}}
+\subsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void Tcp\+Server\+::start (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+start 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_tcp_server_aa8fd2e3eebacb69a7f785ffcc2a69eee}\label{class_tcp_server_aa8fd2e3eebacb69a7f785ffcc2a69eee}} 
+\index{TcpServer@{TcpServer}!m\_host\_address@{m\_host\_address}}
+\index{m\_host\_address@{m\_host\_address}!TcpServer@{TcpServer}}
+\subsubsection{\texorpdfstring{m\_host\_address}{m\_host\_address}}
+{\footnotesize\ttfamily Q\+String Tcp\+Server\+::m\+\_\+host\+\_\+address\hspace{0.3cm}{\ttfamily [private]}}
+
+Client object used to communicate with the client connected to the server \mbox{\Hypertarget{class_tcp_server_a01d5a7bfe29ae6632180be7899d3740f}\label{class_tcp_server_a01d5a7bfe29ae6632180be7899d3740f}} 
+\index{TcpServer@{TcpServer}!m\_port@{m\_port}}
+\index{m\_port@{m\_port}!TcpServer@{TcpServer}}
+\subsubsection{\texorpdfstring{m\_port}{m\_port}}
+{\footnotesize\ttfamily quint16 Tcp\+Server\+::m\+\_\+port\hspace{0.3cm}{\ttfamily [private]}}
+
+$<$ Server port Server address \mbox{\Hypertarget{class_tcp_server_a34a159e3301900eac7bf08346fc3615b}\label{class_tcp_server_a34a159e3301900eac7bf08346fc3615b}} 
+\index{TcpServer@{TcpServer}!m\_tcp\_client@{m\_tcp\_client}}
+\index{m\_tcp\_client@{m\_tcp\_client}!TcpServer@{TcpServer}}
+\subsubsection{\texorpdfstring{m\_tcp\_client}{m\_tcp\_client}}
+{\footnotesize\ttfamily Q\+Tcp\+Socket$\ast$ Tcp\+Server\+::m\+\_\+tcp\+\_\+client\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+network/\mbox{\hyperlink{tcp__server_8hpp}{tcp\+\_\+server.\+hpp}}\item 
+network/\mbox{\hyperlink{tcp__server_8cpp}{tcp\+\_\+server.\+cpp}}\end{DoxyCompactItemize}

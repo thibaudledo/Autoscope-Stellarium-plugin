@@ -1,0 +1,144 @@
+\hypertarget{class_tcp_client}{}\section{Tcp\+Client Class Reference}
+\label{class_tcp_client}\index{TcpClient@{TcpClient}}
+
+
+The \mbox{\hyperlink{class_tcp_client}{Tcp\+Client}} class allow to make usage of Q\+Tcp\+Socket more suitable for development.  
+
+
+
+
+{\ttfamily \#include $<$tcp\+\_\+client.\+hpp$>$}
+
+
+
+Inheritance diagram for Tcp\+Client\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{class_tcp_client__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tcp\+Client\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{class_tcp_client__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_tcp_client_a2c1b8363f05d55bc06335f8da4c7fc8e}{host\+\_\+found\+\_\+handler}} (void)
+\begin{DoxyCompactList}\small\item\em Handle host found. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tcp_client_a2467855310250aad604efaabfdccb55c}{connected\+\_\+handler}} (void)
+\begin{DoxyCompactList}\small\item\em Handle connection to host. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tcp_client_adde22f7475a79d89eca8107fd9223405}{Tcp\+Client}} (Q\+Tcp\+Socket $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Builder of the \mbox{\hyperlink{class_tcp_client}{Tcp\+Client}} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tcp_client_a27a11b182cec604367594ae040e042a8}{Tcp\+Client}} (Q\+Host\+Address host\+\_\+address, quint16 port)
+\begin{DoxyCompactList}\small\item\em Builder of the \mbox{\hyperlink{class_tcp_client}{Tcp\+Client}} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tcp_client_a125d2277f401cbdebadb9689a5933e18}{$\sim$\+Tcp\+Client}} ()
+\begin{DoxyCompactList}\small\item\em Destroyer of the \mbox{\hyperlink{class_tcp_client}{Tcp\+Client}} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+quint16 \mbox{\hyperlink{class_tcp_client_a9c8dbdd8d4571d37bc774d17b627c2d5}{m\+\_\+port}}
+\item 
+Q\+Host\+Address \mbox{\hyperlink{class_tcp_client_acf0e0d339a1160852fd2ed2eaf4dce7f}{m\+\_\+host\+\_\+address}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{class_tcp_client}{Tcp\+Client}} class allow to make usage of Q\+Tcp\+Socket more suitable for development. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tcp_client_adde22f7475a79d89eca8107fd9223405}\label{class_tcp_client_adde22f7475a79d89eca8107fd9223405}} 
+\index{TcpClient@{TcpClient}!TcpClient@{TcpClient}}
+\index{TcpClient@{TcpClient}!TcpClient@{TcpClient}}
+\subsubsection{\texorpdfstring{TcpClient()}{TcpClient()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Tcp\+Client\+::\+Tcp\+Client (\begin{DoxyParamCaption}\item[{Q\+Tcp\+Socket $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Builder of the \mbox{\hyperlink{class_tcp_client}{Tcp\+Client}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The parent of the \mbox{\hyperlink{class_tcp_client}{Tcp\+Client}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tcp_client_a27a11b182cec604367594ae040e042a8}\label{class_tcp_client_a27a11b182cec604367594ae040e042a8}} 
+\index{TcpClient@{TcpClient}!TcpClient@{TcpClient}}
+\index{TcpClient@{TcpClient}!TcpClient@{TcpClient}}
+\subsubsection{\texorpdfstring{TcpClient()}{TcpClient()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Tcp\+Client\+::\+Tcp\+Client (\begin{DoxyParamCaption}\item[{Q\+Host\+Address}]{host\+\_\+address,  }\item[{quint16}]{port }\end{DoxyParamCaption})}
+
+
+
+Builder of the \mbox{\hyperlink{class_tcp_client}{Tcp\+Client}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em host\+\_\+address} & The address of the server \\
+\hline
+{\em port} & The port of the server \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tcp_client_a125d2277f401cbdebadb9689a5933e18}\label{class_tcp_client_a125d2277f401cbdebadb9689a5933e18}} 
+\index{TcpClient@{TcpClient}!````~TcpClient@{$\sim$TcpClient}}
+\index{````~TcpClient@{$\sim$TcpClient}!TcpClient@{TcpClient}}
+\subsubsection{\texorpdfstring{$\sim$TcpClient()}{~TcpClient()}}
+{\footnotesize\ttfamily Tcp\+Client\+::$\sim$\+Tcp\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroyer of the \mbox{\hyperlink{class_tcp_client}{Tcp\+Client}} class. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tcp_client_a2467855310250aad604efaabfdccb55c}\label{class_tcp_client_a2467855310250aad604efaabfdccb55c}} 
+\index{TcpClient@{TcpClient}!connected\_handler@{connected\_handler}}
+\index{connected\_handler@{connected\_handler}!TcpClient@{TcpClient}}
+\subsubsection{\texorpdfstring{connected\_handler}{connected\_handler}}
+{\footnotesize\ttfamily void Tcp\+Client\+::connected\+\_\+handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Handle connection to host. 
+
+\mbox{\Hypertarget{class_tcp_client_a2c1b8363f05d55bc06335f8da4c7fc8e}\label{class_tcp_client_a2c1b8363f05d55bc06335f8da4c7fc8e}} 
+\index{TcpClient@{TcpClient}!host\_found\_handler@{host\_found\_handler}}
+\index{host\_found\_handler@{host\_found\_handler}!TcpClient@{TcpClient}}
+\subsubsection{\texorpdfstring{host\_found\_handler}{host\_found\_handler}}
+{\footnotesize\ttfamily void Tcp\+Client\+::host\+\_\+found\+\_\+handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Handle host found. 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_tcp_client_acf0e0d339a1160852fd2ed2eaf4dce7f}\label{class_tcp_client_acf0e0d339a1160852fd2ed2eaf4dce7f}} 
+\index{TcpClient@{TcpClient}!m\_host\_address@{m\_host\_address}}
+\index{m\_host\_address@{m\_host\_address}!TcpClient@{TcpClient}}
+\subsubsection{\texorpdfstring{m\_host\_address}{m\_host\_address}}
+{\footnotesize\ttfamily Q\+Host\+Address Tcp\+Client\+::m\+\_\+host\+\_\+address\hspace{0.3cm}{\ttfamily [private]}}
+
+server host address \mbox{\Hypertarget{class_tcp_client_a9c8dbdd8d4571d37bc774d17b627c2d5}\label{class_tcp_client_a9c8dbdd8d4571d37bc774d17b627c2d5}} 
+\index{TcpClient@{TcpClient}!m\_port@{m\_port}}
+\index{m\_port@{m\_port}!TcpClient@{TcpClient}}
+\subsubsection{\texorpdfstring{m\_port}{m\_port}}
+{\footnotesize\ttfamily quint16 Tcp\+Client\+::m\+\_\+port\hspace{0.3cm}{\ttfamily [private]}}
+
+server port 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+network/\mbox{\hyperlink{tcp__client_8hpp}{tcp\+\_\+client.\+hpp}}\item 
+network/\mbox{\hyperlink{tcp__client_8cpp}{tcp\+\_\+client.\+cpp}}\end{DoxyCompactItemize}

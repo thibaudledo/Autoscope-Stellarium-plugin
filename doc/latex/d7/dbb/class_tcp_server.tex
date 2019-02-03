@@ -1,0 +1,291 @@
+\hypertarget{class_tcp_server}{}\section{Tcp\+Server Class Reference}
+\label{class_tcp_server}\index{TcpServer@{TcpServer}}
+
+
+The \mbox{\hyperlink{class_tcp_server}{Tcp\+Server}} class allow to make usage of Q\+Tcp\+Server more suitable for development.  
+
+
+
+
+{\ttfamily \#include $<$tcp\+\_\+server.\+hpp$>$}
+
+
+
+Inheritance diagram for Tcp\+Server\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=149pt]{d8/dc4/class_tcp_server__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tcp\+Server\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=149pt]{dc/d71/class_tcp_server__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_tcp_server_a90ee8945eb2ceec552f5f7a850fd9dce}{create\+\_\+socket}} (void)
+\begin{DoxyCompactList}\small\item\em create\+\_\+socket \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tcp_server_abc977059ef61f1c42f5fda1bc5945ab0}{Tcp\+Server}} ()
+\item 
+\mbox{\hyperlink{class_tcp_server_af43d51237b45ebb729911d829dfa7856}{Tcp\+Server}} (bool autostart=0)
+\item 
+\mbox{\hyperlink{class_tcp_server_a5242d1465353dd6e57bf556416021598}{Tcp\+Server}} (Q\+String \&host\+\_\+address, quint16 port=4444, bool autostart=0)
+\item 
+\mbox{\hyperlink{class_tcp_server_a728a9e31c53cf86887f1f6149b1c46dd}{$\sim$\+Tcp\+Server}} ()
+\item 
+void \mbox{\hyperlink{class_tcp_server_ab9a387d38fd311ae853b4b4006504096}{start}} (void)
+\begin{DoxyCompactList}\small\item\em start \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tcp_server_aaf6005b12641ab81bcf91099d9255437}{set\+\_\+port}} (quint16 port)
+\begin{DoxyCompactList}\small\item\em set\+\_\+port \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tcp_server_a3496c0dfa5e3c1cb5bf794739508eda4}{set\+\_\+address}} (const char $\ast$address)
+\begin{DoxyCompactList}\small\item\em set\+\_\+address \end{DoxyCompactList}\item 
+Q\+Tcp\+Socket $\ast$ \mbox{\hyperlink{class_tcp_server_a321f1064fd590efdeb1f9458b89afdca}{get\+\_\+client}} (void)
+\begin{DoxyCompactList}\small\item\em get\+\_\+client \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{class_tcp_server}{Tcp\+Server}} class allow to make usage of Q\+Tcp\+Server more suitable for development. 
+
+Definition at line 20 of file tcp\+\_\+server.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tcp_server_abc977059ef61f1c42f5fda1bc5945ab0}\label{class_tcp_server_abc977059ef61f1c42f5fda1bc5945ab0}} 
+\index{TcpServer@{TcpServer}!TcpServer@{TcpServer}}
+\index{TcpServer@{TcpServer}!TcpServer@{TcpServer}}
+\subsubsection{\texorpdfstring{TcpServer()}{TcpServer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Tcp\+Server\+::\+Tcp\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Definition at line 3 of file tcp\+\_\+server.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3                     \{}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tcp_server_af43d51237b45ebb729911d829dfa7856}\label{class_tcp_server_af43d51237b45ebb729911d829dfa7856}} 
+\index{TcpServer@{TcpServer}!TcpServer@{TcpServer}}
+\index{TcpServer@{TcpServer}!TcpServer@{TcpServer}}
+\subsubsection{\texorpdfstring{TcpServer()}{TcpServer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Tcp\+Server\+::\+Tcp\+Server (\begin{DoxyParamCaption}\item[{bool}]{autostart = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 7 of file tcp\+\_\+server.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{7                                   \{}
+\DoxyCodeLine{8     m\_host\_address = \textcolor{stringliteral}{"127.0.0.1"};}
+\DoxyCodeLine{9     m\_port = 4444;}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11     \textcolor{keywordflow}{if} (autostart)\{}
+\DoxyCodeLine{12         \mbox{\hyperlink{class_tcp_server_ab9a387d38fd311ae853b4b4006504096}{start}}();}
+\DoxyCodeLine{13     \}}
+\DoxyCodeLine{14 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tcp_server_a5242d1465353dd6e57bf556416021598}\label{class_tcp_server_a5242d1465353dd6e57bf556416021598}} 
+\index{TcpServer@{TcpServer}!TcpServer@{TcpServer}}
+\index{TcpServer@{TcpServer}!TcpServer@{TcpServer}}
+\subsubsection{\texorpdfstring{TcpServer()}{TcpServer()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Tcp\+Server\+::\+Tcp\+Server (\begin{DoxyParamCaption}\item[{Q\+String \&}]{host\+\_\+address,  }\item[{quint16}]{port = {\ttfamily 4444},  }\item[{bool}]{autostart = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 16 of file tcp\+\_\+server.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16                                                                        \{}
+\DoxyCodeLine{17     m\_host\_address = host\_address;}
+\DoxyCodeLine{18     m\_port = port;}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \textcolor{keywordflow}{if} (autostart)\{}
+\DoxyCodeLine{21         \mbox{\hyperlink{class_tcp_server_ab9a387d38fd311ae853b4b4006504096}{start}}();}
+\DoxyCodeLine{22     \}}
+\DoxyCodeLine{23 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tcp_server_a728a9e31c53cf86887f1f6149b1c46dd}\label{class_tcp_server_a728a9e31c53cf86887f1f6149b1c46dd}} 
+\index{TcpServer@{TcpServer}!````~TcpServer@{$\sim$TcpServer}}
+\index{````~TcpServer@{$\sim$TcpServer}!TcpServer@{TcpServer}}
+\subsubsection{\texorpdfstring{$\sim$TcpServer()}{~TcpServer()}}
+{\footnotesize\ttfamily Tcp\+Server\+::$\sim$\+Tcp\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 25 of file tcp\+\_\+server.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25                      \{}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \}}
+
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tcp_server_a90ee8945eb2ceec552f5f7a850fd9dce}\label{class_tcp_server_a90ee8945eb2ceec552f5f7a850fd9dce}} 
+\index{TcpServer@{TcpServer}!create\_socket@{create\_socket}}
+\index{create\_socket@{create\_socket}!TcpServer@{TcpServer}}
+\subsubsection{\texorpdfstring{create\_socket}{create\_socket}}
+{\footnotesize\ttfamily void Tcp\+Server\+::create\+\_\+socket (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+create\+\_\+socket 
+
+
+
+Definition at line 29 of file tcp\+\_\+server.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{29                              \{}
+\DoxyCodeLine{30     m\_tcp\_client = nextPendingConnection();}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32     \textcolor{keywordflow}{if} (!m\_tcp\_client->isValid())\{}
+\DoxyCodeLine{33         qDebug() << \textcolor{stringliteral}{"TCP socket error: socket state: "} << m\_tcp\_client->state();}
+\DoxyCodeLine{34     \}}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36     \textcolor{comment}{//connect(m\_tcp\_client, SIGNAL(readyRead()), this, SLOT());}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     qDebug() << \textcolor{stringliteral}{"Connection opened"};}
+\DoxyCodeLine{39 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tcp_server_a321f1064fd590efdeb1f9458b89afdca}\label{class_tcp_server_a321f1064fd590efdeb1f9458b89afdca}} 
+\index{TcpServer@{TcpServer}!get\_client@{get\_client}}
+\index{get\_client@{get\_client}!TcpServer@{TcpServer}}
+\subsubsection{\texorpdfstring{get\_client()}{get\_client()}}
+{\footnotesize\ttfamily Q\+Tcp\+Socket $\ast$ Tcp\+Server\+::get\+\_\+client (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+get\+\_\+client 
+
+\begin{DoxyReturn}{Returns}
+client address for interacting with the client connected to the server 
+\end{DoxyReturn}
+
+
+Definition at line 68 of file tcp\+\_\+server.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{68                                      \{}
+\DoxyCodeLine{69     \textcolor{keywordflow}{return} m\_tcp\_client;}
+\DoxyCodeLine{70 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tcp_server_a3496c0dfa5e3c1cb5bf794739508eda4}\label{class_tcp_server_a3496c0dfa5e3c1cb5bf794739508eda4}} 
+\index{TcpServer@{TcpServer}!set\_address@{set\_address}}
+\index{set\_address@{set\_address}!TcpServer@{TcpServer}}
+\subsubsection{\texorpdfstring{set\_address()}{set\_address()}}
+{\footnotesize\ttfamily void Tcp\+Server\+::set\+\_\+address (\begin{DoxyParamCaption}\item[{const char $\ast$}]{address }\end{DoxyParamCaption})}
+
+
+
+set\+\_\+address 
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 64 of file tcp\+\_\+server.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{64                                               \{}
+\DoxyCodeLine{65     m\_host\_address = QString(address);}
+\DoxyCodeLine{66 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tcp_server_aaf6005b12641ab81bcf91099d9255437}\label{class_tcp_server_aaf6005b12641ab81bcf91099d9255437}} 
+\index{TcpServer@{TcpServer}!set\_port@{set\_port}}
+\index{set\_port@{set\_port}!TcpServer@{TcpServer}}
+\subsubsection{\texorpdfstring{set\_port()}{set\_port()}}
+{\footnotesize\ttfamily void Tcp\+Server\+::set\+\_\+port (\begin{DoxyParamCaption}\item[{quint16}]{port }\end{DoxyParamCaption})}
+
+
+
+set\+\_\+port 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 60 of file tcp\+\_\+server.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{60                                     \{}
+\DoxyCodeLine{61     m\_port = port;}
+\DoxyCodeLine{62 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tcp_server_ab9a387d38fd311ae853b4b4006504096}\label{class_tcp_server_ab9a387d38fd311ae853b4b4006504096}} 
+\index{TcpServer@{TcpServer}!start@{start}}
+\index{start@{start}!TcpServer@{TcpServer}}
+\subsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void Tcp\+Server\+::start (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+start 
+
+
+
+Definition at line 41 of file tcp\+\_\+server.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{41                      \{}
+\DoxyCodeLine{42     \textcolor{keywordtype}{bool} ret = \textcolor{keyword}{false};}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44     qDebug() << \textcolor{stringliteral}{"Starting TCP server..."};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     connect(\textcolor{keyword}{this}, SIGNAL(newConnection()), \textcolor{keyword}{this}, SLOT(\mbox{\hyperlink{class_tcp_server_a90ee8945eb2ceec552f5f7a850fd9dce}{create\_socket}}()));}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48     \textcolor{comment}{// Get host address automatically whether possible}}
+\DoxyCodeLine{49     ret = listen(QHostAddress(QString(m\_host\_address)), m\_port);}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51     \textcolor{keywordflow}{if} (ret == \textcolor{keyword}{false})\{}
+\DoxyCodeLine{52         qDebug() << \textcolor{stringliteral}{"Starting TCP server... failed"};}
+\DoxyCodeLine{53     \}}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55     \textcolor{comment}{// Wait until isListening() with timeout}}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57     qDebug() << \textcolor{stringliteral}{"Starting TCP server... done"};}
+\DoxyCodeLine{58 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+network/\mbox{\hyperlink{tcp__server_8hpp}{tcp\+\_\+server.\+hpp}}\item 
+network/\mbox{\hyperlink{tcp__server_8cpp}{tcp\+\_\+server.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,656 @@
+\hypertarget{class_autoscope_window_form}{}\section{Autoscope\+Window\+Form Class Reference}
+\label{class_autoscope_window_form}\index{AutoscopeWindowForm@{AutoscopeWindowForm}}
+
+
+This class is use to build a configuration interface between the user and the plugin.  
+
+
+
+
+{\ttfamily \#include $<$Autoscope\+Window\+Form.\+hpp$>$}
+
+
+
+Inheritance diagram for Autoscope\+Window\+Form\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{class_autoscope_window_form__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Autoscope\+Window\+Form\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_autoscope_window_form__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_autoscope_window_form_a3f3d731c45d104fee58dd4c2dcc6fd86}{retranslate}} ()
+\begin{DoxyCompactList}\small\item\em Inherited from the Stel\+Dialog class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_autoscope_window_form_ac6b0a28c17efb188b234ce1c08baa82d}{start\+Button\+Pressed}} (void)
+\begin{DoxyCompactList}\small\item\em Start initialization of the telescope. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_autoscope_window_form_ad7b04807a37c5014ab3a151d2ce720b7}{track\+Button\+Pressed}} (void)
+\begin{DoxyCompactList}\small\item\em Start tracking the selected object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_autoscope_window_form_a867b2e9355138f8b41c17dba563c43ef}{untrack\+Button\+Pressed}} (void)
+\begin{DoxyCompactList}\small\item\em Stop tracking the tracked object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_autoscope_window_form_ac78048dc833bd4952108cb5fe8cac6f8}{take\+Picture\+Button\+Pressed}} (void)
+\begin{DoxyCompactList}\small\item\em Send a command to the telescope to take a picture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_autoscope_window_form_ae7caa21b226f06d2f32fd6da6d539bbf}{toggle\+Display\+Button\+Pressed}} (void)
+\begin{DoxyCompactList}\small\item\em Toggle the visibility of the picture display. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_autoscope_window_form_abff392139c212a6f9e183d3984a02a47}{Autoscope\+Window\+Form}} ()
+\begin{DoxyCompactList}\small\item\em Builder of the \mbox{\hyperlink{class_autoscope_window_form}{Autoscope\+Window\+Form}} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_autoscope_window_form_a2a7cceef655815a6c6ee1cc65a40fa8d}{$\sim$\+Autoscope\+Window\+Form}} ()
+\begin{DoxyCompactList}\small\item\em Destroyer of the \mbox{\hyperlink{class_autoscope_window_form}{Autoscope\+Window\+Form}} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_autoscope_window_form_a732f751b8de766e03f5f79a7a08db136}{update}} ()
+\begin{DoxyCompactList}\small\item\em Method used to update calculation and displayed components. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_autoscope_window_form_a4308f566557feaba98e031e28e527812}{set\+Autoscope\+Picture\+Window}} (\mbox{\hyperlink{class_autoscope_picture_window_form}{Autoscope\+Picture\+Window\+Form}} $\ast$autoscope\+Picture\+Window)
+\begin{DoxyCompactList}\small\item\em Setter used to initialize an instance of \mbox{\hyperlink{class_autoscope_picture_window_form}{Autoscope\+Picture\+Window\+Form}} class. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_autoscope_window_form_ad065e4a2a518d779407238e3c258f6e6}{get\+Gui\+Horizontal\+Position}} (void)
+\begin{DoxyCompactList}\small\item\em Getter used to retreive the horizontal gui position. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_autoscope_window_form_a0d92cd0c7342749009e12058517ba060}{get\+Gui\+Vertical\+Position}} (void)
+\begin{DoxyCompactList}\small\item\em Getter used to retreive the vertical gui position. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_autoscope_window_form_a51b6c47d99b53207d9e65157f01270ff}{get\+Screen\+Size\+Percent}} (void)
+\begin{DoxyCompactList}\small\item\em Getter used to retreive the value of the display size editor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_autoscope_window_form_af62e38bc2170d8504f63f07e5d0b4943}{update\+Gui\+Size}} (void)
+\begin{DoxyCompactList}\small\item\em Method used to update the gui size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_autoscope_window_form_aada2c3ef979ce1718bb981490f6c7495}{update\+Gui\+Position}} (void)
+\begin{DoxyCompactList}\small\item\em Method used to update the gui position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_autoscope_window_form_adfa249163e1c2a72485c24a575a67efb}{toggle\+Display}} (void)
+\begin{DoxyCompactList}\small\item\em Method used to toggle the visibility of the picture display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_autoscope_window_form_a38a4a73945cffab764db46b8deec800a}{update\+Ip\+Messenger\+Text}} (Q\+String)
+\begin{DoxyCompactList}\small\item\em Method used to update the IP messenger text. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_autoscope_window_form_ab48246f0892a43963b7d209dc3bf4b4f}{create\+Dialog\+Content}} ()
+\begin{DoxyCompactList}\small\item\em This method is inherited form the Stel\+Dialog class and it\textquotesingle{}s use to create the content of the dialog box. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_autoscope_window_form_a2b958095518ce01c502f912284c9e0cf}{move\+To\+Button\+Pressed}} (void)
+\begin{DoxyCompactList}\small\item\em Move to an azimuth and an altitude. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_autoscope_window_form_a19ceb0c2b007b8adb2a0946b7851c06f}{azimuth\+Changed}} (double)
+\begin{DoxyCompactList}\small\item\em Update azimuth value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_autoscope_window_form_ab29957fd0ac7ea266fd36ce67b3eda75}{altitude\+Changed}} (double)
+\begin{DoxyCompactList}\small\item\em Update altitude value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_autoscope_window_form_a44ccf2b66aa6be7495190d2bb1e62e16}{search\+Object\+Changed}} (Q\+String)
+\begin{DoxyCompactList}\small\item\em Update searched object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_autoscope_window_form_a9a392b1d4b55f5c90653aa418cfa133c}{search\+Button\+Pressed}} (void)
+\begin{DoxyCompactList}\small\item\em Move to the searched object and track it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_autoscope_window_form_a10578baeef8b914526da55ae8d2bddc6}{zoom\+Changed}} (int)
+\begin{DoxyCompactList}\small\item\em Update zoom value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_autoscope_window_form_a2a96899ef93c00205b604c9f4d6ad8e0}{exposure\+Time\+Changed}} (double)
+\begin{DoxyCompactList}\small\item\em Update exposure time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_autoscope_window_form_afa0e563f29e92ef54caf172e6bdd53e2}{number\+Of\+Picture\+Changed}} (int)
+\begin{DoxyCompactList}\small\item\em Update the number of picture taken at each time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_autoscope_window_form_a20119c95db0bc44f6e7fffc49f230af0}{display\+Size\+Changed}} (int)
+\begin{DoxyCompactList}\small\item\em Update the size value of the picture display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_autoscope_window_form_a084c9da4dd3374105e3dd0302e5db578}{horizontal\+Display\+Position\+Changed}} (int)
+\begin{DoxyCompactList}\small\item\em Update the horizontal position value of the picture display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_autoscope_window_form_a775044eeb0c9bf094512c82d2c538ad0}{vertical\+Display\+Position\+Changed}} (int)
+\begin{DoxyCompactList}\small\item\em Update the vertical position value of the picture display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_autoscope_window_form_ac76b6ed3d0bd679c7342eb15bf217418}{display\+Opacity\+Changed}} (int)
+\begin{DoxyCompactList}\small\item\em Update the opacity value of the picture display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_autoscope_window_form_ac44f36cc4ccc68c6109d1c18ab7ba107}{output\+Picture\+Directory\+Changed}} (void)
+\begin{DoxyCompactList}\small\item\em Update the path to put picture into. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_autoscope_window_form_a429d5bdc1f4d7d673e5ae85692e2b67f}{output\+Picture\+Directory\+Button\+Pressed}} (void)
+\begin{DoxyCompactList}\small\item\em Show directory browser to select the directory to put picture into. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_autoscope_window_form_aa9b74f8e713325bc6a1ffbfa2bde4c86}{download\+Picture\+Button\+Pressed}} (void)
+\begin{DoxyCompactList}\small\item\em Download the last picture taken. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_autoscope_window_form_a80f7209d6d50544e0ff3428929144ab9}{ip\+Address\+Changed}} (Q\+String)
+\begin{DoxyCompactList}\small\item\em Update the IP address of the telescope. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_autoscope_window_form_a6a97495bdd5b32ffb89c8c282873e214}{ip\+Port\+Changed}} (int)
+\begin{DoxyCompactList}\small\item\em Update the IP port of the telescope. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_autoscope_window_form_a1ff4464df3990dc363cb186813427a0d}{connection\+Button\+Pressed}} (void)
+\begin{DoxyCompactList}\small\item\em Connect to the IP address and port. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_autoscope_window_form_ab370615515fd07540aed9fa2afa06522}{deconnection\+Button\+Pressed}} (void)
+\begin{DoxyCompactList}\small\item\em Disconnect form the telescope. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_autoscope_window_form_a599b2ec55d4051832dea26cc715265fe}{update\+Max\+Min\+Slider}} (void)
+\begin{DoxyCompactList}\small\item\em Method used to update max and min value of the position slider. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+\_\+\+Autoscope\+Window\+Form $\ast$ \mbox{\hyperlink{class_autoscope_window_form_a9a937e00b0a9a4d16001b5da7449a07f}{ui}}
+\item 
+int \mbox{\hyperlink{class_autoscope_window_form_a494735b51d06bfa71d5954da50f51d3d}{m\+\_\+width}} = 600
+\item 
+int \mbox{\hyperlink{class_autoscope_window_form_a6dbb17c9dce12f2a8775e1510b0139e9}{m\+\_\+height}} = 300
+\item 
+int \mbox{\hyperlink{class_autoscope_window_form_a6a4204832945288b420ae248dc69ae08}{m\+\_\+screen\+Width}}
+\item 
+int \mbox{\hyperlink{class_autoscope_window_form_a60c88c0b6f8f7f5eac46680a7b00b59e}{m\+\_\+screen\+Height}}
+\item 
+int \mbox{\hyperlink{class_autoscope_window_form_a729b0f3174ac22f142a78dbc6d2677be}{m\+\_\+gui\+Horizontal\+Position}}
+\item 
+int \mbox{\hyperlink{class_autoscope_window_form_abfd03b3848ab390f59cfe1778595bcb8}{m\+\_\+gui\+Vertical\+Position}}
+\item 
+int \mbox{\hyperlink{class_autoscope_window_form_a4e436f5aca95b4d503ae9c5fe28ec8ed}{screen\+Size\+Percent}}
+\item 
+bool \mbox{\hyperlink{class_autoscope_window_form_a0a27bb2073810e25351a6dc773f128df}{picture\+Window\+Is\+Visible}} = false
+\item 
+\mbox{\hyperlink{class_autoscope}{Autoscope}} $\ast$ \mbox{\hyperlink{class_autoscope_window_form_a73df08489686c1d7f72d0e1d7f3bfee3}{m\+\_\+autoscope}}
+\begin{DoxyCompactList}\small\item\em An instance of \mbox{\hyperlink{class_autoscope}{Autoscope}} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_autoscope_picture_window_form}{Autoscope\+Picture\+Window\+Form}} $\ast$ \mbox{\hyperlink{class_autoscope_window_form_a859556308e579b3c83862e943684f859}{m\+\_\+autoscope\+Picture\+Window}}
+\begin{DoxyCompactList}\small\item\em An instance of \mbox{\hyperlink{class_autoscope_picture_window_form}{Autoscope\+Picture\+Window\+Form}} class. \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{class_autoscope_window_form_a2e8d5a43841204d931654d255e194e60}{picturedirectory\+Path}} = \char`\"{}\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is use to build a configuration interface between the user and the plugin. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_autoscope_window_form_abff392139c212a6f9e183d3984a02a47}\label{class_autoscope_window_form_abff392139c212a6f9e183d3984a02a47}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{AutoscopeWindowForm()}{AutoscopeWindowForm()}}
+{\footnotesize\ttfamily Autoscope\+Window\+Form\+::\+Autoscope\+Window\+Form (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Builder of the \mbox{\hyperlink{class_autoscope_window_form}{Autoscope\+Window\+Form}} class. 
+
+\mbox{\Hypertarget{class_autoscope_window_form_a2a7cceef655815a6c6ee1cc65a40fa8d}\label{class_autoscope_window_form_a2a7cceef655815a6c6ee1cc65a40fa8d}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!````~AutoscopeWindowForm@{$\sim$AutoscopeWindowForm}}
+\index{````~AutoscopeWindowForm@{$\sim$AutoscopeWindowForm}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{$\sim$AutoscopeWindowForm()}{~AutoscopeWindowForm()}}
+{\footnotesize\ttfamily Autoscope\+Window\+Form\+::$\sim$\+Autoscope\+Window\+Form (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroyer of the \mbox{\hyperlink{class_autoscope_window_form}{Autoscope\+Window\+Form}} class. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_autoscope_window_form_ab29957fd0ac7ea266fd36ce67b3eda75}\label{class_autoscope_window_form_ab29957fd0ac7ea266fd36ce67b3eda75}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!altitudeChanged@{altitudeChanged}}
+\index{altitudeChanged@{altitudeChanged}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{altitudeChanged}{altitudeChanged}}
+{\footnotesize\ttfamily void Autoscope\+Window\+Form\+::altitude\+Changed (\begin{DoxyParamCaption}\item[{double}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Update altitude value. 
+
+\mbox{\Hypertarget{class_autoscope_window_form_a19ceb0c2b007b8adb2a0946b7851c06f}\label{class_autoscope_window_form_a19ceb0c2b007b8adb2a0946b7851c06f}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!azimuthChanged@{azimuthChanged}}
+\index{azimuthChanged@{azimuthChanged}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{azimuthChanged}{azimuthChanged}}
+{\footnotesize\ttfamily void Autoscope\+Window\+Form\+::azimuth\+Changed (\begin{DoxyParamCaption}\item[{double}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Update azimuth value. 
+
+\mbox{\Hypertarget{class_autoscope_window_form_a1ff4464df3990dc363cb186813427a0d}\label{class_autoscope_window_form_a1ff4464df3990dc363cb186813427a0d}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!connectionButtonPressed@{connectionButtonPressed}}
+\index{connectionButtonPressed@{connectionButtonPressed}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{connectionButtonPressed}{connectionButtonPressed}}
+{\footnotesize\ttfamily void Autoscope\+Window\+Form\+::connection\+Button\+Pressed (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Connect to the IP address and port. 
+
+\mbox{\Hypertarget{class_autoscope_window_form_ab48246f0892a43963b7d209dc3bf4b4f}\label{class_autoscope_window_form_ab48246f0892a43963b7d209dc3bf4b4f}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!createDialogContent@{createDialogContent}}
+\index{createDialogContent@{createDialogContent}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{createDialogContent()}{createDialogContent()}}
+{\footnotesize\ttfamily void Autoscope\+Window\+Form\+::create\+Dialog\+Content (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+This method is inherited form the Stel\+Dialog class and it\textquotesingle{}s use to create the content of the dialog box. 
+
+\begin{DoxySeeAlso}{See also}
+Stel\+Dialog 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_autoscope_window_form_ab370615515fd07540aed9fa2afa06522}\label{class_autoscope_window_form_ab370615515fd07540aed9fa2afa06522}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!deconnectionButtonPressed@{deconnectionButtonPressed}}
+\index{deconnectionButtonPressed@{deconnectionButtonPressed}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{deconnectionButtonPressed}{deconnectionButtonPressed}}
+{\footnotesize\ttfamily void Autoscope\+Window\+Form\+::deconnection\+Button\+Pressed (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Disconnect form the telescope. 
+
+\mbox{\Hypertarget{class_autoscope_window_form_ac76b6ed3d0bd679c7342eb15bf217418}\label{class_autoscope_window_form_ac76b6ed3d0bd679c7342eb15bf217418}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!displayOpacityChanged@{displayOpacityChanged}}
+\index{displayOpacityChanged@{displayOpacityChanged}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{displayOpacityChanged}{displayOpacityChanged}}
+{\footnotesize\ttfamily void Autoscope\+Window\+Form\+::display\+Opacity\+Changed (\begin{DoxyParamCaption}\item[{int}]{opacity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Update the opacity value of the picture display. 
+
+\mbox{\Hypertarget{class_autoscope_window_form_a20119c95db0bc44f6e7fffc49f230af0}\label{class_autoscope_window_form_a20119c95db0bc44f6e7fffc49f230af0}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!displaySizeChanged@{displaySizeChanged}}
+\index{displaySizeChanged@{displaySizeChanged}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{displaySizeChanged}{displaySizeChanged}}
+{\footnotesize\ttfamily void Autoscope\+Window\+Form\+::display\+Size\+Changed (\begin{DoxyParamCaption}\item[{int}]{percent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Update the size value of the picture display. 
+
+\mbox{\Hypertarget{class_autoscope_window_form_aa9b74f8e713325bc6a1ffbfa2bde4c86}\label{class_autoscope_window_form_aa9b74f8e713325bc6a1ffbfa2bde4c86}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!downloadPictureButtonPressed@{downloadPictureButtonPressed}}
+\index{downloadPictureButtonPressed@{downloadPictureButtonPressed}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{downloadPictureButtonPressed}{downloadPictureButtonPressed}}
+{\footnotesize\ttfamily void Autoscope\+Window\+Form\+::download\+Picture\+Button\+Pressed (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Download the last picture taken. 
+
+\mbox{\Hypertarget{class_autoscope_window_form_a2a96899ef93c00205b604c9f4d6ad8e0}\label{class_autoscope_window_form_a2a96899ef93c00205b604c9f4d6ad8e0}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!exposureTimeChanged@{exposureTimeChanged}}
+\index{exposureTimeChanged@{exposureTimeChanged}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{exposureTimeChanged}{exposureTimeChanged}}
+{\footnotesize\ttfamily void Autoscope\+Window\+Form\+::exposure\+Time\+Changed (\begin{DoxyParamCaption}\item[{double}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Update exposure time. 
+
+\mbox{\Hypertarget{class_autoscope_window_form_ad065e4a2a518d779407238e3c258f6e6}\label{class_autoscope_window_form_ad065e4a2a518d779407238e3c258f6e6}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!getGuiHorizontalPosition@{getGuiHorizontalPosition}}
+\index{getGuiHorizontalPosition@{getGuiHorizontalPosition}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{getGuiHorizontalPosition()}{getGuiHorizontalPosition()}}
+{\footnotesize\ttfamily int Autoscope\+Window\+Form\+::get\+Gui\+Horizontal\+Position (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Getter used to retreive the horizontal gui position. 
+
+\begin{DoxyReturn}{Returns}
+The horizontal gui position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_autoscope_window_form_a0d92cd0c7342749009e12058517ba060}\label{class_autoscope_window_form_a0d92cd0c7342749009e12058517ba060}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!getGuiVerticalPosition@{getGuiVerticalPosition}}
+\index{getGuiVerticalPosition@{getGuiVerticalPosition}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{getGuiVerticalPosition()}{getGuiVerticalPosition()}}
+{\footnotesize\ttfamily int Autoscope\+Window\+Form\+::get\+Gui\+Vertical\+Position (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Getter used to retreive the vertical gui position. 
+
+\begin{DoxyReturn}{Returns}
+The vertical gui position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_autoscope_window_form_a51b6c47d99b53207d9e65157f01270ff}\label{class_autoscope_window_form_a51b6c47d99b53207d9e65157f01270ff}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!getScreenSizePercent@{getScreenSizePercent}}
+\index{getScreenSizePercent@{getScreenSizePercent}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{getScreenSizePercent()}{getScreenSizePercent()}}
+{\footnotesize\ttfamily int Autoscope\+Window\+Form\+::get\+Screen\+Size\+Percent (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Getter used to retreive the value of the display size editor. 
+
+\begin{DoxyReturn}{Returns}
+The value of the display size editor 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_autoscope_window_form_a084c9da4dd3374105e3dd0302e5db578}\label{class_autoscope_window_form_a084c9da4dd3374105e3dd0302e5db578}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!horizontalDisplayPositionChanged@{horizontalDisplayPositionChanged}}
+\index{horizontalDisplayPositionChanged@{horizontalDisplayPositionChanged}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{horizontalDisplayPositionChanged}{horizontalDisplayPositionChanged}}
+{\footnotesize\ttfamily void Autoscope\+Window\+Form\+::horizontal\+Display\+Position\+Changed (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Update the horizontal position value of the picture display. 
+
+\mbox{\Hypertarget{class_autoscope_window_form_a80f7209d6d50544e0ff3428929144ab9}\label{class_autoscope_window_form_a80f7209d6d50544e0ff3428929144ab9}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!ipAddressChanged@{ipAddressChanged}}
+\index{ipAddressChanged@{ipAddressChanged}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{ipAddressChanged}{ipAddressChanged}}
+{\footnotesize\ttfamily void Autoscope\+Window\+Form\+::ip\+Address\+Changed (\begin{DoxyParamCaption}\item[{Q\+String}]{ip\+Address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Update the IP address of the telescope. 
+
+\mbox{\Hypertarget{class_autoscope_window_form_a6a97495bdd5b32ffb89c8c282873e214}\label{class_autoscope_window_form_a6a97495bdd5b32ffb89c8c282873e214}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!ipPortChanged@{ipPortChanged}}
+\index{ipPortChanged@{ipPortChanged}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{ipPortChanged}{ipPortChanged}}
+{\footnotesize\ttfamily void Autoscope\+Window\+Form\+::ip\+Port\+Changed (\begin{DoxyParamCaption}\item[{int}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Update the IP port of the telescope. 
+
+\mbox{\Hypertarget{class_autoscope_window_form_a2b958095518ce01c502f912284c9e0cf}\label{class_autoscope_window_form_a2b958095518ce01c502f912284c9e0cf}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!moveToButtonPressed@{moveToButtonPressed}}
+\index{moveToButtonPressed@{moveToButtonPressed}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{moveToButtonPressed}{moveToButtonPressed}}
+{\footnotesize\ttfamily void Autoscope\+Window\+Form\+::move\+To\+Button\+Pressed (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Move to an azimuth and an altitude. 
+
+\mbox{\Hypertarget{class_autoscope_window_form_afa0e563f29e92ef54caf172e6bdd53e2}\label{class_autoscope_window_form_afa0e563f29e92ef54caf172e6bdd53e2}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!numberOfPictureChanged@{numberOfPictureChanged}}
+\index{numberOfPictureChanged@{numberOfPictureChanged}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{numberOfPictureChanged}{numberOfPictureChanged}}
+{\footnotesize\ttfamily void Autoscope\+Window\+Form\+::number\+Of\+Picture\+Changed (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Update the number of picture taken at each time. 
+
+\mbox{\Hypertarget{class_autoscope_window_form_a429d5bdc1f4d7d673e5ae85692e2b67f}\label{class_autoscope_window_form_a429d5bdc1f4d7d673e5ae85692e2b67f}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!outputPictureDirectoryButtonPressed@{outputPictureDirectoryButtonPressed}}
+\index{outputPictureDirectoryButtonPressed@{outputPictureDirectoryButtonPressed}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{outputPictureDirectoryButtonPressed}{outputPictureDirectoryButtonPressed}}
+{\footnotesize\ttfamily void Autoscope\+Window\+Form\+::output\+Picture\+Directory\+Button\+Pressed (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Show directory browser to select the directory to put picture into. 
+
+\mbox{\Hypertarget{class_autoscope_window_form_ac44f36cc4ccc68c6109d1c18ab7ba107}\label{class_autoscope_window_form_ac44f36cc4ccc68c6109d1c18ab7ba107}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!outputPictureDirectoryChanged@{outputPictureDirectoryChanged}}
+\index{outputPictureDirectoryChanged@{outputPictureDirectoryChanged}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{outputPictureDirectoryChanged}{outputPictureDirectoryChanged}}
+{\footnotesize\ttfamily void Autoscope\+Window\+Form\+::output\+Picture\+Directory\+Changed (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Update the path to put picture into. 
+
+\mbox{\Hypertarget{class_autoscope_window_form_a3f3d731c45d104fee58dd4c2dcc6fd86}\label{class_autoscope_window_form_a3f3d731c45d104fee58dd4c2dcc6fd86}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!retranslate@{retranslate}}
+\index{retranslate@{retranslate}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{retranslate}{retranslate}}
+{\footnotesize\ttfamily void Autoscope\+Window\+Form\+::retranslate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Inherited from the Stel\+Dialog class. 
+
+\begin{DoxySeeAlso}{See also}
+Stel\+Dialog 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_autoscope_window_form_a9a392b1d4b55f5c90653aa418cfa133c}\label{class_autoscope_window_form_a9a392b1d4b55f5c90653aa418cfa133c}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!searchButtonPressed@{searchButtonPressed}}
+\index{searchButtonPressed@{searchButtonPressed}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{searchButtonPressed}{searchButtonPressed}}
+{\footnotesize\ttfamily void Autoscope\+Window\+Form\+::search\+Button\+Pressed (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Move to the searched object and track it. 
+
+\mbox{\Hypertarget{class_autoscope_window_form_a44ccf2b66aa6be7495190d2bb1e62e16}\label{class_autoscope_window_form_a44ccf2b66aa6be7495190d2bb1e62e16}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!searchObjectChanged@{searchObjectChanged}}
+\index{searchObjectChanged@{searchObjectChanged}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{searchObjectChanged}{searchObjectChanged}}
+{\footnotesize\ttfamily void Autoscope\+Window\+Form\+::search\+Object\+Changed (\begin{DoxyParamCaption}\item[{Q\+String}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Update searched object. 
+
+\mbox{\Hypertarget{class_autoscope_window_form_a4308f566557feaba98e031e28e527812}\label{class_autoscope_window_form_a4308f566557feaba98e031e28e527812}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!setAutoscopePictureWindow@{setAutoscopePictureWindow}}
+\index{setAutoscopePictureWindow@{setAutoscopePictureWindow}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{setAutoscopePictureWindow()}{setAutoscopePictureWindow()}}
+{\footnotesize\ttfamily void Autoscope\+Window\+Form\+::set\+Autoscope\+Picture\+Window (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_autoscope_picture_window_form}{Autoscope\+Picture\+Window\+Form}} $\ast$}]{autoscope\+Picture\+Window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setter used to initialize an instance of \mbox{\hyperlink{class_autoscope_picture_window_form}{Autoscope\+Picture\+Window\+Form}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em autoscope\+Picture\+Window} & An instance of \mbox{\hyperlink{class_autoscope_picture_window_form}{Autoscope\+Picture\+Window\+Form}} class \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_autoscope_window_form_ac6b0a28c17efb188b234ce1c08baa82d}\label{class_autoscope_window_form_ac6b0a28c17efb188b234ce1c08baa82d}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!startButtonPressed@{startButtonPressed}}
+\index{startButtonPressed@{startButtonPressed}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{startButtonPressed}{startButtonPressed}}
+{\footnotesize\ttfamily void Autoscope\+Window\+Form\+::start\+Button\+Pressed (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Start initialization of the telescope. 
+
+\mbox{\Hypertarget{class_autoscope_window_form_ac78048dc833bd4952108cb5fe8cac6f8}\label{class_autoscope_window_form_ac78048dc833bd4952108cb5fe8cac6f8}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!takePictureButtonPressed@{takePictureButtonPressed}}
+\index{takePictureButtonPressed@{takePictureButtonPressed}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{takePictureButtonPressed}{takePictureButtonPressed}}
+{\footnotesize\ttfamily void Autoscope\+Window\+Form\+::take\+Picture\+Button\+Pressed (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Send a command to the telescope to take a picture. 
+
+\mbox{\Hypertarget{class_autoscope_window_form_adfa249163e1c2a72485c24a575a67efb}\label{class_autoscope_window_form_adfa249163e1c2a72485c24a575a67efb}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!toggleDisplay@{toggleDisplay}}
+\index{toggleDisplay@{toggleDisplay}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{toggleDisplay()}{toggleDisplay()}}
+{\footnotesize\ttfamily void Autoscope\+Window\+Form\+::toggle\+Display (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Method used to toggle the visibility of the picture display. 
+
+\mbox{\Hypertarget{class_autoscope_window_form_ae7caa21b226f06d2f32fd6da6d539bbf}\label{class_autoscope_window_form_ae7caa21b226f06d2f32fd6da6d539bbf}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!toggleDisplayButtonPressed@{toggleDisplayButtonPressed}}
+\index{toggleDisplayButtonPressed@{toggleDisplayButtonPressed}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{toggleDisplayButtonPressed}{toggleDisplayButtonPressed}}
+{\footnotesize\ttfamily void Autoscope\+Window\+Form\+::toggle\+Display\+Button\+Pressed (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Toggle the visibility of the picture display. 
+
+\mbox{\Hypertarget{class_autoscope_window_form_ad7b04807a37c5014ab3a151d2ce720b7}\label{class_autoscope_window_form_ad7b04807a37c5014ab3a151d2ce720b7}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!trackButtonPressed@{trackButtonPressed}}
+\index{trackButtonPressed@{trackButtonPressed}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{trackButtonPressed}{trackButtonPressed}}
+{\footnotesize\ttfamily void Autoscope\+Window\+Form\+::track\+Button\+Pressed (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Start tracking the selected object. 
+
+\mbox{\Hypertarget{class_autoscope_window_form_a867b2e9355138f8b41c17dba563c43ef}\label{class_autoscope_window_form_a867b2e9355138f8b41c17dba563c43ef}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!untrackButtonPressed@{untrackButtonPressed}}
+\index{untrackButtonPressed@{untrackButtonPressed}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{untrackButtonPressed}{untrackButtonPressed}}
+{\footnotesize\ttfamily void Autoscope\+Window\+Form\+::untrack\+Button\+Pressed (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Stop tracking the tracked object. 
+
+\mbox{\Hypertarget{class_autoscope_window_form_a732f751b8de766e03f5f79a7a08db136}\label{class_autoscope_window_form_a732f751b8de766e03f5f79a7a08db136}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!update@{update}}
+\index{update@{update}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Autoscope\+Window\+Form\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method used to update calculation and displayed components. 
+
+\mbox{\Hypertarget{class_autoscope_window_form_aada2c3ef979ce1718bb981490f6c7495}\label{class_autoscope_window_form_aada2c3ef979ce1718bb981490f6c7495}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!updateGuiPosition@{updateGuiPosition}}
+\index{updateGuiPosition@{updateGuiPosition}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{updateGuiPosition()}{updateGuiPosition()}}
+{\footnotesize\ttfamily void Autoscope\+Window\+Form\+::update\+Gui\+Position (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Method used to update the gui position. 
+
+\mbox{\Hypertarget{class_autoscope_window_form_af62e38bc2170d8504f63f07e5d0b4943}\label{class_autoscope_window_form_af62e38bc2170d8504f63f07e5d0b4943}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!updateGuiSize@{updateGuiSize}}
+\index{updateGuiSize@{updateGuiSize}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{updateGuiSize()}{updateGuiSize()}}
+{\footnotesize\ttfamily void Autoscope\+Window\+Form\+::update\+Gui\+Size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Method used to update the gui size. 
+
+\mbox{\Hypertarget{class_autoscope_window_form_a38a4a73945cffab764db46b8deec800a}\label{class_autoscope_window_form_a38a4a73945cffab764db46b8deec800a}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!updateIpMessengerText@{updateIpMessengerText}}
+\index{updateIpMessengerText@{updateIpMessengerText}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{updateIpMessengerText()}{updateIpMessengerText()}}
+{\footnotesize\ttfamily void Autoscope\+Window\+Form\+::update\+Ip\+Messenger\+Text (\begin{DoxyParamCaption}\item[{Q\+String}]{message }\end{DoxyParamCaption})}
+
+
+
+Method used to update the IP messenger text. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & text to put in the messenger \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_autoscope_window_form_a599b2ec55d4051832dea26cc715265fe}\label{class_autoscope_window_form_a599b2ec55d4051832dea26cc715265fe}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!updateMaxMinSlider@{updateMaxMinSlider}}
+\index{updateMaxMinSlider@{updateMaxMinSlider}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{updateMaxMinSlider()}{updateMaxMinSlider()}}
+{\footnotesize\ttfamily void Autoscope\+Window\+Form\+::update\+Max\+Min\+Slider (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Method used to update max and min value of the position slider. 
+
+\mbox{\Hypertarget{class_autoscope_window_form_a775044eeb0c9bf094512c82d2c538ad0}\label{class_autoscope_window_form_a775044eeb0c9bf094512c82d2c538ad0}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!verticalDisplayPositionChanged@{verticalDisplayPositionChanged}}
+\index{verticalDisplayPositionChanged@{verticalDisplayPositionChanged}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{verticalDisplayPositionChanged}{verticalDisplayPositionChanged}}
+{\footnotesize\ttfamily void Autoscope\+Window\+Form\+::vertical\+Display\+Position\+Changed (\begin{DoxyParamCaption}\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Update the vertical position value of the picture display. 
+
+\mbox{\Hypertarget{class_autoscope_window_form_a10578baeef8b914526da55ae8d2bddc6}\label{class_autoscope_window_form_a10578baeef8b914526da55ae8d2bddc6}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!zoomChanged@{zoomChanged}}
+\index{zoomChanged@{zoomChanged}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{zoomChanged}{zoomChanged}}
+{\footnotesize\ttfamily void Autoscope\+Window\+Form\+::zoom\+Changed (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Update zoom value. 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_autoscope_window_form_a73df08489686c1d7f72d0e1d7f3bfee3}\label{class_autoscope_window_form_a73df08489686c1d7f72d0e1d7f3bfee3}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!m\_autoscope@{m\_autoscope}}
+\index{m\_autoscope@{m\_autoscope}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{m\_autoscope}{m\_autoscope}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_autoscope}{Autoscope}}$\ast$ Autoscope\+Window\+Form\+::m\+\_\+autoscope\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+An instance of \mbox{\hyperlink{class_autoscope}{Autoscope}} class. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_autoscope}{Autoscope}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_autoscope_window_form_a859556308e579b3c83862e943684f859}\label{class_autoscope_window_form_a859556308e579b3c83862e943684f859}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!m\_autoscopePictureWindow@{m\_autoscopePictureWindow}}
+\index{m\_autoscopePictureWindow@{m\_autoscopePictureWindow}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{m\_autoscopePictureWindow}{m\_autoscopePictureWindow}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_autoscope_picture_window_form}{Autoscope\+Picture\+Window\+Form}}$\ast$ Autoscope\+Window\+Form\+::m\+\_\+autoscope\+Picture\+Window\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+An instance of \mbox{\hyperlink{class_autoscope_picture_window_form}{Autoscope\+Picture\+Window\+Form}} class. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_autoscope_picture_window_form}{Autoscope\+Picture\+Window\+Form}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_autoscope_window_form_a729b0f3174ac22f142a78dbc6d2677be}\label{class_autoscope_window_form_a729b0f3174ac22f142a78dbc6d2677be}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!m\_guiHorizontalPosition@{m\_guiHorizontalPosition}}
+\index{m\_guiHorizontalPosition@{m\_guiHorizontalPosition}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{m\_guiHorizontalPosition}{m\_guiHorizontalPosition}}
+{\footnotesize\ttfamily int Autoscope\+Window\+Form\+::m\+\_\+gui\+Horizontal\+Position\hspace{0.3cm}{\ttfamily [private]}}
+
+The gui horizontal position \mbox{\Hypertarget{class_autoscope_window_form_abfd03b3848ab390f59cfe1778595bcb8}\label{class_autoscope_window_form_abfd03b3848ab390f59cfe1778595bcb8}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!m\_guiVerticalPosition@{m\_guiVerticalPosition}}
+\index{m\_guiVerticalPosition@{m\_guiVerticalPosition}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{m\_guiVerticalPosition}{m\_guiVerticalPosition}}
+{\footnotesize\ttfamily int Autoscope\+Window\+Form\+::m\+\_\+gui\+Vertical\+Position\hspace{0.3cm}{\ttfamily [private]}}
+
+The gui vertical position \mbox{\Hypertarget{class_autoscope_window_form_a6dbb17c9dce12f2a8775e1510b0139e9}\label{class_autoscope_window_form_a6dbb17c9dce12f2a8775e1510b0139e9}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!m\_height@{m\_height}}
+\index{m\_height@{m\_height}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{m\_height}{m\_height}}
+{\footnotesize\ttfamily int Autoscope\+Window\+Form\+::m\+\_\+height = 300\hspace{0.3cm}{\ttfamily [private]}}
+
+The height of the dialog box \mbox{\Hypertarget{class_autoscope_window_form_a60c88c0b6f8f7f5eac46680a7b00b59e}\label{class_autoscope_window_form_a60c88c0b6f8f7f5eac46680a7b00b59e}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!m\_screenHeight@{m\_screenHeight}}
+\index{m\_screenHeight@{m\_screenHeight}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{m\_screenHeight}{m\_screenHeight}}
+{\footnotesize\ttfamily int Autoscope\+Window\+Form\+::m\+\_\+screen\+Height\hspace{0.3cm}{\ttfamily [private]}}
+
+The height of the screen \mbox{\Hypertarget{class_autoscope_window_form_a6a4204832945288b420ae248dc69ae08}\label{class_autoscope_window_form_a6a4204832945288b420ae248dc69ae08}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!m\_screenWidth@{m\_screenWidth}}
+\index{m\_screenWidth@{m\_screenWidth}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{m\_screenWidth}{m\_screenWidth}}
+{\footnotesize\ttfamily int Autoscope\+Window\+Form\+::m\+\_\+screen\+Width\hspace{0.3cm}{\ttfamily [private]}}
+
+The width of the screen \mbox{\Hypertarget{class_autoscope_window_form_a494735b51d06bfa71d5954da50f51d3d}\label{class_autoscope_window_form_a494735b51d06bfa71d5954da50f51d3d}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!m\_width@{m\_width}}
+\index{m\_width@{m\_width}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{m\_width}{m\_width}}
+{\footnotesize\ttfamily int Autoscope\+Window\+Form\+::m\+\_\+width = 600\hspace{0.3cm}{\ttfamily [private]}}
+
+The width of the dialog box \mbox{\Hypertarget{class_autoscope_window_form_a2e8d5a43841204d931654d255e194e60}\label{class_autoscope_window_form_a2e8d5a43841204d931654d255e194e60}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!picturedirectoryPath@{picturedirectoryPath}}
+\index{picturedirectoryPath@{picturedirectoryPath}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{picturedirectoryPath}{picturedirectoryPath}}
+{\footnotesize\ttfamily Q\+String Autoscope\+Window\+Form\+::picturedirectory\+Path = \char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+The path where to put downloaded picture \mbox{\Hypertarget{class_autoscope_window_form_a0a27bb2073810e25351a6dc773f128df}\label{class_autoscope_window_form_a0a27bb2073810e25351a6dc773f128df}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!pictureWindowIsVisible@{pictureWindowIsVisible}}
+\index{pictureWindowIsVisible@{pictureWindowIsVisible}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{pictureWindowIsVisible}{pictureWindowIsVisible}}
+{\footnotesize\ttfamily bool Autoscope\+Window\+Form\+::picture\+Window\+Is\+Visible = false\hspace{0.3cm}{\ttfamily [private]}}
+
+Flag which represent the visibility of the picture display window \mbox{\Hypertarget{class_autoscope_window_form_a4e436f5aca95b4d503ae9c5fe28ec8ed}\label{class_autoscope_window_form_a4e436f5aca95b4d503ae9c5fe28ec8ed}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!screenSizePercent@{screenSizePercent}}
+\index{screenSizePercent@{screenSizePercent}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{screenSizePercent}{screenSizePercent}}
+{\footnotesize\ttfamily int Autoscope\+Window\+Form\+::screen\+Size\+Percent\hspace{0.3cm}{\ttfamily [private]}}
+
+The size of the dialog box in percent of the screen \mbox{\Hypertarget{class_autoscope_window_form_a9a937e00b0a9a4d16001b5da7449a07f}\label{class_autoscope_window_form_a9a937e00b0a9a4d16001b5da7449a07f}} 
+\index{AutoscopeWindowForm@{AutoscopeWindowForm}!ui@{ui}}
+\index{ui@{ui}!AutoscopeWindowForm@{AutoscopeWindowForm}}
+\subsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+\_\+\+Autoscope\+Window\+Form$\ast$ Autoscope\+Window\+Form\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+An instance of the Ui\+\_\+\+Autoscope\+Window\+Form class 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+gui/\mbox{\hyperlink{_autoscope_window_form_8hpp}{Autoscope\+Window\+Form.\+hpp}}\item 
+gui/\mbox{\hyperlink{_autoscope_window_form_8cpp}{Autoscope\+Window\+Form.\+cpp}}\end{DoxyCompactItemize}
