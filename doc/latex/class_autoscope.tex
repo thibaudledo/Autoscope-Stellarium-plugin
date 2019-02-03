@@ -2,7 +2,7 @@
 \label{class_autoscope}\index{Autoscope@{Autoscope}}
 
 
-This class is use to retreive and compute data for sending to the telescope, and call user interfaces windows.  
+This class is use to retrieve and compute data for sending to the telescope, and call user interfaces windows.  
 
 
 
@@ -11,7 +11,8 @@ This class is use to retreive and compute data for sending to the telescope, and
 
 
 
-Inheritance diagram for Autoscope\+:\nopagebreak
+Inheritance diagram for Autoscope\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -20,7 +21,8 @@ Inheritance diagram for Autoscope\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Autoscope\+:\nopagebreak
+Collaboration diagram for Autoscope\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -60,11 +62,11 @@ virtual double \mbox{\hyperlink{class_autoscope_a9495317b6b710812825c40dbe7ddd45
 virtual bool \mbox{\hyperlink{class_autoscope_a1a3fca34a12ae80391943194340d2c7e}{configure\+Gui}} (bool show)
 \begin{DoxyCompactList}\small\item\em Configure\+Gui method is inherited from Stel\+Module class and is use to show the user interface through the plugin manager. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_autoscope_af24c123f39ace0191799b5c20ceca7a6}{load\+Configuration}} ()
-\begin{DoxyCompactList}\small\item\em Method used to retreive the configuration of the plugin. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Method used to retrieve the configuration of the plugin. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_autoscope_a2c5424afe3270c6069e0109834dd52b5}{restore\+Default\+Configuration}} ()
 \begin{DoxyCompactList}\small\item\em Method used to restore the default configuration of the plugin. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_autoscope_af61a84b86f02cc55472c53cc79b025b2}{get\+Alt\+Azi}} (Stel\+ObjectP object)
-\begin{DoxyCompactList}\small\item\em Method used to retreive the altitude and the azimuth of an object. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Method used to retrieve the altitude and the azimuth of an object. \end{DoxyCompactList}\item 
 Q\+String \mbox{\hyperlink{class_autoscope_af1d803331f5ab5f5ff5d3839df8952c7}{search\+An\+Object}} (Q\+String object\+Name)
 \begin{DoxyCompactList}\small\item\em Method used to search an object by it\textquotesingle{}s name. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_autoscope_a0a616d2998641471cb6785e2abb6e7b5}{set\+Track\+Object}} (Stel\+ObjectP object)
@@ -78,13 +80,13 @@ void \mbox{\hyperlink{class_autoscope_a2bf2306aa6d3f37dadd83e6e00a35ff3}{clear\+
 void \mbox{\hyperlink{class_autoscope_ac8f9e09385739a5ba5ed460c83ec88df}{move\+Observer\+To\+Object}} (Stel\+ObjectP object)
 \begin{DoxyCompactList}\small\item\em Method used to move the view in Stellarium to an object. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_autoscope_window_form}{Autoscope\+Window\+Form}} $\ast$ \mbox{\hyperlink{class_autoscope_aad8f888c886f1f3e36878e8c3e658813}{get\+Autoscope\+Window}} (void)
-\begin{DoxyCompactList}\small\item\em Getter which allow any class which have an instance of \mbox{\hyperlink{class_autoscope}{Autoscope}} class to retreive an instance of the configuration window. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Getter which allow any class which have an instance of \mbox{\hyperlink{class_autoscope}{Autoscope}} class to retrieve an instance of the configuration window. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_autoscope_picture_window_form}{Autoscope\+Picture\+Window\+Form}} $\ast$ \mbox{\hyperlink{class_autoscope_a78d970ac013a0640bc28cac027737848}{get\+Autoscope\+Picture\+Window}} (void)
-\begin{DoxyCompactList}\small\item\em Getter which allow any class which have an instance of \mbox{\hyperlink{class_autoscope}{Autoscope}} class to retreive an instance of the picture window. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Getter which allow any class which have an instance of \mbox{\hyperlink{class_autoscope}{Autoscope}} class to retrieve an instance of the picture window. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_autoscope_a0e438a40043c916a7f0f98a30221de11}{get\+Screen\+Width}} (void)
-\begin{DoxyCompactList}\small\item\em Getter allow any class which have an instance of \mbox{\hyperlink{class_autoscope}{Autoscope}} class to retreive the width of the screen. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Getter allow any class which have an instance of \mbox{\hyperlink{class_autoscope}{Autoscope}} class to retrieve the width of the screen. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_autoscope_adb579d1e5a23aaa401d5a93be033529d}{get\+Screen\+Height}} (void)
-\begin{DoxyCompactList}\small\item\em Getter allow any class which have an instance of \mbox{\hyperlink{class_autoscope}{Autoscope}} class to retreive the height of the screen. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Getter allow any class which have an instance of \mbox{\hyperlink{class_autoscope}{Autoscope}} class to retrieve the height of the screen. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_autoscope_aad5b62b7a114ef8755923067e14f9dd8}{set\+Ip\+Address}} (Q\+String addr)
 \begin{DoxyCompactList}\small\item\em Setter used to set the IP address of the \mbox{\hyperlink{class_autoscope}{Autoscope}}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_autoscope_acda88ddee4fb3fbd0333717c0f140e54}{set\+Port}} (int port)
@@ -99,7 +101,7 @@ void \mbox{\hyperlink{class_autoscope_aafe64e11135903a1b83d16ffdd07d63e}{deconne
 Stel\+Movement\+Mgr $\ast$ \mbox{\hyperlink{class_autoscope_ab34124a1179a937ac061bb4fa3faa2de}{mv\+Mgr}}
 \begin{DoxyCompactList}\small\item\em An instance of Stellarium movement manager and it\textquotesingle{}s use to move the view in Stellarium. \end{DoxyCompactList}\item 
 Stel\+Object\+Mgr $\ast$ \mbox{\hyperlink{class_autoscope_aec2c452e45c0a7d045417a8656aa7c45}{object\+Mgr}}
-\begin{DoxyCompactList}\small\item\em An instance of Stellarium object manager and it\textquotesingle{}s use to retreive selected object or search object by name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em An instance of Stellarium object manager and it\textquotesingle{}s use to retrieve selected object or search object by name. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -160,7 +162,7 @@ int \mbox{\hyperlink{class_autoscope_abb67968cc6c6678995512aa1a05ad0e1}{m\+\_\+a
 
 
 \subsection{Detailed Description}
-This class is use to retreive and compute data for sending to the telescope, and call user interfaces windows. 
+This class is use to retrieve and compute data for sending to the telescope, and call user interfaces windows. 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_autoscope_a70213dc05856f7f6592d089d14f08f68}\label{class_autoscope_a70213dc05856f7f6592d089d14f08f68}} 
@@ -263,11 +265,11 @@ Stel\+Module
 
 
 
-Method used to retreive the altitude and the azimuth of an object. 
+Method used to retrieve the altitude and the azimuth of an object. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em object} & The object that we want to retreive data from \\
+{\em object} & The object that we want to retrieve data from \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{class_autoscope_a78d970ac013a0640bc28cac027737848}\label{class_autoscope_a78d970ac013a0640bc28cac027737848}} 
@@ -278,7 +280,7 @@ Method used to retreive the altitude and the azimuth of an object.
 
 
 
-Getter which allow any class which have an instance of \mbox{\hyperlink{class_autoscope}{Autoscope}} class to retreive an instance of the picture window. 
+Getter which allow any class which have an instance of \mbox{\hyperlink{class_autoscope}{Autoscope}} class to retrieve an instance of the picture window. 
 
 \begin{DoxyReturn}{Returns}
 An instance of the picture window 
@@ -291,7 +293,7 @@ An instance of the picture window
 
 
 
-Getter which allow any class which have an instance of \mbox{\hyperlink{class_autoscope}{Autoscope}} class to retreive an instance of the configuration window. 
+Getter which allow any class which have an instance of \mbox{\hyperlink{class_autoscope}{Autoscope}} class to retrieve an instance of the configuration window. 
 
 \begin{DoxyReturn}{Returns}
 An instance of the configuration window 
@@ -325,7 +327,7 @@ Stel\+Module
 
 
 
-Getter allow any class which have an instance of \mbox{\hyperlink{class_autoscope}{Autoscope}} class to retreive the height of the screen. 
+Getter allow any class which have an instance of \mbox{\hyperlink{class_autoscope}{Autoscope}} class to retrieve the height of the screen. 
 
 \begin{DoxyReturn}{Returns}
 The height of the screen 
@@ -338,7 +340,7 @@ The height of the screen
 
 
 
-Getter allow any class which have an instance of \mbox{\hyperlink{class_autoscope}{Autoscope}} class to retreive the width of the screen. 
+Getter allow any class which have an instance of \mbox{\hyperlink{class_autoscope}{Autoscope}} class to retrieve the width of the screen. 
 
 \begin{DoxyReturn}{Returns}
 The width of the screen 
@@ -364,7 +366,7 @@ Stel\+Module
 
 
 
-Method used to retreive the configuration of the plugin. 
+Method used to retrieve the configuration of the plugin. 
 
 \mbox{\Hypertarget{class_autoscope_ac8f9e09385739a5ba5ed460c83ec88df}\label{class_autoscope_ac8f9e09385739a5ba5ed460c83ec88df}} 
 \index{Autoscope@{Autoscope}!moveObserverToObject@{moveObserverToObject}}
@@ -707,7 +709,7 @@ A list of Stel\+ObjectP \mbox{\Hypertarget{class_autoscope_aec2c452e45c0a7d04541
 
 
 
-An instance of Stellarium object manager and it\textquotesingle{}s use to retreive selected object or search object by name. 
+An instance of Stellarium object manager and it\textquotesingle{}s use to retrieve selected object or search object by name. 
 
 \begin{DoxySeeAlso}{See also}
 Stel\+Object\+Mgr 
@@ -770,5 +772,5 @@ An instance of Stel\+Button
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{_autoscope_8hpp}{Autoscope.\+hpp}}\item 
-\mbox{\hyperlink{_autoscope_8cpp}{Autoscope.\+cpp}}\end{DoxyCompactItemize}
+src/\mbox{\hyperlink{_autoscope_8hpp}{Autoscope.\+hpp}}\item 
+src/\mbox{\hyperlink{_autoscope_8cpp}{Autoscope.\+cpp}}\end{DoxyCompactItemize}

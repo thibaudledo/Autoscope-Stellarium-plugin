@@ -49,19 +49,19 @@ public:
     void setAutoscopePictureWindow(AutoscopePictureWindowForm* autoscopePictureWindow){m_autoscopePictureWindow = autoscopePictureWindow;}
 
     /*!
-     * \brief Getter used to retreive the horizontal gui position
+     * \brief Getter used to retrieve the horizontal gui position
      * \return The horizontal gui position
      */
     int getGuiHorizontalPosition(void);
 
     /*!
-     * \brief Getter used to retreive the vertical gui position
+     * \brief Getter used to retrieve the vertical gui position
      * \return The vertical gui position
      */
     int getGuiVerticalPosition(void);
 
     /*!
-     * \brief Getter used to retreive the value of the display size editor
+     * \brief Getter used to retrieve the value of the display size editor
      * \return The value of the display size editor
      */
     int getScreenSizePercent(void);

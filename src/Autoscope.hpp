@@ -45,7 +45,7 @@ class TcpClient;
 
 /*!
  * \class Autoscope
- * \brief This class is use to retreive and compute data for sending to the telescope, and call user interfaces windows
+ * \brief This class is use to retrieve and compute data for sending to the telescope, and call user interfaces windows
  */
 class Autoscope : public StelModule
 {
@@ -101,7 +101,7 @@ public:
     virtual bool configureGui(bool show);
 
     /*!
-     * \brief Method used to retreive the configuration of the plugin
+     * \brief Method used to retrieve the configuration of the plugin
      */
     void loadConfiguration();
 
@@ -111,8 +111,8 @@ public:
     void restoreDefaultConfiguration();
 
     /*!
-     * \brief Method used to retreive the altitude and the azimuth of an object
-     * \param object The object that we want to retreive data from
+     * \brief Method used to retrieve the altitude and the azimuth of an object
+     * \param object The object that we want to retrieve data from
      */
     void getAltAzi(StelObjectP object);
 
@@ -152,25 +152,25 @@ public:
     void moveObserverToObject(StelObjectP object);
 
     /*!
-     * \brief Getter which allow any class which have an instance of Autoscope class to retreive an instance of the configuration window
+     * \brief Getter which allow any class which have an instance of Autoscope class to retrieve an instance of the configuration window
      * \return An instance of the configuration window
      */
     AutoscopeWindowForm* getAutoscopeWindow(void){if(m_autoscopeWindow!=nullptr)return m_autoscopeWindow;}
 
     /*!
-     * \brief Getter which allow any class which have an instance of Autoscope class to retreive an instance of the picture window
+     * \brief Getter which allow any class which have an instance of Autoscope class to retrieve an instance of the picture window
      * \return An instance of the picture window
      */
     AutoscopePictureWindowForm* getAutoscopePictureWindow(void){if(m_autoscopePictureWindow!=nullptr)return m_autoscopePictureWindow;}
 
     /*!
-     * \brief Getter allow any class which have an instance of Autoscope class to retreive the width of the screen
+     * \brief Getter allow any class which have an instance of Autoscope class to retrieve the width of the screen
      * \return The width of the screen
      */
     int getScreenWidth(void){return m_screenWidth;}
 
     /*!
-     * \brief Getter allow any class which have an instance of Autoscope class to retreive the height of the screen
+     * \brief Getter allow any class which have an instance of Autoscope class to retrieve the height of the screen
      * \return The height of the screen
      */
     int getScreenHeight(void){return m_screenHeight;}
@@ -204,7 +204,7 @@ public:
     StelMovementMgr* mvMgr;
 
     /*!
-     * \brief An instance of Stellarium object manager and it's use to retreive selected object or search object by name
+     * \brief An instance of Stellarium object manager and it's use to retrieve selected object or search object by name
      * \see StelObjectMgr
      */
     StelObjectMgr* objectMgr;

@@ -1,5 +1,5 @@
-<map id="gui/AutoscopeWindowForm.hpp" name="gui/AutoscopeWindowForm.hpp">
-<area shape="rect" id="node1" title="Header file including configuration window definition." alt="" coords="369,5,575,32"/>
+<map id="src/gui/AutoscopeWindowForm.hpp" name="src/gui/AutoscopeWindowForm.hpp">
+<area shape="rect" id="node1" title="Header file including configuration window definition." alt="" coords="357,5,587,32"/>
 <area shape="rect" id="node2" title=" " alt="" coords="170,162,243,189"/>
 <area shape="rect" id="node3" title=" " alt="" coords="268,162,375,189"/>
 <area shape="rect" id="node4" href="$_autoscope_8hpp.html" title="Main plugin class." alt="" coords="612,162,721,189"/>

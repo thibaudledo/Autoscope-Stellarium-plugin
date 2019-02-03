@@ -41,13 +41,13 @@ public:
     void update();
 
     /*!
-     * \brief Getter used to retreive the horizontal gui position
+     * \brief Getter used to retrieve the horizontal gui position
      * \return The horizontal gui position
      */
     int getGuiHorizontalPosition(void);
 
     /*!
-     * \brief Getter used to retreive the vertical gui position
+     * \brief Getter used to retrieve the vertical gui position
      * \return The vertical gui position
      */
     int getGuiVerticalPosition(void);
@@ -65,13 +65,13 @@ public:
     void setGuiVerticalPosition(int);
 
     /*!
-     * \brief Getter used to retreive the gui width
+     * \brief Getter used to retrieve the gui width
      * \return The gui width
      */
     int getGuiWidth(void);
 
     /*!
-     * \brief Getter used to retreive the gui height
+     * \brief Getter used to retrieve the gui height
      * \return The gui height
      */
     int getGuiHeight(void);
