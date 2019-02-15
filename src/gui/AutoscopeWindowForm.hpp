@@ -8,6 +8,7 @@
 #include "Autoscope.hpp"
 #include "ui_AutoscopeWindowForm.h"
 #include "AutoscopePictureWindowForm.hpp"
+#include "network/CommandParser.hpp"
 
 class Autoscope;
 class AutoscopePictureWindowForm;
@@ -123,6 +124,8 @@ private:
      * \see AutoscopePictureWindowForm
      */
     AutoscopePictureWindowForm* m_autoscopePictureWindow;
+
+    CommandParser* m_parser;
 
     QString picturedirectoryPath = "";  /*!< The path where to put downloaded picture */
 

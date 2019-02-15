@@ -1,5 +1,5 @@
 # This is the cmake config file for the MyPlugin
-SET(MYPLUGIN_VERSION "0.1.0")
+SET(AUTOSCOPE_VERSION "0.1.0")
 
 ADD_SUBDIRECTORY( src )
 

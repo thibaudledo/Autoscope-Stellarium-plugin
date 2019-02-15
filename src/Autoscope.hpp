@@ -29,6 +29,8 @@
 #include "StelObjectMgr.hpp"
 #include "StelObjectType.hpp"
 
+#include "network/CommandParser.hpp"
+
 #include <QHostAddress>
 
 class StelButton;
@@ -163,6 +165,8 @@ public:
      */
     AutoscopePictureWindowForm* getAutoscopePictureWindow(void){if(m_autoscopePictureWindow!=nullptr)return m_autoscopePictureWindow;}
 
+    CommandParser* getCommandParser(void){if(m_parser!=nullptr)return m_parser;}
+
     /*!
      * \brief Getter allow any class which have an instance of Autoscope class to retrieve the width of the screen
      * \return The width of the screen
@@ -197,6 +201,8 @@ public:
      */
     void deconnectFromAutoscope(void);
 
+    void sendToServer(QString);
+
     /*!
      * \brief An instance of Stellarium movement manager and it's use to move the view in Stellarium
      * \see StelMovementMgr
@@ -230,6 +236,10 @@ private:
      * \brief An instance of StelCore
      */
     StelCore* m_core;
+
+    QTimer* m_timer;
+
+    CommandParser* m_parser;
 
     Vec3f markColor;
     LinearFader markFader;
@@ -299,6 +309,13 @@ public slots:
      * \brief Triggered when the plugin succeed to connect to the Autoscope
      */
     void slotConnected(void);
+
+    void slotUpdateAltAz(void);
+
+    /*!
+     * \brief Method used to disconnect the plugin from the Autoscope
+     */
+    void slotDeconnectFromAutoscope(void);
 };
 
 

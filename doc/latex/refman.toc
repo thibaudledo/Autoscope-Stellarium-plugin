@@ -1,0 +1,208 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Hierarchical Index}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Class Hierarchy}{1}{section.1.1}
+\contentsline {chapter}{\numberline {2}Class Index}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Class List}{3}{section.2.1}
+\contentsline {chapter}{\numberline {3}File Index}{5}{chapter.3}
+\contentsline {section}{\numberline {3.1}File List}{5}{section.3.1}
+\contentsline {chapter}{\numberline {4}Class Documentation}{7}{chapter.4}
+\contentsline {section}{\numberline {4.1}Autoscope Class Reference}{7}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Detailed Description}{10}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Constructor \& Destructor Documentation}{10}{subsection.4.1.2}
+\contentsline {subsubsection}{\numberline {4.1.2.1}Autoscope()}{10}{subsubsection.4.1.2.1}
+\contentsline {subsubsection}{\numberline {4.1.2.2}$\sim $Autoscope()}{11}{subsubsection.4.1.2.2}
+\contentsline {subsection}{\numberline {4.1.3}Member Function Documentation}{11}{subsection.4.1.3}
+\contentsline {subsubsection}{\numberline {4.1.3.1}clearTrackedObject()}{11}{subsubsection.4.1.3.1}
+\contentsline {subsubsection}{\numberline {4.1.3.2}configureGui()}{11}{subsubsection.4.1.3.2}
+\contentsline {subsubsection}{\numberline {4.1.3.3}connectToAutoscope()}{11}{subsubsection.4.1.3.3}
+\contentsline {subsubsection}{\numberline {4.1.3.4}deconnectFromAutoscope()}{12}{subsubsection.4.1.3.4}
+\contentsline {subsubsection}{\numberline {4.1.3.5}draw()}{12}{subsubsection.4.1.3.5}
+\contentsline {subsubsection}{\numberline {4.1.3.6}getAltAzi()}{12}{subsubsection.4.1.3.6}
+\contentsline {subsubsection}{\numberline {4.1.3.7}getAutoscopePictureWindow()}{12}{subsubsection.4.1.3.7}
+\contentsline {subsubsection}{\numberline {4.1.3.8}getAutoscopeWindow()}{13}{subsubsection.4.1.3.8}
+\contentsline {subsubsection}{\numberline {4.1.3.9}getCallOrder()}{13}{subsubsection.4.1.3.9}
+\contentsline {subsubsection}{\numberline {4.1.3.10}getScreenHeight()}{13}{subsubsection.4.1.3.10}
+\contentsline {subsubsection}{\numberline {4.1.3.11}getScreenWidth()}{14}{subsubsection.4.1.3.11}
+\contentsline {subsubsection}{\numberline {4.1.3.12}init()}{14}{subsubsection.4.1.3.12}
+\contentsline {subsubsection}{\numberline {4.1.3.13}loadConfiguration()}{14}{subsubsection.4.1.3.13}
+\contentsline {subsubsection}{\numberline {4.1.3.14}moveObserverToObject()}{14}{subsubsection.4.1.3.14}
+\contentsline {subsubsection}{\numberline {4.1.3.15}restoreDefaultConfiguration()}{15}{subsubsection.4.1.3.15}
+\contentsline {subsubsection}{\numberline {4.1.3.16}searchAnObject()}{15}{subsubsection.4.1.3.16}
+\contentsline {subsubsection}{\numberline {4.1.3.17}setIpAddress()}{15}{subsubsection.4.1.3.17}
+\contentsline {subsubsection}{\numberline {4.1.3.18}setPort()}{15}{subsubsection.4.1.3.18}
+\contentsline {subsubsection}{\numberline {4.1.3.19}setTrackObject()}{16}{subsubsection.4.1.3.19}
+\contentsline {subsubsection}{\numberline {4.1.3.20}showGui}{16}{subsubsection.4.1.3.20}
+\contentsline {subsubsection}{\numberline {4.1.3.21}slotConnected}{16}{subsubsection.4.1.3.21}
+\contentsline {subsubsection}{\numberline {4.1.3.22}slotEnablePictureDispaly}{16}{subsubsection.4.1.3.22}
+\contentsline {subsubsection}{\numberline {4.1.3.23}slotTakePicture}{16}{subsubsection.4.1.3.23}
+\contentsline {subsubsection}{\numberline {4.1.3.24}slotTrackObject}{17}{subsubsection.4.1.3.24}
+\contentsline {subsubsection}{\numberline {4.1.3.25}slotUnTrackOject}{17}{subsubsection.4.1.3.25}
+\contentsline {subsubsection}{\numberline {4.1.3.26}trackSearchedObject()}{17}{subsubsection.4.1.3.26}
+\contentsline {subsubsection}{\numberline {4.1.3.27}trackSelectedObject()}{17}{subsubsection.4.1.3.27}
+\contentsline {subsubsection}{\numberline {4.1.3.28}update()}{17}{subsubsection.4.1.3.28}
+\contentsline {subsection}{\numberline {4.1.4}Member Data Documentation}{18}{subsection.4.1.4}
+\contentsline {subsubsection}{\numberline {4.1.4.1}conf}{18}{subsubsection.4.1.4.1}
+\contentsline {subsubsection}{\numberline {4.1.4.2}displayedAtStartup}{18}{subsubsection.4.1.4.2}
+\contentsline {subsubsection}{\numberline {4.1.4.3}EnablePictureDisplay}{18}{subsubsection.4.1.4.3}
+\contentsline {subsubsection}{\numberline {4.1.4.4}font}{18}{subsubsection.4.1.4.4}
+\contentsline {subsubsection}{\numberline {4.1.4.5}gui}{18}{subsubsection.4.1.4.5}
+\contentsline {subsubsection}{\numberline {4.1.4.6}guiIsVisible}{18}{subsubsection.4.1.4.6}
+\contentsline {subsubsection}{\numberline {4.1.4.7}m\_autoscopeIp}{18}{subsubsection.4.1.4.7}
+\contentsline {subsubsection}{\numberline {4.1.4.8}m\_autoscopePictureWindow}{19}{subsubsection.4.1.4.8}
+\contentsline {subsubsection}{\numberline {4.1.4.9}m\_autoscopePort}{19}{subsubsection.4.1.4.9}
+\contentsline {subsubsection}{\numberline {4.1.4.10}m\_autoscopeWindow}{19}{subsubsection.4.1.4.10}
+\contentsline {subsubsection}{\numberline {4.1.4.11}m\_client}{19}{subsubsection.4.1.4.11}
+\contentsline {subsubsection}{\numberline {4.1.4.12}m\_core}{19}{subsubsection.4.1.4.12}
+\contentsline {subsubsection}{\numberline {4.1.4.13}m\_screenHeight}{20}{subsubsection.4.1.4.13}
+\contentsline {subsubsection}{\numberline {4.1.4.14}m\_screenWidth}{20}{subsubsection.4.1.4.14}
+\contentsline {subsubsection}{\numberline {4.1.4.15}markColor}{20}{subsubsection.4.1.4.15}
+\contentsline {subsubsection}{\numberline {4.1.4.16}markFader}{20}{subsubsection.4.1.4.16}
+\contentsline {subsubsection}{\numberline {4.1.4.17}menuButton}{20}{subsubsection.4.1.4.17}
+\contentsline {subsubsection}{\numberline {4.1.4.18}mvMgr}{20}{subsubsection.4.1.4.18}
+\contentsline {subsubsection}{\numberline {4.1.4.19}newSelected}{20}{subsubsection.4.1.4.19}
+\contentsline {subsubsection}{\numberline {4.1.4.20}objectMgr}{21}{subsubsection.4.1.4.20}
+\contentsline {subsubsection}{\numberline {4.1.4.21}objectPosition}{21}{subsubsection.4.1.4.21}
+\contentsline {subsubsection}{\numberline {4.1.4.22}searchedObject}{21}{subsubsection.4.1.4.22}
+\contentsline {subsubsection}{\numberline {4.1.4.23}searchObjectFound}{21}{subsubsection.4.1.4.23}
+\contentsline {subsubsection}{\numberline {4.1.4.24}selectedObject}{21}{subsubsection.4.1.4.24}
+\contentsline {subsubsection}{\numberline {4.1.4.25}Sun}{21}{subsubsection.4.1.4.25}
+\contentsline {subsubsection}{\numberline {4.1.4.26}takePicture}{21}{subsubsection.4.1.4.26}
+\contentsline {subsubsection}{\numberline {4.1.4.27}trackButton}{22}{subsubsection.4.1.4.27}
+\contentsline {subsubsection}{\numberline {4.1.4.28}trackObject}{22}{subsubsection.4.1.4.28}
+\contentsline {subsubsection}{\numberline {4.1.4.29}unTrackButton}{22}{subsubsection.4.1.4.29}
+\contentsline {section}{\numberline {4.2}Autoscope\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Picture\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Window\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Form Class Reference}{22}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Detailed Description}{24}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Constructor \& Destructor Documentation}{24}{subsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.2.1}AutoscopePictureWindowForm()}{24}{subsubsection.4.2.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2.2}$\sim $AutoscopePictureWindowForm()}{24}{subsubsection.4.2.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Member Function Documentation}{24}{subsection.4.2.3}
+\contentsline {subsubsection}{\numberline {4.2.3.1}createDialogContent()}{25}{subsubsection.4.2.3.1}
+\contentsline {subsubsection}{\numberline {4.2.3.2}getGuiHeight()}{25}{subsubsection.4.2.3.2}
+\contentsline {subsubsection}{\numberline {4.2.3.3}getGuiHorizontalPosition()}{25}{subsubsection.4.2.3.3}
+\contentsline {subsubsection}{\numberline {4.2.3.4}getGuiVerticalPosition()}{25}{subsubsection.4.2.3.4}
+\contentsline {subsubsection}{\numberline {4.2.3.5}getGuiWidth()}{26}{subsubsection.4.2.3.5}
+\contentsline {subsubsection}{\numberline {4.2.3.6}retranslate}{26}{subsubsection.4.2.3.6}
+\contentsline {subsubsection}{\numberline {4.2.3.7}setAutoscopeWindow()}{26}{subsubsection.4.2.3.7}
+\contentsline {subsubsection}{\numberline {4.2.3.8}setGuiHorizontalPosition()}{26}{subsubsection.4.2.3.8}
+\contentsline {subsubsection}{\numberline {4.2.3.9}setGuiOpacity()}{27}{subsubsection.4.2.3.9}
+\contentsline {subsubsection}{\numberline {4.2.3.10}setGuiSize()}{27}{subsubsection.4.2.3.10}
+\contentsline {subsubsection}{\numberline {4.2.3.11}setGuiVerticalPosition()}{27}{subsubsection.4.2.3.11}
+\contentsline {subsubsection}{\numberline {4.2.3.12}update()}{27}{subsubsection.4.2.3.12}
+\contentsline {subsubsection}{\numberline {4.2.3.13}updateGuiPosition()}{28}{subsubsection.4.2.3.13}
+\contentsline {subsubsection}{\numberline {4.2.3.14}updateGuiSize()}{28}{subsubsection.4.2.3.14}
+\contentsline {subsubsection}{\numberline {4.2.3.15}updateImage()}{28}{subsubsection.4.2.3.15}
+\contentsline {subsection}{\numberline {4.2.4}Member Data Documentation}{28}{subsection.4.2.4}
+\contentsline {subsubsection}{\numberline {4.2.4.1}m\_autoscope}{28}{subsubsection.4.2.4.1}
+\contentsline {subsubsection}{\numberline {4.2.4.2}m\_autoscopeWindow}{28}{subsubsection.4.2.4.2}
+\contentsline {subsubsection}{\numberline {4.2.4.3}m\_guiHorizontalPosition}{29}{subsubsection.4.2.4.3}
+\contentsline {subsubsection}{\numberline {4.2.4.4}m\_guiVerticalPosition}{29}{subsubsection.4.2.4.4}
+\contentsline {subsubsection}{\numberline {4.2.4.5}m\_height}{29}{subsubsection.4.2.4.5}
+\contentsline {subsubsection}{\numberline {4.2.4.6}m\_screenHeight}{29}{subsubsection.4.2.4.6}
+\contentsline {subsubsection}{\numberline {4.2.4.7}m\_screenWidth}{29}{subsubsection.4.2.4.7}
+\contentsline {subsubsection}{\numberline {4.2.4.8}m\_width}{29}{subsubsection.4.2.4.8}
+\contentsline {subsubsection}{\numberline {4.2.4.9}ui}{29}{subsubsection.4.2.4.9}
+\contentsline {section}{\numberline {4.3}Autoscope\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Stel\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Plugin\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Interface Class Reference}{30}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Detailed Description}{30}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Member Function Documentation}{30}{subsection.4.3.2}
+\contentsline {subsubsection}{\numberline {4.3.2.1}getExtensionList()}{31}{subsubsection.4.3.2.1}
+\contentsline {subsubsection}{\numberline {4.3.2.2}getPluginInfo()}{31}{subsubsection.4.3.2.2}
+\contentsline {subsubsection}{\numberline {4.3.2.3}getStelModule()}{31}{subsubsection.4.3.2.3}
+\contentsline {section}{\numberline {4.4}Autoscope\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Window\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Form Class Reference}{31}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Detailed Description}{34}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Constructor \& Destructor Documentation}{34}{subsection.4.4.2}
+\contentsline {subsubsection}{\numberline {4.4.2.1}AutoscopeWindowForm()}{34}{subsubsection.4.4.2.1}
+\contentsline {subsubsection}{\numberline {4.4.2.2}$\sim $AutoscopeWindowForm()}{34}{subsubsection.4.4.2.2}
+\contentsline {subsection}{\numberline {4.4.3}Member Function Documentation}{34}{subsection.4.4.3}
+\contentsline {subsubsection}{\numberline {4.4.3.1}altitudeChanged}{35}{subsubsection.4.4.3.1}
+\contentsline {subsubsection}{\numberline {4.4.3.2}azimuthChanged}{35}{subsubsection.4.4.3.2}
+\contentsline {subsubsection}{\numberline {4.4.3.3}connectionButtonPressed}{35}{subsubsection.4.4.3.3}
+\contentsline {subsubsection}{\numberline {4.4.3.4}createDialogContent()}{35}{subsubsection.4.4.3.4}
+\contentsline {subsubsection}{\numberline {4.4.3.5}deconnectionButtonPressed}{35}{subsubsection.4.4.3.5}
+\contentsline {subsubsection}{\numberline {4.4.3.6}displayOpacityChanged}{36}{subsubsection.4.4.3.6}
+\contentsline {subsubsection}{\numberline {4.4.3.7}displaySizeChanged}{36}{subsubsection.4.4.3.7}
+\contentsline {subsubsection}{\numberline {4.4.3.8}downloadPictureButtonPressed}{36}{subsubsection.4.4.3.8}
+\contentsline {subsubsection}{\numberline {4.4.3.9}exposureTimeChanged}{36}{subsubsection.4.4.3.9}
+\contentsline {subsubsection}{\numberline {4.4.3.10}getGuiHorizontalPosition()}{36}{subsubsection.4.4.3.10}
+\contentsline {subsubsection}{\numberline {4.4.3.11}getGuiVerticalPosition()}{37}{subsubsection.4.4.3.11}
+\contentsline {subsubsection}{\numberline {4.4.3.12}getScreenSizePercent()}{37}{subsubsection.4.4.3.12}
+\contentsline {subsubsection}{\numberline {4.4.3.13}horizontalDisplayPositionChanged}{37}{subsubsection.4.4.3.13}
+\contentsline {subsubsection}{\numberline {4.4.3.14}ipAddressChanged}{37}{subsubsection.4.4.3.14}
+\contentsline {subsubsection}{\numberline {4.4.3.15}ipPortChanged}{37}{subsubsection.4.4.3.15}
+\contentsline {subsubsection}{\numberline {4.4.3.16}moveToButtonPressed}{38}{subsubsection.4.4.3.16}
+\contentsline {subsubsection}{\numberline {4.4.3.17}numberOfPictureChanged}{38}{subsubsection.4.4.3.17}
+\contentsline {subsubsection}{\numberline {4.4.3.18}outputPictureDirectoryButtonPressed}{38}{subsubsection.4.4.3.18}
+\contentsline {subsubsection}{\numberline {4.4.3.19}outputPictureDirectoryChanged}{38}{subsubsection.4.4.3.19}
+\contentsline {subsubsection}{\numberline {4.4.3.20}retranslate}{38}{subsubsection.4.4.3.20}
+\contentsline {subsubsection}{\numberline {4.4.3.21}searchButtonPressed}{39}{subsubsection.4.4.3.21}
+\contentsline {subsubsection}{\numberline {4.4.3.22}searchObjectChanged}{39}{subsubsection.4.4.3.22}
+\contentsline {subsubsection}{\numberline {4.4.3.23}setAutoscopePictureWindow()}{39}{subsubsection.4.4.3.23}
+\contentsline {subsubsection}{\numberline {4.4.3.24}startButtonPressed}{39}{subsubsection.4.4.3.24}
+\contentsline {subsubsection}{\numberline {4.4.3.25}takePictureButtonPressed}{39}{subsubsection.4.4.3.25}
+\contentsline {subsubsection}{\numberline {4.4.3.26}toggleDisplay()}{40}{subsubsection.4.4.3.26}
+\contentsline {subsubsection}{\numberline {4.4.3.27}toggleDisplayButtonPressed}{40}{subsubsection.4.4.3.27}
+\contentsline {subsubsection}{\numberline {4.4.3.28}trackButtonPressed}{40}{subsubsection.4.4.3.28}
+\contentsline {subsubsection}{\numberline {4.4.3.29}untrackButtonPressed}{40}{subsubsection.4.4.3.29}
+\contentsline {subsubsection}{\numberline {4.4.3.30}update()}{40}{subsubsection.4.4.3.30}
+\contentsline {subsubsection}{\numberline {4.4.3.31}updateGuiPosition()}{40}{subsubsection.4.4.3.31}
+\contentsline {subsubsection}{\numberline {4.4.3.32}updateGuiSize()}{41}{subsubsection.4.4.3.32}
+\contentsline {subsubsection}{\numberline {4.4.3.33}updateIpMessengerText()}{41}{subsubsection.4.4.3.33}
+\contentsline {subsubsection}{\numberline {4.4.3.34}updateMaxMinSlider()}{41}{subsubsection.4.4.3.34}
+\contentsline {subsubsection}{\numberline {4.4.3.35}verticalDisplayPositionChanged}{41}{subsubsection.4.4.3.35}
+\contentsline {subsubsection}{\numberline {4.4.3.36}zoomChanged}{41}{subsubsection.4.4.3.36}
+\contentsline {subsection}{\numberline {4.4.4}Member Data Documentation}{42}{subsection.4.4.4}
+\contentsline {subsubsection}{\numberline {4.4.4.1}m\_autoscope}{42}{subsubsection.4.4.4.1}
+\contentsline {subsubsection}{\numberline {4.4.4.2}m\_autoscopePictureWindow}{42}{subsubsection.4.4.4.2}
+\contentsline {subsubsection}{\numberline {4.4.4.3}m\_guiHorizontalPosition}{42}{subsubsection.4.4.4.3}
+\contentsline {subsubsection}{\numberline {4.4.4.4}m\_guiVerticalPosition}{42}{subsubsection.4.4.4.4}
+\contentsline {subsubsection}{\numberline {4.4.4.5}m\_height}{42}{subsubsection.4.4.4.5}
+\contentsline {subsubsection}{\numberline {4.4.4.6}m\_screenHeight}{43}{subsubsection.4.4.4.6}
+\contentsline {subsubsection}{\numberline {4.4.4.7}m\_screenWidth}{43}{subsubsection.4.4.4.7}
+\contentsline {subsubsection}{\numberline {4.4.4.8}m\_width}{43}{subsubsection.4.4.4.8}
+\contentsline {subsubsection}{\numberline {4.4.4.9}picturedirectoryPath}{43}{subsubsection.4.4.4.9}
+\contentsline {subsubsection}{\numberline {4.4.4.10}pictureWindowIsVisible}{43}{subsubsection.4.4.4.10}
+\contentsline {subsubsection}{\numberline {4.4.4.11}screenSizePercent}{43}{subsubsection.4.4.4.11}
+\contentsline {subsubsection}{\numberline {4.4.4.12}ui}{43}{subsubsection.4.4.4.12}
+\contentsline {section}{\numberline {4.5}Tcp\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Client Class Reference}{44}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Detailed Description}{45}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Constructor \& Destructor Documentation}{45}{subsection.4.5.2}
+\contentsline {subsubsection}{\numberline {4.5.2.1}TcpClient()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{45}{subsubsection.4.5.2.1}
+\contentsline {subsubsection}{\numberline {4.5.2.2}TcpClient()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{45}{subsubsection.4.5.2.2}
+\contentsline {subsubsection}{\numberline {4.5.2.3}$\sim $TcpClient()}{45}{subsubsection.4.5.2.3}
+\contentsline {subsection}{\numberline {4.5.3}Member Function Documentation}{46}{subsection.4.5.3}
+\contentsline {subsubsection}{\numberline {4.5.3.1}connected\_handler}{46}{subsubsection.4.5.3.1}
+\contentsline {subsubsection}{\numberline {4.5.3.2}host\_found\_handler}{46}{subsubsection.4.5.3.2}
+\contentsline {subsection}{\numberline {4.5.4}Member Data Documentation}{46}{subsection.4.5.4}
+\contentsline {subsubsection}{\numberline {4.5.4.1}m\_host\_address}{46}{subsubsection.4.5.4.1}
+\contentsline {subsubsection}{\numberline {4.5.4.2}m\_port}{46}{subsubsection.4.5.4.2}
+\contentsline {section}{\numberline {4.6}Tcp\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Server Class Reference}{47}{section.4.6}
+\contentsline {subsection}{\numberline {4.6.1}Detailed Description}{48}{subsection.4.6.1}
+\contentsline {subsection}{\numberline {4.6.2}Constructor \& Destructor Documentation}{48}{subsection.4.6.2}
+\contentsline {subsubsection}{\numberline {4.6.2.1}TcpServer()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/3]}}{48}{subsubsection.4.6.2.1}
+\contentsline {subsubsection}{\numberline {4.6.2.2}TcpServer()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/3]}}{48}{subsubsection.4.6.2.2}
+\contentsline {subsubsection}{\numberline {4.6.2.3}TcpServer()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [3/3]}}{48}{subsubsection.4.6.2.3}
+\contentsline {subsubsection}{\numberline {4.6.2.4}$\sim $TcpServer()}{48}{subsubsection.4.6.2.4}
+\contentsline {subsection}{\numberline {4.6.3}Member Function Documentation}{49}{subsection.4.6.3}
+\contentsline {subsubsection}{\numberline {4.6.3.1}create\_socket}{49}{subsubsection.4.6.3.1}
+\contentsline {subsubsection}{\numberline {4.6.3.2}get\_client()}{49}{subsubsection.4.6.3.2}
+\contentsline {subsubsection}{\numberline {4.6.3.3}set\_address()}{49}{subsubsection.4.6.3.3}
+\contentsline {subsubsection}{\numberline {4.6.3.4}set\_port()}{49}{subsubsection.4.6.3.4}
+\contentsline {subsubsection}{\numberline {4.6.3.5}start()}{50}{subsubsection.4.6.3.5}
+\contentsline {subsection}{\numberline {4.6.4}Member Data Documentation}{50}{subsection.4.6.4}
+\contentsline {subsubsection}{\numberline {4.6.4.1}m\_host\_address}{50}{subsubsection.4.6.4.1}
+\contentsline {subsubsection}{\numberline {4.6.4.2}m\_port}{50}{subsubsection.4.6.4.2}
+\contentsline {subsubsection}{\numberline {4.6.4.3}m\_tcp\_client}{50}{subsubsection.4.6.4.3}
+\contentsline {chapter}{\numberline {5}File Documentation}{51}{chapter.5}
+\contentsline {section}{\numberline {5.1}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Autoscope.cpp File Reference}{51}{section.5.1}
+\contentsline {section}{\numberline {5.2}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Autoscope.hpp File Reference}{51}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Detailed Description}{52}{subsection.5.2.1}
+\contentsline {section}{\numberline {5.3}src/gui/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Autoscope\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Picture\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Window\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Form.cpp File Reference}{53}{section.5.3}
+\contentsline {section}{\numberline {5.4}src/gui/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Autoscope\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Picture\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Window\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Form.hpp File Reference}{53}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Detailed Description}{54}{subsection.5.4.1}
+\contentsline {section}{\numberline {5.5}src/gui/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Autoscope\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Window\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Form.cpp File Reference}{54}{section.5.5}
+\contentsline {section}{\numberline {5.6}src/gui/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Autoscope\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Window\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Form.hpp File Reference}{54}{section.5.6}
+\contentsline {subsection}{\numberline {5.6.1}Detailed Description}{55}{subsection.5.6.1}
+\contentsline {section}{\numberline {5.7}src/network/tcp\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}client.cpp File Reference}{55}{section.5.7}
+\contentsline {section}{\numberline {5.8}src/network/tcp\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}client.hpp File Reference}{56}{section.5.8}
+\contentsline {subsection}{\numberline {5.8.1}Detailed Description}{56}{subsection.5.8.1}
+\contentsline {section}{\numberline {5.9}src/network/tcp\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}server.cpp File Reference}{57}{section.5.9}
+\contentsline {section}{\numberline {5.10}src/network/tcp\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}server.hpp File Reference}{57}{section.5.10}

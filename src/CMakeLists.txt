@@ -22,6 +22,8 @@ SET(Autoscope_SRCS
 	network/tcp_client.hpp
 	network/tcp_server.cpp
 	network/tcp_server.hpp
+        network/CommandParser.cpp
+        network/CommandParser.hpp
 )
 
 SET(AUTOSCOPE_UIS

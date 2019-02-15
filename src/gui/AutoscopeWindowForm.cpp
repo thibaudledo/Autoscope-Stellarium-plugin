@@ -36,6 +36,7 @@ void AutoscopeWindowForm::createDialogContent()
     qDebug() << "createDialogContent";
     m_autoscope = GETSTELMODULE(Autoscope);
     m_autoscopePictureWindow = m_autoscope->getAutoscopePictureWindow();
+    m_parser = m_autoscope->getCommandParser();
 
     ui->setupUi(dialog);
 
@@ -55,7 +56,7 @@ void AutoscopeWindowForm::createDialogContent()
     connect(ui->searchEditor, SIGNAL(textChanged(QString)), this, SLOT(searchObjectChanged(QString)));
     connect(ui->searchButton, SIGNAL(clicked()), this, SLOT(searchButtonPressed(void)));
     connect(ui->zoomEditor, SIGNAL(valueChanged(int)), this, SLOT(zoomChanged(int)));
-    connect(ui->zoomSlider, SIGNAL(valueChanged(int)), this, SLOT(zoomChanged(int)));
+    //connect(ui->zoomSlider, SIGNAL(valueChanged(int)), this, SLOT(zoomChanged(int)));
     connect(ui->startButton, SIGNAL(clicked()), this, SLOT(startButtonPressed(void)));
     connect(ui->trackButton, SIGNAL(clicked()), this, SLOT(trackButtonPressed(void)));
     connect(ui->untrackButton, SIGNAL(clicked()), this, SLOT(untrackButtonPressed(void)));
@@ -129,6 +130,7 @@ int AutoscopeWindowForm::getScreenSizePercent(void)
 void AutoscopeWindowForm::startButtonPressed(void)
 {
     qDebug() << "startButtonPressed";
+    m_autoscope->sendToServer(m_parser->initCommand());
 }
 
 void AutoscopeWindowForm::trackButtonPressed(void)
@@ -146,6 +148,7 @@ void AutoscopeWindowForm::untrackButtonPressed(void)
 void AutoscopeWindowForm::takePictureButtonPressed(void)
 {
     qDebug() << "takePictureButtonPressed";
+    m_autoscope->sendToServer(m_parser->takePictureCommand());
 }
 
 void AutoscopeWindowForm::toggleDisplayButtonPressed(void)
@@ -175,6 +178,7 @@ void AutoscopeWindowForm::toggleDisplay(void)
 void AutoscopeWindowForm::moveToButtonPressed(void)
 {
     qDebug() << "moveToButtonPressed";
+    m_autoscope->sendToServer(m_parser->moveToCommand(ui->azimuthEditor->value(), ui->altitudeEditor->value()));
 }
 
 void AutoscopeWindowForm::azimuthChanged(double d)
@@ -207,16 +211,19 @@ void AutoscopeWindowForm::searchButtonPressed(void)
 void AutoscopeWindowForm::zoomChanged(int i)
 {
     qDebug() << "zoomChanged";
+    m_autoscope->sendToServer(m_parser->zoomCommand(i));
 }
 
 void AutoscopeWindowForm::exposureTimeChanged(double d)
 {
     qDebug() << "exposureTimeChanged";
+    m_autoscope->sendToServer(m_parser->exposureTimeCommand(d));
 }
 
 void AutoscopeWindowForm::numberOfPictureChanged(int i)
 {
     qDebug() << "numberOfPictureChanged";
+    m_autoscope->sendToServer(m_parser->numberOfPictureCommand(i));
 }
 
 void AutoscopeWindowForm::displaySizeChanged(int percent)

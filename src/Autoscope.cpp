@@ -36,6 +36,7 @@
 #include <QSettings>
 
 #include "StelDialog.hpp"
+#include "StelMainView.hpp"
 
 #include "AutoscopeWindowForm.hpp"
 #include "AutoscopePictureWindowForm.hpp"
@@ -84,6 +85,11 @@ Autoscope::Autoscope()
     m_autoscopeIp = QHostAddress("192.168.43.107");
     m_autoscopePort = 4444;
     m_client = new TcpClient(m_autoscopeIp, m_autoscopePort);
+
+    m_timer = new QTimer(this);
+    m_timer->setInterval(250);
+
+    m_parser = new CommandParser();
 }
 
 /*************************************************************************
@@ -186,6 +192,9 @@ void Autoscope::init()
         connect(takePicture, SIGNAL(triggered()), this, SLOT(slotTakePicture()));
 
         connect(m_client, SIGNAL(connected()), this, SLOT(slotConnected()));
+
+        connect(m_timer, SIGNAL(timeout()), this, SLOT(slotUpdateAltAz()));
+
     }
     catch (std::runtime_error& e)
     {
@@ -236,6 +245,11 @@ void Autoscope::showGui()
     }
 }
 
+void Autoscope::sendToServer(QString str)
+{
+    m_client->write(str.toStdString().c_str());
+}
+
 void Autoscope::slotTrackObject(void)
 {
     qDebug() << "slotTrackObject";
@@ -268,9 +282,24 @@ void Autoscope::connectToAutoscope(void)
     m_client->connectToHost(m_autoscopeIp, m_autoscopePort);
 }
 
+void Autoscope::slotDeconnectFromAutoscope(void)
+{
+    qDebug() << "disconnect";
+    deconnectFromAutoscope();
+}
+
 void Autoscope::deconnectFromAutoscope(void)
 {
+    qDebug() << "disconnect";
     m_client->close();
+}
+
+void Autoscope::slotUpdateAltAz(void)
+{
+    if(!trackObject.isNull())
+    {
+        getAltAzi(trackObject);
+    }
 }
 
 void Autoscope::getAltAzi(StelObjectP object)
@@ -291,9 +320,11 @@ void Autoscope::getAltAzi(StelObjectP object)
 
     QString str = trackObject->getEnglishName() + " Az./Alt. : " + cxt + "  " + cyt;
 
-    m_client->write(str.toStdString().c_str());
+    //m_client->write(str.toStdString().c_str());
 
     qDebug() << trackObject->getEnglishName() << " Az./Alt. : " << cxt << "  " << cyt;
+
+    sendToServer(m_parser->trackCommand(trackObject->getEnglishName(), cxt, cyt));
 }
 
 // ne fonctionne pas encore
@@ -320,6 +351,7 @@ void Autoscope::setTrackObject(StelObjectP object)
             qDebug() << "Autoscope is tracking " << object->getEnglishName();
             trackObject = object;
         }
+        m_timer->start();
     }
 }
 
@@ -349,6 +381,7 @@ QString Autoscope::trackSearchedObject(void)
 void Autoscope::clearTrackedObject()
 {
     trackObject = nullptr;
+    m_timer->stop();
 }
 
 void Autoscope::moveObserverToObject(StelObjectP object)
@@ -367,11 +400,6 @@ void Autoscope::update(double t)
     {
         m_autoscopeWindow->updateGuiSize();
         m_autoscopeWindow->updateGuiPosition();
-    }
-
-    if(!trackObject.isNull())
-    {
-        getAltAzi(trackObject);
     }
 }
 
