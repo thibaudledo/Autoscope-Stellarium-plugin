@@ -1,6 +1,5 @@
 <map id="src/gui/AutoscopeWindowForm.hpp" name="src/gui/AutoscopeWindowForm.hpp">
-<area shape="rect" id="node1" title="Header file including configuration window definition." alt="" coords="129,5,359,32"/>
-<area shape="rect" id="node2" href="$_autoscope_8cpp.html" title=" " alt="" coords="5,87,136,114"/>
-<area shape="rect" id="node3" href="$_autoscope_picture_window_form_8cpp.html" title=" " alt="" coords="160,80,328,121"/>
-<area shape="rect" id="node4" href="$_autoscope_window_form_8cpp.html" title=" " alt="" coords="352,87,581,114"/>
+<area shape="rect" id="node2" href="$_autoscope_8cpp.html" title="src/Autoscope.cpp" alt="" coords="5,87,136,114"/>
+<area shape="rect" id="node3" href="$_autoscope_picture_window_form_8cpp.html" title="src/gui/AutoscopePicture\lWindowForm.cpp" alt="" coords="160,80,328,121"/>
+<area shape="rect" id="node4" href="$_autoscope_window_form_8cpp.html" title="src/gui/AutoscopeWindowForm.cpp" alt="" coords="352,87,581,114"/>
 </map>

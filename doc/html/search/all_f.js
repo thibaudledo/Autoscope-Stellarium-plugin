@@ -2,6 +2,7 @@ var searchData=
 [
   ['takepicture',['takePicture',['../class_autoscope.html#a8f64e1d50e979751403a70008f0d01da',1,'Autoscope']]],
   ['takepicturebuttonpressed',['takePictureButtonPressed',['../class_autoscope_window_form.html#ac78048dc833bd4952108cb5fe8cac6f8',1,'AutoscopeWindowForm']]],
+  ['takepicturecommand',['takePictureCommand',['../class_command_parser.html#a9fd529d8ec75417afcff7c6ecb3908eb',1,'CommandParser']]],
   ['tcp_5fclient_2ecpp',['tcp_client.cpp',['../tcp__client_8cpp.html',1,'']]],
   ['tcp_5fclient_2ehpp',['tcp_client.hpp',['../tcp__client_8hpp.html',1,'']]],
   ['tcp_5fserver_2ecpp',['tcp_server.cpp',['../tcp__server_8cpp.html',1,'']]],
@@ -12,6 +13,7 @@ var searchData=
   ['toggledisplaybuttonpressed',['toggleDisplayButtonPressed',['../class_autoscope_window_form.html#ae7caa21b226f06d2f32fd6da6d539bbf',1,'AutoscopeWindowForm']]],
   ['trackbutton',['trackButton',['../class_autoscope.html#a816e3212639b4204e9917704e02b0d09',1,'Autoscope']]],
   ['trackbuttonpressed',['trackButtonPressed',['../class_autoscope_window_form.html#ad7b04807a37c5014ab3a151d2ce720b7',1,'AutoscopeWindowForm']]],
+  ['trackcommand',['trackCommand',['../class_command_parser.html#a79e2a2a51a39066c67aa16be2d3bb8cc',1,'CommandParser']]],
   ['trackobject',['trackObject',['../class_autoscope.html#a170fbbc7b2a719517912aa3614727021',1,'Autoscope']]],
   ['tracksearchedobject',['trackSearchedObject',['../class_autoscope.html#ac5a2819eb2d6971becc544d9f7136b79',1,'Autoscope']]],
   ['trackselectedobject',['trackSelectedObject',['../class_autoscope.html#a5782dc8cf3afeb9710240fdc98d0caa1',1,'Autoscope']]]

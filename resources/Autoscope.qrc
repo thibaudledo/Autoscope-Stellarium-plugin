@@ -9,5 +9,8 @@
 	<file>display_off.png</file>
 	<file>display_on.png</file>
 	<file>DeathStar.png</file>
+	<file>leaveFolder.png</file>
+	<file>folder.png</file>
+	<file>file.png</file>
   </qresource>
 </RCC>

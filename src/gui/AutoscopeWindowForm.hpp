@@ -49,6 +49,8 @@ public:
      */
     void setAutoscopePictureWindow(AutoscopePictureWindowForm* autoscopePictureWindow){m_autoscopePictureWindow = autoscopePictureWindow;}
 
+    void setAutoscopeFtpDialog(AutoscopeFtpDialog* autoscopeFtpDialog){m_autoscopeFtpDialog = autoscopeFtpDialog;}
+
     /*!
      * \brief Getter used to retrieve the horizontal gui position
      * \return The horizontal gui position
@@ -124,6 +126,8 @@ private:
      * \see AutoscopePictureWindowForm
      */
     AutoscopePictureWindowForm* m_autoscopePictureWindow;
+
+    AutoscopeFtpDialog* m_autoscopeFtpDialog;
 
     CommandParser* m_parser;
 

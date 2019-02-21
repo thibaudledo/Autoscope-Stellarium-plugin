@@ -30,6 +30,7 @@
 #include "StelObjectType.hpp"
 
 #include "network/CommandParser.hpp"
+#include "AutoscopeFtpDialog.hpp"
 
 #include <QHostAddress>
 
@@ -231,6 +232,8 @@ private:
      * \see AutoscopePictureWindowForm
      */
     AutoscopePictureWindowForm* m_autoscopePictureWindow;
+
+    AutoscopeFtpDialog* m_autoscopeFtpDialog;
 
     /*!
      * \brief An instance of StelCore

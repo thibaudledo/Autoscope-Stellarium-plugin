@@ -9,6 +9,8 @@
 #include "StelModule.hpp"
 #include "StelModuleMgr.hpp"
 
+#include "AutoscopeFtpDialog.hpp"
+
 class Autoscope;
 
 AutoscopeWindowForm::AutoscopeWindowForm()
@@ -278,6 +280,7 @@ void AutoscopeWindowForm::updateMaxMinSlider(void)
 void AutoscopeWindowForm::outputPictureDirectoryChanged(void)
 {
     qDebug() << "outputPictureDirectoryChanged";
+    m_autoscopeFtpDialog->setPathToSaveFile(ui->picturePathEditor->text());
 }
 
 void AutoscopeWindowForm::outputPictureDirectoryButtonPressed(void)
@@ -285,13 +288,14 @@ void AutoscopeWindowForm::outputPictureDirectoryButtonPressed(void)
     qDebug() << "outputPictureDirectoryButtonPressed";
     picturedirectoryPath = QFileDialog::getExistingDirectory(nullptr);
     ui->picturePathEditor->setText(picturedirectoryPath);
+    m_autoscopeFtpDialog->setPathToSaveFile(ui->picturePathEditor->text());
 }
 
 void AutoscopeWindowForm::downloadPictureButtonPressed(void)
 {
     qDebug() << "downloadPictureButtonPressed";
 
-    m_autoscopePictureWindow->updateImage(QPixmap(":/Autoscope/dossier.png"));
+    m_autoscopeFtpDialog->setVisible(true);
 }
 
 void AutoscopeWindowForm::ipAddressChanged(QString ipAddress)

@@ -79,6 +79,8 @@ Autoscope::Autoscope()
     gui = dynamic_cast<StelGui*>(StelApp::getInstance().getGui());
     m_autoscopeWindow = new AutoscopeWindowForm();
     m_autoscopePictureWindow = new AutoscopePictureWindowForm();
+    m_autoscopeFtpDialog = new AutoscopeFtpDialog();
+    m_autoscopeWindow->setAutoscopeFtpDialog(m_autoscopeFtpDialog);
     m_autoscopeWindow->setAutoscopePictureWindow(m_autoscopePictureWindow);
     m_autoscopePictureWindow->setAutoscopeWindow(m_autoscopeWindow);
 

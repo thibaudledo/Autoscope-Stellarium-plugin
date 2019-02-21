@@ -601,7 +601,7 @@
             <string notr="true"/>
            </property>
            <property name="text">
-            <string>Download picture</string>
+            <string>FTP Manager</string>
            </property>
           </widget>
          </item>

@@ -1,9 +1,6 @@
 <map id="AutoscopePictureWindowForm" name="AutoscopePictureWindowForm">
-<area shape="rect" id="node1" title="This class is use to build a picture display interface to show to the user the last taken picture." alt="" coords="405,81,607,108"/>
-<area shape="rect" id="node3" href="$class_autoscope_window_form.html" title="This class is use to build a configuration interface between the user and the plugin." alt="" coords="585,171,747,197"/>
-<area shape="rect" id="node4" href="$class_autoscope.html" title="This class is use to retrieve and compute data for sending to the telescope, and call user interfaces..." alt="" coords="311,260,395,287"/>
-<area shape="rect" id="node2" title=" " alt="" coords="639,5,722,32"/>
-<area shape="rect" id="node5" title=" " alt="" coords="5,171,92,197"/>
-<area shape="rect" id="node6" href="$class_tcp_client.html" title="The TcpClient class allow to make usage of QTcpSocket more suitable for development." alt="" coords="116,171,195,197"/>
-<area shape="rect" id="node7" title=" " alt="" coords="108,81,203,108"/>
+<area shape="rect" id="node3" href="$class_autoscope_window_form.html" title="This class is use to build a configuration interface between the user and the plugin. " alt="" coords="327,171,488,197"/>
+<area shape="rect" id="node4" href="$class_autoscope.html" title="This class is use to retrieve and compute data for sending to the telescope, and call user interfaces..." alt="" coords="252,260,336,287"/>
+<area shape="rect" id="node6" href="$class_tcp_client.html" title="The TcpClient class allow to make usage of QTcpSocket more suitable for development. " alt="" coords="116,171,195,197"/>
+<area shape="rect" id="node8" href="$class_command_parser.html" title="CommandParser" alt="" coords="209,81,329,108"/>
 </map>

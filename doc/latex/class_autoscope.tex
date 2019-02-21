@@ -32,132 +32,144 @@ Collaboration diagram for Autoscope\+:
 \subsection*{Public Slots}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_autoscope_a2a3fc7df788580d91949351f687eab7a}{show\+Gui}} (void)
+void \hyperlink{class_autoscope_a2a3fc7df788580d91949351f687eab7a}{show\+Gui} (void)
 \begin{DoxyCompactList}\small\item\em Enable the configuration menu. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_autoscope_ae0c39815fab1084effd39f87e56febf3}{slot\+Track\+Object}} (void)
+void \hyperlink{class_autoscope_ae0c39815fab1084effd39f87e56febf3}{slot\+Track\+Object} (void)
 \begin{DoxyCompactList}\small\item\em Start tracking the selected object. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_autoscope_a47d7fbe1a8bcf025ef57b45ead2bcf6e}{slot\+Un\+Track\+Oject}} (void)
+void \hyperlink{class_autoscope_a47d7fbe1a8bcf025ef57b45ead2bcf6e}{slot\+Un\+Track\+Oject} (void)
 \begin{DoxyCompactList}\small\item\em Stop tracking the tracked object. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_autoscope_a9216c1ee654d8da28d331b3020b6e27d}{slot\+Enable\+Picture\+Dispaly}} (void)
+void \hyperlink{class_autoscope_a9216c1ee654d8da28d331b3020b6e27d}{slot\+Enable\+Picture\+Dispaly} (void)
 \begin{DoxyCompactList}\small\item\em Toggle the visibility of the picture display. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_autoscope_a55c4956c3a71198b70cf19fea503a776}{slot\+Take\+Picture}} (void)
-\begin{DoxyCompactList}\small\item\em Send a command to the \mbox{\hyperlink{class_autoscope}{Autoscope}} to take a picture. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_autoscope_ae85d6642b5db861e226a6a261c5c0a37}{slot\+Connected}} (void)
-\begin{DoxyCompactList}\small\item\em Triggered when the plugin succeed to connect to the \mbox{\hyperlink{class_autoscope}{Autoscope}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \hyperlink{class_autoscope_a55c4956c3a71198b70cf19fea503a776}{slot\+Take\+Picture} (void)
+\begin{DoxyCompactList}\small\item\em Send a command to the \hyperlink{class_autoscope}{Autoscope} to take a picture. \end{DoxyCompactList}\item 
+void \hyperlink{class_autoscope_ae85d6642b5db861e226a6a261c5c0a37}{slot\+Connected} (void)
+\begin{DoxyCompactList}\small\item\em Triggered when the plugin succeed to connect to the \hyperlink{class_autoscope}{Autoscope}. \end{DoxyCompactList}\item 
+void \hyperlink{class_autoscope_a7d51e9915c4618d8ee5dd78e5ca079c5}{slot\+Update\+Alt\+Az} (void)
+\item 
+void \hyperlink{class_autoscope_a191c9746ccdf08bc804150452792b7eb}{slot\+Deconnect\+From\+Autoscope} (void)
+\begin{DoxyCompactList}\small\item\em Method used to disconnect the plugin from the \hyperlink{class_autoscope}{Autoscope}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_autoscope_a70213dc05856f7f6592d089d14f08f68}{Autoscope}} ()
-\begin{DoxyCompactList}\small\item\em Builder of the \mbox{\hyperlink{class_autoscope}{Autoscope}} class. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{class_autoscope_a8ed25b0eb945f3d2a2a3652322b14b42}{$\sim$\+Autoscope}} ()
-\begin{DoxyCompactList}\small\item\em Destroyer of the \mbox{\hyperlink{class_autoscope}{Autoscope}} class. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_autoscope_a0aaa7e7edbdd749e209dc42ee360f3a5}{init}} ()
+\hyperlink{class_autoscope_a70213dc05856f7f6592d089d14f08f68}{Autoscope} ()
+\begin{DoxyCompactList}\small\item\em Builder of the \hyperlink{class_autoscope}{Autoscope} class. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_autoscope_a8ed25b0eb945f3d2a2a3652322b14b42}{$\sim$\+Autoscope} ()
+\begin{DoxyCompactList}\small\item\em Destroyer of the \hyperlink{class_autoscope}{Autoscope} class. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_autoscope_a0aaa7e7edbdd749e209dc42ee360f3a5}{init} ()
 \begin{DoxyCompactList}\small\item\em Init method is inherited form Stel\+Module class and is use to initialize components sush as Stel\+Button. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_autoscope_a3def05ed6ebac1d2f0245c96c1719d0a}{update}} (double)
+virtual void \hyperlink{class_autoscope_a3def05ed6ebac1d2f0245c96c1719d0a}{update} (double)
 \begin{DoxyCompactList}\small\item\em Update method is inherited form Stel\+Module class and is use to update components or methods. It\textquotesingle{}s automatically called by Stel\+Module\+Mgr. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_autoscope_a268e2b524e0abd079f76c55e8443e907}{draw}} (Stel\+Core $\ast$core)
+virtual void \hyperlink{class_autoscope_a268e2b524e0abd079f76c55e8443e907}{draw} (Stel\+Core $\ast$core)
 \begin{DoxyCompactList}\small\item\em Draw method is inherited form Stel\+Module class and is use to draw components on the user interface. \end{DoxyCompactList}\item 
-virtual double \mbox{\hyperlink{class_autoscope_a9495317b6b710812825c40dbe7ddd458}{get\+Call\+Order}} (Stel\+Module\+Action\+Name action\+Name) const
+virtual double \hyperlink{class_autoscope_ad9607f8ffdd72687a19d160a068e1251}{get\+Call\+Order} (Stel\+Module\+Action\+Name action\+Name) const 
 \begin{DoxyCompactList}\small\item\em get\+Call\+Order method \end{DoxyCompactList}\item 
-virtual bool \mbox{\hyperlink{class_autoscope_a1a3fca34a12ae80391943194340d2c7e}{configure\+Gui}} (bool show)
+virtual bool \hyperlink{class_autoscope_a1a3fca34a12ae80391943194340d2c7e}{configure\+Gui} (bool show)
 \begin{DoxyCompactList}\small\item\em Configure\+Gui method is inherited from Stel\+Module class and is use to show the user interface through the plugin manager. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_autoscope_af24c123f39ace0191799b5c20ceca7a6}{load\+Configuration}} ()
+void \hyperlink{class_autoscope_af24c123f39ace0191799b5c20ceca7a6}{load\+Configuration} ()
 \begin{DoxyCompactList}\small\item\em Method used to retrieve the configuration of the plugin. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_autoscope_a2c5424afe3270c6069e0109834dd52b5}{restore\+Default\+Configuration}} ()
+void \hyperlink{class_autoscope_a2c5424afe3270c6069e0109834dd52b5}{restore\+Default\+Configuration} ()
 \begin{DoxyCompactList}\small\item\em Method used to restore the default configuration of the plugin. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_autoscope_af61a84b86f02cc55472c53cc79b025b2}{get\+Alt\+Azi}} (Stel\+ObjectP object)
+void \hyperlink{class_autoscope_af61a84b86f02cc55472c53cc79b025b2}{get\+Alt\+Azi} (Stel\+ObjectP object)
 \begin{DoxyCompactList}\small\item\em Method used to retrieve the altitude and the azimuth of an object. \end{DoxyCompactList}\item 
-Q\+String \mbox{\hyperlink{class_autoscope_af1d803331f5ab5f5ff5d3839df8952c7}{search\+An\+Object}} (Q\+String object\+Name)
+Q\+String \hyperlink{class_autoscope_af1d803331f5ab5f5ff5d3839df8952c7}{search\+An\+Object} (Q\+String object\+Name)
 \begin{DoxyCompactList}\small\item\em Method used to search an object by it\textquotesingle{}s name. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_autoscope_a0a616d2998641471cb6785e2abb6e7b5}{set\+Track\+Object}} (Stel\+ObjectP object)
-\begin{DoxyCompactList}\small\item\em Method used to modify the object that the \mbox{\hyperlink{class_autoscope}{Autoscope}} should track. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_autoscope_a5782dc8cf3afeb9710240fdc98d0caa1}{track\+Selected\+Object}} (void)
+void \hyperlink{class_autoscope_a0a616d2998641471cb6785e2abb6e7b5}{set\+Track\+Object} (Stel\+ObjectP object)
+\begin{DoxyCompactList}\small\item\em Method used to modify the object that the \hyperlink{class_autoscope}{Autoscope} should track. \end{DoxyCompactList}\item 
+void \hyperlink{class_autoscope_a5782dc8cf3afeb9710240fdc98d0caa1}{track\+Selected\+Object} (void)
 \begin{DoxyCompactList}\small\item\em Method used to tarck the object selected by the user. \end{DoxyCompactList}\item 
-Q\+String \mbox{\hyperlink{class_autoscope_ac5a2819eb2d6971becc544d9f7136b79}{track\+Searched\+Object}} (void)
+Q\+String \hyperlink{class_autoscope_ac5a2819eb2d6971becc544d9f7136b79}{track\+Searched\+Object} (void)
 \begin{DoxyCompactList}\small\item\em Method used to tarck the object search by the user. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_autoscope_a2bf2306aa6d3f37dadd83e6e00a35ff3}{clear\+Tracked\+Object}} (void)
+void \hyperlink{class_autoscope_a2bf2306aa6d3f37dadd83e6e00a35ff3}{clear\+Tracked\+Object} (void)
 \begin{DoxyCompactList}\small\item\em Method used to clear the current tracked object. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_autoscope_ac8f9e09385739a5ba5ed460c83ec88df}{move\+Observer\+To\+Object}} (Stel\+ObjectP object)
+void \hyperlink{class_autoscope_ac8f9e09385739a5ba5ed460c83ec88df}{move\+Observer\+To\+Object} (Stel\+ObjectP object)
 \begin{DoxyCompactList}\small\item\em Method used to move the view in Stellarium to an object. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_autoscope_window_form}{Autoscope\+Window\+Form}} $\ast$ \mbox{\hyperlink{class_autoscope_aad8f888c886f1f3e36878e8c3e658813}{get\+Autoscope\+Window}} (void)
-\begin{DoxyCompactList}\small\item\em Getter which allow any class which have an instance of \mbox{\hyperlink{class_autoscope}{Autoscope}} class to retrieve an instance of the configuration window. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_autoscope_picture_window_form}{Autoscope\+Picture\+Window\+Form}} $\ast$ \mbox{\hyperlink{class_autoscope_a78d970ac013a0640bc28cac027737848}{get\+Autoscope\+Picture\+Window}} (void)
-\begin{DoxyCompactList}\small\item\em Getter which allow any class which have an instance of \mbox{\hyperlink{class_autoscope}{Autoscope}} class to retrieve an instance of the picture window. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{class_autoscope_a0e438a40043c916a7f0f98a30221de11}{get\+Screen\+Width}} (void)
-\begin{DoxyCompactList}\small\item\em Getter allow any class which have an instance of \mbox{\hyperlink{class_autoscope}{Autoscope}} class to retrieve the width of the screen. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{class_autoscope_adb579d1e5a23aaa401d5a93be033529d}{get\+Screen\+Height}} (void)
-\begin{DoxyCompactList}\small\item\em Getter allow any class which have an instance of \mbox{\hyperlink{class_autoscope}{Autoscope}} class to retrieve the height of the screen. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_autoscope_aad5b62b7a114ef8755923067e14f9dd8}{set\+Ip\+Address}} (Q\+String addr)
-\begin{DoxyCompactList}\small\item\em Setter used to set the IP address of the \mbox{\hyperlink{class_autoscope}{Autoscope}}. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_autoscope_acda88ddee4fb3fbd0333717c0f140e54}{set\+Port}} (int port)
-\begin{DoxyCompactList}\small\item\em Setter used to set the port of the \mbox{\hyperlink{class_autoscope}{Autoscope}}. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_autoscope_a1ae78f4cada1c4e36f5a06db126017fe}{connect\+To\+Autoscope}} (void)
-\begin{DoxyCompactList}\small\item\em Method used to connect the plugin to the \mbox{\hyperlink{class_autoscope}{Autoscope}}. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_autoscope_aafe64e11135903a1b83d16ffdd07d63e}{deconnect\+From\+Autoscope}} (void)
-\begin{DoxyCompactList}\small\item\em Method used to disconnect the plugin from the \mbox{\hyperlink{class_autoscope}{Autoscope}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{class_autoscope_window_form}{Autoscope\+Window\+Form} $\ast$ \hyperlink{class_autoscope_aad8f888c886f1f3e36878e8c3e658813}{get\+Autoscope\+Window} (void)
+\begin{DoxyCompactList}\small\item\em Getter which allow any class which have an instance of \hyperlink{class_autoscope}{Autoscope} class to retrieve an instance of the configuration window. \end{DoxyCompactList}\item 
+\hyperlink{class_autoscope_picture_window_form}{Autoscope\+Picture\+Window\+Form} $\ast$ \hyperlink{class_autoscope_a78d970ac013a0640bc28cac027737848}{get\+Autoscope\+Picture\+Window} (void)
+\begin{DoxyCompactList}\small\item\em Getter which allow any class which have an instance of \hyperlink{class_autoscope}{Autoscope} class to retrieve an instance of the picture window. \end{DoxyCompactList}\item 
+\hyperlink{class_command_parser}{Command\+Parser} $\ast$ \hyperlink{class_autoscope_a1be145363f86657b59c6b0cba1497970}{get\+Command\+Parser} (void)
+\item 
+int \hyperlink{class_autoscope_a0e438a40043c916a7f0f98a30221de11}{get\+Screen\+Width} (void)
+\begin{DoxyCompactList}\small\item\em Getter allow any class which have an instance of \hyperlink{class_autoscope}{Autoscope} class to retrieve the width of the screen. \end{DoxyCompactList}\item 
+int \hyperlink{class_autoscope_adb579d1e5a23aaa401d5a93be033529d}{get\+Screen\+Height} (void)
+\begin{DoxyCompactList}\small\item\em Getter allow any class which have an instance of \hyperlink{class_autoscope}{Autoscope} class to retrieve the height of the screen. \end{DoxyCompactList}\item 
+void \hyperlink{class_autoscope_aad5b62b7a114ef8755923067e14f9dd8}{set\+Ip\+Address} (Q\+String addr)
+\begin{DoxyCompactList}\small\item\em Setter used to set the IP address of the \hyperlink{class_autoscope}{Autoscope}. \end{DoxyCompactList}\item 
+void \hyperlink{class_autoscope_acda88ddee4fb3fbd0333717c0f140e54}{set\+Port} (int port)
+\begin{DoxyCompactList}\small\item\em Setter used to set the port of the \hyperlink{class_autoscope}{Autoscope}. \end{DoxyCompactList}\item 
+void \hyperlink{class_autoscope_a1ae78f4cada1c4e36f5a06db126017fe}{connect\+To\+Autoscope} (void)
+\begin{DoxyCompactList}\small\item\em Method used to connect the plugin to the \hyperlink{class_autoscope}{Autoscope}. \end{DoxyCompactList}\item 
+void \hyperlink{class_autoscope_aafe64e11135903a1b83d16ffdd07d63e}{deconnect\+From\+Autoscope} (void)
+\begin{DoxyCompactList}\small\item\em Method used to disconnect the plugin from the \hyperlink{class_autoscope}{Autoscope}. \end{DoxyCompactList}\item 
+void \hyperlink{class_autoscope_a724178eb130dde22dc564a086b82c0e4}{send\+To\+Server} (Q\+String)
+\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-Stel\+Movement\+Mgr $\ast$ \mbox{\hyperlink{class_autoscope_ab34124a1179a937ac061bb4fa3faa2de}{mv\+Mgr}}
+Stel\+Movement\+Mgr $\ast$ \hyperlink{class_autoscope_ab34124a1179a937ac061bb4fa3faa2de}{mv\+Mgr}
 \begin{DoxyCompactList}\small\item\em An instance of Stellarium movement manager and it\textquotesingle{}s use to move the view in Stellarium. \end{DoxyCompactList}\item 
-Stel\+Object\+Mgr $\ast$ \mbox{\hyperlink{class_autoscope_aec2c452e45c0a7d045417a8656aa7c45}{object\+Mgr}}
+Stel\+Object\+Mgr $\ast$ \hyperlink{class_autoscope_aec2c452e45c0a7d045417a8656aa7c45}{object\+Mgr}
 \begin{DoxyCompactList}\small\item\em An instance of Stellarium object manager and it\textquotesingle{}s use to retrieve selected object or search object by name. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-Q\+Settings $\ast$ \mbox{\hyperlink{class_autoscope_a6a17eb00225f765623844eaa9f80e71e}{conf}}
+Q\+Settings $\ast$ \hyperlink{class_autoscope_a6a17eb00225f765623844eaa9f80e71e}{conf}
 \item 
-Stel\+Gui $\ast$ \mbox{\hyperlink{class_autoscope_a90c44f576ab3acd74da3af3ad8162ca7}{gui}}
+Stel\+Gui $\ast$ \hyperlink{class_autoscope_a90c44f576ab3acd74da3af3ad8162ca7}{gui}
 \item 
-\mbox{\hyperlink{class_autoscope_window_form}{Autoscope\+Window\+Form}} $\ast$ \mbox{\hyperlink{class_autoscope_a33104164061c784c65c1f94bfde26423}{m\+\_\+autoscope\+Window}}
-\begin{DoxyCompactList}\small\item\em An instance of \mbox{\hyperlink{class_autoscope_window_form}{Autoscope\+Window\+Form}} class. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_autoscope_picture_window_form}{Autoscope\+Picture\+Window\+Form}} $\ast$ \mbox{\hyperlink{class_autoscope_a75a50ab46f25c007b9a86d3776385fc6}{m\+\_\+autoscope\+Picture\+Window}}
-\begin{DoxyCompactList}\small\item\em An instance of \mbox{\hyperlink{class_autoscope_picture_window_form}{Autoscope\+Picture\+Window\+Form}} class. \end{DoxyCompactList}\item 
-Stel\+Core $\ast$ \mbox{\hyperlink{class_autoscope_aa333cfe8f256f5698c686423cad648c2}{m\+\_\+core}}
+\hyperlink{class_autoscope_window_form}{Autoscope\+Window\+Form} $\ast$ \hyperlink{class_autoscope_a33104164061c784c65c1f94bfde26423}{m\+\_\+autoscope\+Window}
+\begin{DoxyCompactList}\small\item\em An instance of \hyperlink{class_autoscope_window_form}{Autoscope\+Window\+Form} class. \end{DoxyCompactList}\item 
+\hyperlink{class_autoscope_picture_window_form}{Autoscope\+Picture\+Window\+Form} $\ast$ \hyperlink{class_autoscope_a75a50ab46f25c007b9a86d3776385fc6}{m\+\_\+autoscope\+Picture\+Window}
+\begin{DoxyCompactList}\small\item\em An instance of \hyperlink{class_autoscope_picture_window_form}{Autoscope\+Picture\+Window\+Form} class. \end{DoxyCompactList}\item 
+Stel\+Core $\ast$ \hyperlink{class_autoscope_aa333cfe8f256f5698c686423cad648c2}{m\+\_\+core}
 \begin{DoxyCompactList}\small\item\em An instance of Stel\+Core. \end{DoxyCompactList}\item 
-Vec3f \mbox{\hyperlink{class_autoscope_a58327daadc555f31fc62b6db85e3fcfa}{mark\+Color}}
+Q\+Timer $\ast$ \hyperlink{class_autoscope_a6d86ef1f5ea17f5175009a15004b2459}{m\+\_\+timer}
 \item 
-Linear\+Fader \mbox{\hyperlink{class_autoscope_a9c141894e06ed64f4131f1071e9e18af}{mark\+Fader}}
+\hyperlink{class_command_parser}{Command\+Parser} $\ast$ \hyperlink{class_autoscope_ab4a9bf62ccbcf24b4a6e3752cff9f090}{m\+\_\+parser}
 \item 
-bool \mbox{\hyperlink{class_autoscope_a8c066a069946815c05fe7d32b13211d3}{displayed\+At\+Startup}}
+Vec3f \hyperlink{class_autoscope_a58327daadc555f31fc62b6db85e3fcfa}{mark\+Color}
 \item 
-bool \mbox{\hyperlink{class_autoscope_ac995550136b93293df166aead2eda5b7}{gui\+Is\+Visible}} = false
+Linear\+Fader \hyperlink{class_autoscope_a9c141894e06ed64f4131f1071e9e18af}{mark\+Fader}
 \item 
-Stel\+Button $\ast$ \mbox{\hyperlink{class_autoscope_a5b14962697fbd8fffac986df08aee611}{menu\+Button}}
+bool \hyperlink{class_autoscope_a8c066a069946815c05fe7d32b13211d3}{displayed\+At\+Startup}
 \item 
-Stel\+Button $\ast$ \mbox{\hyperlink{class_autoscope_a816e3212639b4204e9917704e02b0d09}{track\+Button}}
+bool \hyperlink{class_autoscope_ac995550136b93293df166aead2eda5b7}{gui\+Is\+Visible} = false
 \item 
-Stel\+Button $\ast$ \mbox{\hyperlink{class_autoscope_a5d3be6a8522dc18b921936b57c8e661c}{un\+Track\+Button}}
+Stel\+Button $\ast$ \hyperlink{class_autoscope_a5b14962697fbd8fffac986df08aee611}{menu\+Button}
 \item 
-Stel\+Button $\ast$ \mbox{\hyperlink{class_autoscope_aa3b4663ded25875ce8fb21906b38d174}{Enable\+Picture\+Display}}
+Stel\+Button $\ast$ \hyperlink{class_autoscope_a816e3212639b4204e9917704e02b0d09}{track\+Button}
 \item 
-Stel\+Button $\ast$ \mbox{\hyperlink{class_autoscope_a8f64e1d50e979751403a70008f0d01da}{take\+Picture}}
+Stel\+Button $\ast$ \hyperlink{class_autoscope_a5d3be6a8522dc18b921936b57c8e661c}{un\+Track\+Button}
 \item 
-Q\+Font \mbox{\hyperlink{class_autoscope_a168d6d47f412a7966c2f5ddeb0f4cc79}{font}}
+Stel\+Button $\ast$ \hyperlink{class_autoscope_aa3b4663ded25875ce8fb21906b38d174}{Enable\+Picture\+Display}
 \item 
-Stel\+ObjectP \mbox{\hyperlink{class_autoscope_a5bcfda333996f4fc3a959306be3e3d07}{Sun}}
+Stel\+Button $\ast$ \hyperlink{class_autoscope_a8f64e1d50e979751403a70008f0d01da}{take\+Picture}
 \item 
-Stel\+ObjectP \mbox{\hyperlink{class_autoscope_a170fbbc7b2a719517912aa3614727021}{track\+Object}}
+Q\+Font \hyperlink{class_autoscope_a168d6d47f412a7966c2f5ddeb0f4cc79}{font}
 \item 
-Stel\+ObjectP \mbox{\hyperlink{class_autoscope_a954a97691346ff2fb0981877554c1ac3}{selected\+Object}}
+Stel\+ObjectP \hyperlink{class_autoscope_a5bcfda333996f4fc3a959306be3e3d07}{Sun}
 \item 
-Stel\+ObjectP \mbox{\hyperlink{class_autoscope_aba59abee95b4b5443709dce1d61a3498}{searched\+Object}}
+Stel\+ObjectP \hyperlink{class_autoscope_a170fbbc7b2a719517912aa3614727021}{track\+Object}
 \item 
-Vec3d \mbox{\hyperlink{class_autoscope_aff4d8365cc96689c79f3370ebde45b9e}{object\+Position}}
+Stel\+ObjectP \hyperlink{class_autoscope_a954a97691346ff2fb0981877554c1ac3}{selected\+Object}
 \item 
-Q\+List$<$ Stel\+ObjectP $>$ \mbox{\hyperlink{class_autoscope_aa02f096fc07e27ef3843eb4f8ba2c5a5}{new\+Selected}}
+Stel\+ObjectP \hyperlink{class_autoscope_aba59abee95b4b5443709dce1d61a3498}{searched\+Object}
 \item 
-bool \mbox{\hyperlink{class_autoscope_adcd9ee42b339c3c526231ed97c0ef6fa}{search\+Object\+Found}} = false
+Vec3d \hyperlink{class_autoscope_aff4d8365cc96689c79f3370ebde45b9e}{object\+Position}
 \item 
-int \mbox{\hyperlink{class_autoscope_afe92778dfed037b0ec41ad51f8086a56}{m\+\_\+screen\+Width}}
+Q\+List$<$ Stel\+ObjectP $>$ \hyperlink{class_autoscope_aa02f096fc07e27ef3843eb4f8ba2c5a5}{new\+Selected}
 \item 
-int \mbox{\hyperlink{class_autoscope_a003c73a069f579f831eeaa8f04cf2977}{m\+\_\+screen\+Height}}
+bool \hyperlink{class_autoscope_adcd9ee42b339c3c526231ed97c0ef6fa}{search\+Object\+Found} = false
 \item 
-\mbox{\hyperlink{class_tcp_client}{Tcp\+Client}} $\ast$ \mbox{\hyperlink{class_autoscope_af6e7a8d7cf7014e9b0f9296e2b7d7fd5}{m\+\_\+client}}
-\begin{DoxyCompactList}\small\item\em An instance of \mbox{\hyperlink{class_tcp_client}{Tcp\+Client}} class. \end{DoxyCompactList}\item 
-Q\+Host\+Address \mbox{\hyperlink{class_autoscope_aa3c1b8d19881d76c680b8c4ea1692c89}{m\+\_\+autoscope\+Ip}}
+int \hyperlink{class_autoscope_afe92778dfed037b0ec41ad51f8086a56}{m\+\_\+screen\+Width}
 \item 
-int \mbox{\hyperlink{class_autoscope_abb67968cc6c6678995512aa1a05ad0e1}{m\+\_\+autoscope\+Port}} = 4444
+int \hyperlink{class_autoscope_a003c73a069f579f831eeaa8f04cf2977}{m\+\_\+screen\+Height}
+\item 
+\hyperlink{class_tcp_client}{Tcp\+Client} $\ast$ \hyperlink{class_autoscope_af6e7a8d7cf7014e9b0f9296e2b7d7fd5}{m\+\_\+client}
+\begin{DoxyCompactList}\small\item\em An instance of \hyperlink{class_tcp_client}{Tcp\+Client} class. \end{DoxyCompactList}\item 
+Q\+Host\+Address \hyperlink{class_autoscope_aa3c1b8d19881d76c680b8c4ea1692c89}{m\+\_\+autoscope\+Ip}
+\item 
+int \hyperlink{class_autoscope_abb67968cc6c6678995512aa1a05ad0e1}{m\+\_\+autoscope\+Port} = 4444
 \end{DoxyCompactItemize}
 
 
@@ -165,45 +177,49 @@ int \mbox{\hyperlink{class_autoscope_abb67968cc6c6678995512aa1a05ad0e1}{m\+\_\+a
 This class is use to retrieve and compute data for sending to the telescope, and call user interfaces windows. 
 
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_autoscope_a70213dc05856f7f6592d089d14f08f68}\label{class_autoscope_a70213dc05856f7f6592d089d14f08f68}} 
 \index{Autoscope@{Autoscope}!Autoscope@{Autoscope}}
 \index{Autoscope@{Autoscope}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{Autoscope()}{Autoscope()}}
-{\footnotesize\ttfamily Autoscope\+::\+Autoscope (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\subsubsection[{\texorpdfstring{Autoscope()}{Autoscope()}}]{\setlength{\rightskip}{0pt plus 5cm}Autoscope\+::\+Autoscope (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_autoscope_a70213dc05856f7f6592d089d14f08f68}{}\label{class_autoscope_a70213dc05856f7f6592d089d14f08f68}
 
 
+Builder of the \hyperlink{class_autoscope}{Autoscope} class. 
 
-Builder of the \mbox{\hyperlink{class_autoscope}{Autoscope}} class. 
+\index{Autoscope@{Autoscope}!````~Autoscope@{$\sim$\+Autoscope}}
+\index{````~Autoscope@{$\sim$\+Autoscope}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{$\sim$\+Autoscope()}{~Autoscope()}}]{\setlength{\rightskip}{0pt plus 5cm}Autoscope\+::$\sim$\+Autoscope (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_autoscope_a8ed25b0eb945f3d2a2a3652322b14b42}{}\label{class_autoscope_a8ed25b0eb945f3d2a2a3652322b14b42}
 
-\mbox{\Hypertarget{class_autoscope_a8ed25b0eb945f3d2a2a3652322b14b42}\label{class_autoscope_a8ed25b0eb945f3d2a2a3652322b14b42}} 
-\index{Autoscope@{Autoscope}!````~Autoscope@{$\sim$Autoscope}}
-\index{````~Autoscope@{$\sim$Autoscope}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{$\sim$Autoscope()}{~Autoscope()}}
-{\footnotesize\ttfamily Autoscope\+::$\sim$\+Autoscope (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-
-
-Destroyer of the \mbox{\hyperlink{class_autoscope}{Autoscope}} class. 
+Destroyer of the \hyperlink{class_autoscope}{Autoscope} class. 
 
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{class_autoscope_a2bf2306aa6d3f37dadd83e6e00a35ff3}\label{class_autoscope_a2bf2306aa6d3f37dadd83e6e00a35ff3}} 
-\index{Autoscope@{Autoscope}!clearTrackedObject@{clearTrackedObject}}
-\index{clearTrackedObject@{clearTrackedObject}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{clearTrackedObject()}{clearTrackedObject()}}
-{\footnotesize\ttfamily void Autoscope\+::clear\+Tracked\+Object (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
-
+\index{Autoscope@{Autoscope}!clear\+Tracked\+Object@{clear\+Tracked\+Object}}
+\index{clear\+Tracked\+Object@{clear\+Tracked\+Object}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{clear\+Tracked\+Object(void)}{clearTrackedObject(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Autoscope\+::clear\+Tracked\+Object (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_autoscope_a2bf2306aa6d3f37dadd83e6e00a35ff3}{}\label{class_autoscope_a2bf2306aa6d3f37dadd83e6e00a35ff3}
 
 
 Method used to clear the current tracked object. 
 
-\mbox{\Hypertarget{class_autoscope_a1a3fca34a12ae80391943194340d2c7e}\label{class_autoscope_a1a3fca34a12ae80391943194340d2c7e}} 
-\index{Autoscope@{Autoscope}!configureGui@{configureGui}}
-\index{configureGui@{configureGui}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{configureGui()}{configureGui()}}
-{\footnotesize\ttfamily bool Autoscope\+::configure\+Gui (\begin{DoxyParamCaption}\item[{bool}]{show }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
+\index{Autoscope@{Autoscope}!configure\+Gui@{configure\+Gui}}
+\index{configure\+Gui@{configure\+Gui}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{configure\+Gui(bool show)}{configureGui(bool show)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Autoscope\+::configure\+Gui (
+\begin{DoxyParamCaption}
+\item[{bool}]{show}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_autoscope_a1a3fca34a12ae80391943194340d2c7e}{}\label{class_autoscope_a1a3fca34a12ae80391943194340d2c7e}
 
 
 Configure\+Gui method is inherited from Stel\+Module class and is use to show the user interface through the plugin manager. 
@@ -219,32 +235,35 @@ true if it doesn\textquotesingle{}t crash!
 \begin{DoxySeeAlso}{See also}
 Stel\+Module 
 \end{DoxySeeAlso}
-\mbox{\Hypertarget{class_autoscope_a1ae78f4cada1c4e36f5a06db126017fe}\label{class_autoscope_a1ae78f4cada1c4e36f5a06db126017fe}} 
-\index{Autoscope@{Autoscope}!connectToAutoscope@{connectToAutoscope}}
-\index{connectToAutoscope@{connectToAutoscope}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{connectToAutoscope()}{connectToAutoscope()}}
-{\footnotesize\ttfamily void Autoscope\+::connect\+To\+Autoscope (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+\index{Autoscope@{Autoscope}!connect\+To\+Autoscope@{connect\+To\+Autoscope}}
+\index{connect\+To\+Autoscope@{connect\+To\+Autoscope}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{connect\+To\+Autoscope(void)}{connectToAutoscope(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Autoscope\+::connect\+To\+Autoscope (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_autoscope_a1ae78f4cada1c4e36f5a06db126017fe}{}\label{class_autoscope_a1ae78f4cada1c4e36f5a06db126017fe}
 
 
+Method used to connect the plugin to the \hyperlink{class_autoscope}{Autoscope}. 
 
-Method used to connect the plugin to the \mbox{\hyperlink{class_autoscope}{Autoscope}}. 
+\index{Autoscope@{Autoscope}!deconnect\+From\+Autoscope@{deconnect\+From\+Autoscope}}
+\index{deconnect\+From\+Autoscope@{deconnect\+From\+Autoscope}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{deconnect\+From\+Autoscope(void)}{deconnectFromAutoscope(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Autoscope\+::deconnect\+From\+Autoscope (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_autoscope_aafe64e11135903a1b83d16ffdd07d63e}{}\label{class_autoscope_aafe64e11135903a1b83d16ffdd07d63e}
 
-\mbox{\Hypertarget{class_autoscope_aafe64e11135903a1b83d16ffdd07d63e}\label{class_autoscope_aafe64e11135903a1b83d16ffdd07d63e}} 
-\index{Autoscope@{Autoscope}!deconnectFromAutoscope@{deconnectFromAutoscope}}
-\index{deconnectFromAutoscope@{deconnectFromAutoscope}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{deconnectFromAutoscope()}{deconnectFromAutoscope()}}
-{\footnotesize\ttfamily void Autoscope\+::deconnect\+From\+Autoscope (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
+Method used to disconnect the plugin from the \hyperlink{class_autoscope}{Autoscope}. 
 
-
-Method used to disconnect the plugin from the \mbox{\hyperlink{class_autoscope}{Autoscope}}. 
-
-\mbox{\Hypertarget{class_autoscope_a268e2b524e0abd079f76c55e8443e907}\label{class_autoscope_a268e2b524e0abd079f76c55e8443e907}} 
 \index{Autoscope@{Autoscope}!draw@{draw}}
 \index{draw@{draw}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{draw()}{draw()}}
-{\footnotesize\ttfamily void Autoscope\+::draw (\begin{DoxyParamCaption}\item[{Stel\+Core $\ast$}]{core }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
+\subsubsection[{\texorpdfstring{draw(\+Stel\+Core $\ast$core)}{draw(StelCore *core)}}]{\setlength{\rightskip}{0pt plus 5cm}void Autoscope\+::draw (
+\begin{DoxyParamCaption}
+\item[{Stel\+Core $\ast$}]{core}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_autoscope_a268e2b524e0abd079f76c55e8443e907}{}\label{class_autoscope_a268e2b524e0abd079f76c55e8443e907}
 
 
 Draw method is inherited form Stel\+Module class and is use to draw components on the user interface. 
@@ -257,12 +276,13 @@ Draw method is inherited form Stel\+Module class and is use to draw components o
 \begin{DoxySeeAlso}{See also}
 Stel\+Module 
 \end{DoxySeeAlso}
-\mbox{\Hypertarget{class_autoscope_af61a84b86f02cc55472c53cc79b025b2}\label{class_autoscope_af61a84b86f02cc55472c53cc79b025b2}} 
-\index{Autoscope@{Autoscope}!getAltAzi@{getAltAzi}}
-\index{getAltAzi@{getAltAzi}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{getAltAzi()}{getAltAzi()}}
-{\footnotesize\ttfamily void Autoscope\+::get\+Alt\+Azi (\begin{DoxyParamCaption}\item[{Stel\+ObjectP}]{object }\end{DoxyParamCaption})}
-
+\index{Autoscope@{Autoscope}!get\+Alt\+Azi@{get\+Alt\+Azi}}
+\index{get\+Alt\+Azi@{get\+Alt\+Azi}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{get\+Alt\+Azi(\+Stel\+Object\+P object)}{getAltAzi(StelObjectP object)}}]{\setlength{\rightskip}{0pt plus 5cm}void Autoscope\+::get\+Alt\+Azi (
+\begin{DoxyParamCaption}
+\item[{Stel\+ObjectP}]{object}
+\end{DoxyParamCaption}
+)}\hypertarget{class_autoscope_af61a84b86f02cc55472c53cc79b025b2}{}\label{class_autoscope_af61a84b86f02cc55472c53cc79b025b2}
 
 
 Method used to retrieve the altitude and the azimuth of an object. 
@@ -272,38 +292,41 @@ Method used to retrieve the altitude and the azimuth of an object.
 {\em object} & The object that we want to retrieve data from \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_autoscope_a78d970ac013a0640bc28cac027737848}\label{class_autoscope_a78d970ac013a0640bc28cac027737848}} 
-\index{Autoscope@{Autoscope}!getAutoscopePictureWindow@{getAutoscopePictureWindow}}
-\index{getAutoscopePictureWindow@{getAutoscopePictureWindow}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{getAutoscopePictureWindow()}{getAutoscopePictureWindow()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_autoscope_picture_window_form}{Autoscope\+Picture\+Window\+Form}}$\ast$ Autoscope\+::get\+Autoscope\+Picture\+Window (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\index{Autoscope@{Autoscope}!get\+Autoscope\+Picture\+Window@{get\+Autoscope\+Picture\+Window}}
+\index{get\+Autoscope\+Picture\+Window@{get\+Autoscope\+Picture\+Window}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{get\+Autoscope\+Picture\+Window(void)}{getAutoscopePictureWindow(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Autoscope\+Picture\+Window\+Form}$\ast$ Autoscope\+::get\+Autoscope\+Picture\+Window (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_autoscope_a78d970ac013a0640bc28cac027737848}{}\label{class_autoscope_a78d970ac013a0640bc28cac027737848}
 
 
-
-Getter which allow any class which have an instance of \mbox{\hyperlink{class_autoscope}{Autoscope}} class to retrieve an instance of the picture window. 
+Getter which allow any class which have an instance of \hyperlink{class_autoscope}{Autoscope} class to retrieve an instance of the picture window. 
 
 \begin{DoxyReturn}{Returns}
 An instance of the picture window 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_autoscope_aad8f888c886f1f3e36878e8c3e658813}\label{class_autoscope_aad8f888c886f1f3e36878e8c3e658813}} 
-\index{Autoscope@{Autoscope}!getAutoscopeWindow@{getAutoscopeWindow}}
-\index{getAutoscopeWindow@{getAutoscopeWindow}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{getAutoscopeWindow()}{getAutoscopeWindow()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_autoscope_window_form}{Autoscope\+Window\+Form}}$\ast$ Autoscope\+::get\+Autoscope\+Window (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\index{Autoscope@{Autoscope}!get\+Autoscope\+Window@{get\+Autoscope\+Window}}
+\index{get\+Autoscope\+Window@{get\+Autoscope\+Window}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{get\+Autoscope\+Window(void)}{getAutoscopeWindow(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Autoscope\+Window\+Form}$\ast$ Autoscope\+::get\+Autoscope\+Window (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_autoscope_aad8f888c886f1f3e36878e8c3e658813}{}\label{class_autoscope_aad8f888c886f1f3e36878e8c3e658813}
 
 
-
-Getter which allow any class which have an instance of \mbox{\hyperlink{class_autoscope}{Autoscope}} class to retrieve an instance of the configuration window. 
+Getter which allow any class which have an instance of \hyperlink{class_autoscope}{Autoscope} class to retrieve an instance of the configuration window. 
 
 \begin{DoxyReturn}{Returns}
 An instance of the configuration window 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_autoscope_a9495317b6b710812825c40dbe7ddd458}\label{class_autoscope_a9495317b6b710812825c40dbe7ddd458}} 
-\index{Autoscope@{Autoscope}!getCallOrder@{getCallOrder}}
-\index{getCallOrder@{getCallOrder}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{getCallOrder()}{getCallOrder()}}
-{\footnotesize\ttfamily double Autoscope\+::get\+Call\+Order (\begin{DoxyParamCaption}\item[{Stel\+Module\+Action\+Name}]{action\+Name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
-
+\index{Autoscope@{Autoscope}!get\+Call\+Order@{get\+Call\+Order}}
+\index{get\+Call\+Order@{get\+Call\+Order}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{get\+Call\+Order(\+Stel\+Module\+Action\+Name action\+Name) const }{getCallOrder(StelModuleActionName actionName) const }}]{\setlength{\rightskip}{0pt plus 5cm}double Autoscope\+::get\+Call\+Order (
+\begin{DoxyParamCaption}
+\item[{Stel\+Module\+Action\+Name}]{action\+Name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_autoscope_ad9607f8ffdd72687a19d160a068e1251}{}\label{class_autoscope_ad9607f8ffdd72687a19d160a068e1251}
 
 
 get\+Call\+Order method 
@@ -319,38 +342,48 @@ Stel\+Module
 \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_autoscope_adb579d1e5a23aaa401d5a93be033529d}\label{class_autoscope_adb579d1e5a23aaa401d5a93be033529d}} 
-\index{Autoscope@{Autoscope}!getScreenHeight@{getScreenHeight}}
-\index{getScreenHeight@{getScreenHeight}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{getScreenHeight()}{getScreenHeight()}}
-{\footnotesize\ttfamily int Autoscope\+::get\+Screen\+Height (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\index{Autoscope@{Autoscope}!get\+Command\+Parser@{get\+Command\+Parser}}
+\index{get\+Command\+Parser@{get\+Command\+Parser}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{get\+Command\+Parser(void)}{getCommandParser(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Command\+Parser}$\ast$ Autoscope\+::get\+Command\+Parser (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_autoscope_a1be145363f86657b59c6b0cba1497970}{}\label{class_autoscope_a1be145363f86657b59c6b0cba1497970}
+\index{Autoscope@{Autoscope}!get\+Screen\+Height@{get\+Screen\+Height}}
+\index{get\+Screen\+Height@{get\+Screen\+Height}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{get\+Screen\+Height(void)}{getScreenHeight(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int Autoscope\+::get\+Screen\+Height (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_autoscope_adb579d1e5a23aaa401d5a93be033529d}{}\label{class_autoscope_adb579d1e5a23aaa401d5a93be033529d}
 
 
-
-Getter allow any class which have an instance of \mbox{\hyperlink{class_autoscope}{Autoscope}} class to retrieve the height of the screen. 
+Getter allow any class which have an instance of \hyperlink{class_autoscope}{Autoscope} class to retrieve the height of the screen. 
 
 \begin{DoxyReturn}{Returns}
 The height of the screen 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_autoscope_a0e438a40043c916a7f0f98a30221de11}\label{class_autoscope_a0e438a40043c916a7f0f98a30221de11}} 
-\index{Autoscope@{Autoscope}!getScreenWidth@{getScreenWidth}}
-\index{getScreenWidth@{getScreenWidth}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{getScreenWidth()}{getScreenWidth()}}
-{\footnotesize\ttfamily int Autoscope\+::get\+Screen\+Width (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\index{Autoscope@{Autoscope}!get\+Screen\+Width@{get\+Screen\+Width}}
+\index{get\+Screen\+Width@{get\+Screen\+Width}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{get\+Screen\+Width(void)}{getScreenWidth(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int Autoscope\+::get\+Screen\+Width (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_autoscope_a0e438a40043c916a7f0f98a30221de11}{}\label{class_autoscope_a0e438a40043c916a7f0f98a30221de11}
 
 
-
-Getter allow any class which have an instance of \mbox{\hyperlink{class_autoscope}{Autoscope}} class to retrieve the width of the screen. 
+Getter allow any class which have an instance of \hyperlink{class_autoscope}{Autoscope} class to retrieve the width of the screen. 
 
 \begin{DoxyReturn}{Returns}
 The width of the screen 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_autoscope_a0aaa7e7edbdd749e209dc42ee360f3a5}\label{class_autoscope_a0aaa7e7edbdd749e209dc42ee360f3a5}} 
 \index{Autoscope@{Autoscope}!init@{init}}
 \index{init@{init}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{init()}{init()}}
-{\footnotesize\ttfamily void Autoscope\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
+\subsubsection[{\texorpdfstring{init()}{init()}}]{\setlength{\rightskip}{0pt plus 5cm}void Autoscope\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_autoscope_a0aaa7e7edbdd749e209dc42ee360f3a5}{}\label{class_autoscope_a0aaa7e7edbdd749e209dc42ee360f3a5}
 
 
 Init method is inherited form Stel\+Module class and is use to initialize components sush as Stel\+Button. 
@@ -358,22 +391,24 @@ Init method is inherited form Stel\+Module class and is use to initialize compon
 \begin{DoxySeeAlso}{See also}
 Stel\+Module 
 \end{DoxySeeAlso}
-\mbox{\Hypertarget{class_autoscope_af24c123f39ace0191799b5c20ceca7a6}\label{class_autoscope_af24c123f39ace0191799b5c20ceca7a6}} 
-\index{Autoscope@{Autoscope}!loadConfiguration@{loadConfiguration}}
-\index{loadConfiguration@{loadConfiguration}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{loadConfiguration()}{loadConfiguration()}}
-{\footnotesize\ttfamily void Autoscope\+::load\+Configuration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
+\index{Autoscope@{Autoscope}!load\+Configuration@{load\+Configuration}}
+\index{load\+Configuration@{load\+Configuration}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{load\+Configuration()}{loadConfiguration()}}]{\setlength{\rightskip}{0pt plus 5cm}void Autoscope\+::load\+Configuration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_autoscope_af24c123f39ace0191799b5c20ceca7a6}{}\label{class_autoscope_af24c123f39ace0191799b5c20ceca7a6}
 
 
 Method used to retrieve the configuration of the plugin. 
 
-\mbox{\Hypertarget{class_autoscope_ac8f9e09385739a5ba5ed460c83ec88df}\label{class_autoscope_ac8f9e09385739a5ba5ed460c83ec88df}} 
-\index{Autoscope@{Autoscope}!moveObserverToObject@{moveObserverToObject}}
-\index{moveObserverToObject@{moveObserverToObject}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{moveObserverToObject()}{moveObserverToObject()}}
-{\footnotesize\ttfamily void Autoscope\+::move\+Observer\+To\+Object (\begin{DoxyParamCaption}\item[{Stel\+ObjectP}]{object }\end{DoxyParamCaption})}
-
+\index{Autoscope@{Autoscope}!move\+Observer\+To\+Object@{move\+Observer\+To\+Object}}
+\index{move\+Observer\+To\+Object@{move\+Observer\+To\+Object}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{move\+Observer\+To\+Object(\+Stel\+Object\+P object)}{moveObserverToObject(StelObjectP object)}}]{\setlength{\rightskip}{0pt plus 5cm}void Autoscope\+::move\+Observer\+To\+Object (
+\begin{DoxyParamCaption}
+\item[{Stel\+ObjectP}]{object}
+\end{DoxyParamCaption}
+)}\hypertarget{class_autoscope_ac8f9e09385739a5ba5ed460c83ec88df}{}\label{class_autoscope_ac8f9e09385739a5ba5ed460c83ec88df}
 
 
 Method used to move the view in Stellarium to an object. 
@@ -383,22 +418,24 @@ Method used to move the view in Stellarium to an object.
 {\em object} & \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_autoscope_a2c5424afe3270c6069e0109834dd52b5}\label{class_autoscope_a2c5424afe3270c6069e0109834dd52b5}} 
-\index{Autoscope@{Autoscope}!restoreDefaultConfiguration@{restoreDefaultConfiguration}}
-\index{restoreDefaultConfiguration@{restoreDefaultConfiguration}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{restoreDefaultConfiguration()}{restoreDefaultConfiguration()}}
-{\footnotesize\ttfamily void Autoscope\+::restore\+Default\+Configuration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
+\index{Autoscope@{Autoscope}!restore\+Default\+Configuration@{restore\+Default\+Configuration}}
+\index{restore\+Default\+Configuration@{restore\+Default\+Configuration}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{restore\+Default\+Configuration()}{restoreDefaultConfiguration()}}]{\setlength{\rightskip}{0pt plus 5cm}void Autoscope\+::restore\+Default\+Configuration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_autoscope_a2c5424afe3270c6069e0109834dd52b5}{}\label{class_autoscope_a2c5424afe3270c6069e0109834dd52b5}
 
 
 Method used to restore the default configuration of the plugin. 
 
-\mbox{\Hypertarget{class_autoscope_af1d803331f5ab5f5ff5d3839df8952c7}\label{class_autoscope_af1d803331f5ab5f5ff5d3839df8952c7}} 
-\index{Autoscope@{Autoscope}!searchAnObject@{searchAnObject}}
-\index{searchAnObject@{searchAnObject}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{searchAnObject()}{searchAnObject()}}
-{\footnotesize\ttfamily Q\+String Autoscope\+::search\+An\+Object (\begin{DoxyParamCaption}\item[{Q\+String}]{object\+Name }\end{DoxyParamCaption})}
-
+\index{Autoscope@{Autoscope}!search\+An\+Object@{search\+An\+Object}}
+\index{search\+An\+Object@{search\+An\+Object}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{search\+An\+Object(\+Q\+String object\+Name)}{searchAnObject(QString objectName)}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Autoscope\+::search\+An\+Object (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{object\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{class_autoscope_af1d803331f5ab5f5ff5d3839df8952c7}{}\label{class_autoscope_af1d803331f5ab5f5ff5d3839df8952c7}
 
 
 Method used to search an object by it\textquotesingle{}s name. 
@@ -411,117 +448,152 @@ Method used to search an object by it\textquotesingle{}s name.
 \begin{DoxyReturn}{Returns}
 A string to display in the search\+Messenger 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_autoscope_aad5b62b7a114ef8755923067e14f9dd8}\label{class_autoscope_aad5b62b7a114ef8755923067e14f9dd8}} 
-\index{Autoscope@{Autoscope}!setIpAddress@{setIpAddress}}
-\index{setIpAddress@{setIpAddress}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{setIpAddress()}{setIpAddress()}}
-{\footnotesize\ttfamily void Autoscope\+::set\+Ip\+Address (\begin{DoxyParamCaption}\item[{Q\+String}]{addr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\index{Autoscope@{Autoscope}!send\+To\+Server@{send\+To\+Server}}
+\index{send\+To\+Server@{send\+To\+Server}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{send\+To\+Server(\+Q\+String)}{sendToServer(QString)}}]{\setlength{\rightskip}{0pt plus 5cm}void Autoscope\+::send\+To\+Server (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{str}
+\end{DoxyParamCaption}
+)}\hypertarget{class_autoscope_a724178eb130dde22dc564a086b82c0e4}{}\label{class_autoscope_a724178eb130dde22dc564a086b82c0e4}
+\index{Autoscope@{Autoscope}!set\+Ip\+Address@{set\+Ip\+Address}}
+\index{set\+Ip\+Address@{set\+Ip\+Address}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{set\+Ip\+Address(\+Q\+String addr)}{setIpAddress(QString addr)}}]{\setlength{\rightskip}{0pt plus 5cm}void Autoscope\+::set\+Ip\+Address (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{addr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_autoscope_aad5b62b7a114ef8755923067e14f9dd8}{}\label{class_autoscope_aad5b62b7a114ef8755923067e14f9dd8}
 
 
-
-Setter used to set the IP address of the \mbox{\hyperlink{class_autoscope}{Autoscope}}. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em addr} & The IP address of the \mbox{\hyperlink{class_autoscope}{Autoscope}} \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{class_autoscope_acda88ddee4fb3fbd0333717c0f140e54}\label{class_autoscope_acda88ddee4fb3fbd0333717c0f140e54}} 
-\index{Autoscope@{Autoscope}!setPort@{setPort}}
-\index{setPort@{setPort}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{setPort()}{setPort()}}
-{\footnotesize\ttfamily void Autoscope\+::set\+Port (\begin{DoxyParamCaption}\item[{int}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Setter used to set the port of the \mbox{\hyperlink{class_autoscope}{Autoscope}}. 
+Setter used to set the IP address of the \hyperlink{class_autoscope}{Autoscope}. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em port} & The port of the \mbox{\hyperlink{class_autoscope}{Autoscope}} \\
+{\em addr} & The IP address of the \hyperlink{class_autoscope}{Autoscope} \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_autoscope_a0a616d2998641471cb6785e2abb6e7b5}\label{class_autoscope_a0a616d2998641471cb6785e2abb6e7b5}} 
-\index{Autoscope@{Autoscope}!setTrackObject@{setTrackObject}}
-\index{setTrackObject@{setTrackObject}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{setTrackObject()}{setTrackObject()}}
-{\footnotesize\ttfamily void Autoscope\+::set\+Track\+Object (\begin{DoxyParamCaption}\item[{Stel\+ObjectP}]{object }\end{DoxyParamCaption})}
+\index{Autoscope@{Autoscope}!set\+Port@{set\+Port}}
+\index{set\+Port@{set\+Port}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{set\+Port(int port)}{setPort(int port)}}]{\setlength{\rightskip}{0pt plus 5cm}void Autoscope\+::set\+Port (
+\begin{DoxyParamCaption}
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_autoscope_acda88ddee4fb3fbd0333717c0f140e54}{}\label{class_autoscope_acda88ddee4fb3fbd0333717c0f140e54}
 
 
+Setter used to set the port of the \hyperlink{class_autoscope}{Autoscope}. 
 
-Method used to modify the object that the \mbox{\hyperlink{class_autoscope}{Autoscope}} should track. 
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The port of the \hyperlink{class_autoscope}{Autoscope} \\
+\hline
+\end{DoxyParams}
+\index{Autoscope@{Autoscope}!set\+Track\+Object@{set\+Track\+Object}}
+\index{set\+Track\+Object@{set\+Track\+Object}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{set\+Track\+Object(\+Stel\+Object\+P object)}{setTrackObject(StelObjectP object)}}]{\setlength{\rightskip}{0pt plus 5cm}void Autoscope\+::set\+Track\+Object (
+\begin{DoxyParamCaption}
+\item[{Stel\+ObjectP}]{object}
+\end{DoxyParamCaption}
+)}\hypertarget{class_autoscope_a0a616d2998641471cb6785e2abb6e7b5}{}\label{class_autoscope_a0a616d2998641471cb6785e2abb6e7b5}
+
+
+Method used to modify the object that the \hyperlink{class_autoscope}{Autoscope} should track. 
 
 
 \begin{DoxyParams}{Parameters}
 {\em object} & The object to track \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_autoscope_a2a3fc7df788580d91949351f687eab7a}\label{class_autoscope_a2a3fc7df788580d91949351f687eab7a}} 
-\index{Autoscope@{Autoscope}!showGui@{showGui}}
-\index{showGui@{showGui}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{showGui}{showGui}}
-{\footnotesize\ttfamily void Autoscope\+::show\+Gui (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
-
+\index{Autoscope@{Autoscope}!show\+Gui@{show\+Gui}}
+\index{show\+Gui@{show\+Gui}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{show\+Gui}{showGui}}]{\setlength{\rightskip}{0pt plus 5cm}void Autoscope\+::show\+Gui (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\hypertarget{class_autoscope_a2a3fc7df788580d91949351f687eab7a}{}\label{class_autoscope_a2a3fc7df788580d91949351f687eab7a}
 
 
 Enable the configuration menu. 
 
-\mbox{\Hypertarget{class_autoscope_ae85d6642b5db861e226a6a261c5c0a37}\label{class_autoscope_ae85d6642b5db861e226a6a261c5c0a37}} 
-\index{Autoscope@{Autoscope}!slotConnected@{slotConnected}}
-\index{slotConnected@{slotConnected}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{slotConnected}{slotConnected}}
-{\footnotesize\ttfamily void Autoscope\+::slot\+Connected (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+\index{Autoscope@{Autoscope}!slot\+Connected@{slot\+Connected}}
+\index{slot\+Connected@{slot\+Connected}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{slot\+Connected}{slotConnected}}]{\setlength{\rightskip}{0pt plus 5cm}void Autoscope\+::slot\+Connected (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\hypertarget{class_autoscope_ae85d6642b5db861e226a6a261c5c0a37}{}\label{class_autoscope_ae85d6642b5db861e226a6a261c5c0a37}
 
 
+Triggered when the plugin succeed to connect to the \hyperlink{class_autoscope}{Autoscope}. 
 
-Triggered when the plugin succeed to connect to the \mbox{\hyperlink{class_autoscope}{Autoscope}}. 
+\index{Autoscope@{Autoscope}!slot\+Deconnect\+From\+Autoscope@{slot\+Deconnect\+From\+Autoscope}}
+\index{slot\+Deconnect\+From\+Autoscope@{slot\+Deconnect\+From\+Autoscope}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{slot\+Deconnect\+From\+Autoscope}{slotDeconnectFromAutoscope}}]{\setlength{\rightskip}{0pt plus 5cm}void Autoscope\+::slot\+Deconnect\+From\+Autoscope (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\hypertarget{class_autoscope_a191c9746ccdf08bc804150452792b7eb}{}\label{class_autoscope_a191c9746ccdf08bc804150452792b7eb}
 
-\mbox{\Hypertarget{class_autoscope_a9216c1ee654d8da28d331b3020b6e27d}\label{class_autoscope_a9216c1ee654d8da28d331b3020b6e27d}} 
-\index{Autoscope@{Autoscope}!slotEnablePictureDispaly@{slotEnablePictureDispaly}}
-\index{slotEnablePictureDispaly@{slotEnablePictureDispaly}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{slotEnablePictureDispaly}{slotEnablePictureDispaly}}
-{\footnotesize\ttfamily void Autoscope\+::slot\+Enable\+Picture\+Dispaly (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
 
+Method used to disconnect the plugin from the \hyperlink{class_autoscope}{Autoscope}. 
+
+\index{Autoscope@{Autoscope}!slot\+Enable\+Picture\+Dispaly@{slot\+Enable\+Picture\+Dispaly}}
+\index{slot\+Enable\+Picture\+Dispaly@{slot\+Enable\+Picture\+Dispaly}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{slot\+Enable\+Picture\+Dispaly}{slotEnablePictureDispaly}}]{\setlength{\rightskip}{0pt plus 5cm}void Autoscope\+::slot\+Enable\+Picture\+Dispaly (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\hypertarget{class_autoscope_a9216c1ee654d8da28d331b3020b6e27d}{}\label{class_autoscope_a9216c1ee654d8da28d331b3020b6e27d}
 
 
 Toggle the visibility of the picture display. 
 
-\mbox{\Hypertarget{class_autoscope_a55c4956c3a71198b70cf19fea503a776}\label{class_autoscope_a55c4956c3a71198b70cf19fea503a776}} 
-\index{Autoscope@{Autoscope}!slotTakePicture@{slotTakePicture}}
-\index{slotTakePicture@{slotTakePicture}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{slotTakePicture}{slotTakePicture}}
-{\footnotesize\ttfamily void Autoscope\+::slot\+Take\+Picture (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+\index{Autoscope@{Autoscope}!slot\+Take\+Picture@{slot\+Take\+Picture}}
+\index{slot\+Take\+Picture@{slot\+Take\+Picture}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{slot\+Take\+Picture}{slotTakePicture}}]{\setlength{\rightskip}{0pt plus 5cm}void Autoscope\+::slot\+Take\+Picture (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\hypertarget{class_autoscope_a55c4956c3a71198b70cf19fea503a776}{}\label{class_autoscope_a55c4956c3a71198b70cf19fea503a776}
 
 
+Send a command to the \hyperlink{class_autoscope}{Autoscope} to take a picture. 
 
-Send a command to the \mbox{\hyperlink{class_autoscope}{Autoscope}} to take a picture. 
-
-\mbox{\Hypertarget{class_autoscope_ae0c39815fab1084effd39f87e56febf3}\label{class_autoscope_ae0c39815fab1084effd39f87e56febf3}} 
-\index{Autoscope@{Autoscope}!slotTrackObject@{slotTrackObject}}
-\index{slotTrackObject@{slotTrackObject}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{slotTrackObject}{slotTrackObject}}
-{\footnotesize\ttfamily void Autoscope\+::slot\+Track\+Object (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
-
+\index{Autoscope@{Autoscope}!slot\+Track\+Object@{slot\+Track\+Object}}
+\index{slot\+Track\+Object@{slot\+Track\+Object}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{slot\+Track\+Object}{slotTrackObject}}]{\setlength{\rightskip}{0pt plus 5cm}void Autoscope\+::slot\+Track\+Object (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\hypertarget{class_autoscope_ae0c39815fab1084effd39f87e56febf3}{}\label{class_autoscope_ae0c39815fab1084effd39f87e56febf3}
 
 
 Start tracking the selected object. 
 
-\mbox{\Hypertarget{class_autoscope_a47d7fbe1a8bcf025ef57b45ead2bcf6e}\label{class_autoscope_a47d7fbe1a8bcf025ef57b45ead2bcf6e}} 
-\index{Autoscope@{Autoscope}!slotUnTrackOject@{slotUnTrackOject}}
-\index{slotUnTrackOject@{slotUnTrackOject}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{slotUnTrackOject}{slotUnTrackOject}}
-{\footnotesize\ttfamily void Autoscope\+::slot\+Un\+Track\+Oject (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
-
+\index{Autoscope@{Autoscope}!slot\+Un\+Track\+Oject@{slot\+Un\+Track\+Oject}}
+\index{slot\+Un\+Track\+Oject@{slot\+Un\+Track\+Oject}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{slot\+Un\+Track\+Oject}{slotUnTrackOject}}]{\setlength{\rightskip}{0pt plus 5cm}void Autoscope\+::slot\+Un\+Track\+Oject (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\hypertarget{class_autoscope_a47d7fbe1a8bcf025ef57b45ead2bcf6e}{}\label{class_autoscope_a47d7fbe1a8bcf025ef57b45ead2bcf6e}
 
 
 Stop tracking the tracked object. 
 
-\mbox{\Hypertarget{class_autoscope_ac5a2819eb2d6971becc544d9f7136b79}\label{class_autoscope_ac5a2819eb2d6971becc544d9f7136b79}} 
-\index{Autoscope@{Autoscope}!trackSearchedObject@{trackSearchedObject}}
-\index{trackSearchedObject@{trackSearchedObject}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{trackSearchedObject()}{trackSearchedObject()}}
-{\footnotesize\ttfamily Q\+String Autoscope\+::track\+Searched\+Object (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
-
+\index{Autoscope@{Autoscope}!slot\+Update\+Alt\+Az@{slot\+Update\+Alt\+Az}}
+\index{slot\+Update\+Alt\+Az@{slot\+Update\+Alt\+Az}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{slot\+Update\+Alt\+Az}{slotUpdateAltAz}}]{\setlength{\rightskip}{0pt plus 5cm}void Autoscope\+::slot\+Update\+Alt\+Az (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\hypertarget{class_autoscope_a7d51e9915c4618d8ee5dd78e5ca079c5}{}\label{class_autoscope_a7d51e9915c4618d8ee5dd78e5ca079c5}
+\index{Autoscope@{Autoscope}!track\+Searched\+Object@{track\+Searched\+Object}}
+\index{track\+Searched\+Object@{track\+Searched\+Object}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{track\+Searched\+Object(void)}{trackSearchedObject(void)}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Autoscope\+::track\+Searched\+Object (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_autoscope_ac5a2819eb2d6971becc544d9f7136b79}{}\label{class_autoscope_ac5a2819eb2d6971becc544d9f7136b79}
 
 
 Method used to tarck the object search by the user. 
@@ -529,22 +601,24 @@ Method used to tarck the object search by the user.
 \begin{DoxyReturn}{Returns}
 A string to display in the search\+Messenger 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_autoscope_a5782dc8cf3afeb9710240fdc98d0caa1}\label{class_autoscope_a5782dc8cf3afeb9710240fdc98d0caa1}} 
-\index{Autoscope@{Autoscope}!trackSelectedObject@{trackSelectedObject}}
-\index{trackSelectedObject@{trackSelectedObject}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{trackSelectedObject()}{trackSelectedObject()}}
-{\footnotesize\ttfamily void Autoscope\+::track\+Selected\+Object (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
-
+\index{Autoscope@{Autoscope}!track\+Selected\+Object@{track\+Selected\+Object}}
+\index{track\+Selected\+Object@{track\+Selected\+Object}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{track\+Selected\+Object(void)}{trackSelectedObject(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Autoscope\+::track\+Selected\+Object (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_autoscope_a5782dc8cf3afeb9710240fdc98d0caa1}{}\label{class_autoscope_a5782dc8cf3afeb9710240fdc98d0caa1}
 
 
 Method used to tarck the object selected by the user. 
 
-\mbox{\Hypertarget{class_autoscope_a3def05ed6ebac1d2f0245c96c1719d0a}\label{class_autoscope_a3def05ed6ebac1d2f0245c96c1719d0a}} 
 \index{Autoscope@{Autoscope}!update@{update}}
 \index{update@{update}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{update()}{update()}}
-{\footnotesize\ttfamily void Autoscope\+::update (\begin{DoxyParamCaption}\item[{double}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
+\subsubsection[{\texorpdfstring{update(double)}{update(double)}}]{\setlength{\rightskip}{0pt plus 5cm}void Autoscope\+::update (
+\begin{DoxyParamCaption}
+\item[{double}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_autoscope_a3def05ed6ebac1d2f0245c96c1719d0a}{}\label{class_autoscope_a3def05ed6ebac1d2f0245c96c1719d0a}
 
 
 Update method is inherited form Stel\+Module class and is use to update components or methods. It\textquotesingle{}s automatically called by Stel\+Module\+Mgr. 
@@ -555,139 +629,91 @@ Stel\+Module
 
 
 \subsection{Member Data Documentation}
-\mbox{\Hypertarget{class_autoscope_a6a17eb00225f765623844eaa9f80e71e}\label{class_autoscope_a6a17eb00225f765623844eaa9f80e71e}} 
 \index{Autoscope@{Autoscope}!conf@{conf}}
 \index{conf@{conf}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{conf}{conf}}
-{\footnotesize\ttfamily Q\+Settings$\ast$ Autoscope\+::conf\hspace{0.3cm}{\ttfamily [private]}}
-
-An instance of Q\+Settings \mbox{\Hypertarget{class_autoscope_a8c066a069946815c05fe7d32b13211d3}\label{class_autoscope_a8c066a069946815c05fe7d32b13211d3}} 
-\index{Autoscope@{Autoscope}!displayedAtStartup@{displayedAtStartup}}
-\index{displayedAtStartup@{displayedAtStartup}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{displayedAtStartup}{displayedAtStartup}}
-{\footnotesize\ttfamily bool Autoscope\+::displayed\+At\+Startup\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{class_autoscope_aa3b4663ded25875ce8fb21906b38d174}\label{class_autoscope_aa3b4663ded25875ce8fb21906b38d174}} 
-\index{Autoscope@{Autoscope}!EnablePictureDisplay@{EnablePictureDisplay}}
-\index{EnablePictureDisplay@{EnablePictureDisplay}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{EnablePictureDisplay}{EnablePictureDisplay}}
-{\footnotesize\ttfamily Stel\+Button$\ast$ Autoscope\+::\+Enable\+Picture\+Display\hspace{0.3cm}{\ttfamily [private]}}
-
-An instance of Stel\+Button \mbox{\Hypertarget{class_autoscope_a168d6d47f412a7966c2f5ddeb0f4cc79}\label{class_autoscope_a168d6d47f412a7966c2f5ddeb0f4cc79}} 
-\index{Autoscope@{Autoscope}!font@{font}}
+\subsubsection[{\texorpdfstring{conf}{conf}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Settings$\ast$ Autoscope\+::conf\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_autoscope_a6a17eb00225f765623844eaa9f80e71e}{}\label{class_autoscope_a6a17eb00225f765623844eaa9f80e71e}
+An instance of Q\+Settings \index{Autoscope@{Autoscope}!displayed\+At\+Startup@{displayed\+At\+Startup}}
+\index{displayed\+At\+Startup@{displayed\+At\+Startup}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{displayed\+At\+Startup}{displayedAtStartup}}]{\setlength{\rightskip}{0pt plus 5cm}bool Autoscope\+::displayed\+At\+Startup\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_autoscope_a8c066a069946815c05fe7d32b13211d3}{}\label{class_autoscope_a8c066a069946815c05fe7d32b13211d3}
+\index{Autoscope@{Autoscope}!Enable\+Picture\+Display@{Enable\+Picture\+Display}}
+\index{Enable\+Picture\+Display@{Enable\+Picture\+Display}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{Enable\+Picture\+Display}{EnablePictureDisplay}}]{\setlength{\rightskip}{0pt plus 5cm}Stel\+Button$\ast$ Autoscope\+::\+Enable\+Picture\+Display\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_autoscope_aa3b4663ded25875ce8fb21906b38d174}{}\label{class_autoscope_aa3b4663ded25875ce8fb21906b38d174}
+An instance of Stel\+Button \index{Autoscope@{Autoscope}!font@{font}}
 \index{font@{font}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{font}{font}}
-{\footnotesize\ttfamily Q\+Font Autoscope\+::font\hspace{0.3cm}{\ttfamily [private]}}
-
-An instance of Qfont \mbox{\Hypertarget{class_autoscope_a90c44f576ab3acd74da3af3ad8162ca7}\label{class_autoscope_a90c44f576ab3acd74da3af3ad8162ca7}} 
-\index{Autoscope@{Autoscope}!gui@{gui}}
+\subsubsection[{\texorpdfstring{font}{font}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Font Autoscope\+::font\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_autoscope_a168d6d47f412a7966c2f5ddeb0f4cc79}{}\label{class_autoscope_a168d6d47f412a7966c2f5ddeb0f4cc79}
+An instance of Qfont \index{Autoscope@{Autoscope}!gui@{gui}}
 \index{gui@{gui}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{gui}{gui}}
-{\footnotesize\ttfamily Stel\+Gui$\ast$ Autoscope\+::gui\hspace{0.3cm}{\ttfamily [private]}}
-
-An instance of Stel\+Gui \mbox{\Hypertarget{class_autoscope_ac995550136b93293df166aead2eda5b7}\label{class_autoscope_ac995550136b93293df166aead2eda5b7}} 
-\index{Autoscope@{Autoscope}!guiIsVisible@{guiIsVisible}}
-\index{guiIsVisible@{guiIsVisible}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{guiIsVisible}{guiIsVisible}}
-{\footnotesize\ttfamily bool Autoscope\+::gui\+Is\+Visible = false\hspace{0.3cm}{\ttfamily [private]}}
-
-A flag which represent the visibility of the configuration window \mbox{\Hypertarget{class_autoscope_aa3c1b8d19881d76c680b8c4ea1692c89}\label{class_autoscope_aa3c1b8d19881d76c680b8c4ea1692c89}} 
-\index{Autoscope@{Autoscope}!m\_autoscopeIp@{m\_autoscopeIp}}
-\index{m\_autoscopeIp@{m\_autoscopeIp}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{m\_autoscopeIp}{m\_autoscopeIp}}
-{\footnotesize\ttfamily Q\+Host\+Address Autoscope\+::m\+\_\+autoscope\+Ip\hspace{0.3cm}{\ttfamily [private]}}
-
-The \mbox{\hyperlink{class_autoscope}{Autoscope}} IP address \mbox{\Hypertarget{class_autoscope_a75a50ab46f25c007b9a86d3776385fc6}\label{class_autoscope_a75a50ab46f25c007b9a86d3776385fc6}} 
-\index{Autoscope@{Autoscope}!m\_autoscopePictureWindow@{m\_autoscopePictureWindow}}
-\index{m\_autoscopePictureWindow@{m\_autoscopePictureWindow}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{m\_autoscopePictureWindow}{m\_autoscopePictureWindow}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_autoscope_picture_window_form}{Autoscope\+Picture\+Window\+Form}}$\ast$ Autoscope\+::m\+\_\+autoscope\+Picture\+Window\hspace{0.3cm}{\ttfamily [private]}}
+\subsubsection[{\texorpdfstring{gui}{gui}}]{\setlength{\rightskip}{0pt plus 5cm}Stel\+Gui$\ast$ Autoscope\+::gui\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_autoscope_a90c44f576ab3acd74da3af3ad8162ca7}{}\label{class_autoscope_a90c44f576ab3acd74da3af3ad8162ca7}
+An instance of Stel\+Gui \index{Autoscope@{Autoscope}!gui\+Is\+Visible@{gui\+Is\+Visible}}
+\index{gui\+Is\+Visible@{gui\+Is\+Visible}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{gui\+Is\+Visible}{guiIsVisible}}]{\setlength{\rightskip}{0pt plus 5cm}bool Autoscope\+::gui\+Is\+Visible = false\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_autoscope_ac995550136b93293df166aead2eda5b7}{}\label{class_autoscope_ac995550136b93293df166aead2eda5b7}
+A flag which represent the visibility of the configuration window \index{Autoscope@{Autoscope}!m\+\_\+autoscope\+Ip@{m\+\_\+autoscope\+Ip}}
+\index{m\+\_\+autoscope\+Ip@{m\+\_\+autoscope\+Ip}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{m\+\_\+autoscope\+Ip}{m_autoscopeIp}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Host\+Address Autoscope\+::m\+\_\+autoscope\+Ip\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_autoscope_aa3c1b8d19881d76c680b8c4ea1692c89}{}\label{class_autoscope_aa3c1b8d19881d76c680b8c4ea1692c89}
+The \hyperlink{class_autoscope}{Autoscope} IP address \index{Autoscope@{Autoscope}!m\+\_\+autoscope\+Picture\+Window@{m\+\_\+autoscope\+Picture\+Window}}
+\index{m\+\_\+autoscope\+Picture\+Window@{m\+\_\+autoscope\+Picture\+Window}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{m\+\_\+autoscope\+Picture\+Window}{m_autoscopePictureWindow}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Autoscope\+Picture\+Window\+Form}$\ast$ Autoscope\+::m\+\_\+autoscope\+Picture\+Window\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_autoscope_a75a50ab46f25c007b9a86d3776385fc6}{}\label{class_autoscope_a75a50ab46f25c007b9a86d3776385fc6}
 
 
-
-An instance of \mbox{\hyperlink{class_autoscope_picture_window_form}{Autoscope\+Picture\+Window\+Form}} class. 
+An instance of \hyperlink{class_autoscope_picture_window_form}{Autoscope\+Picture\+Window\+Form} class. 
 
 \begin{DoxySeeAlso}{See also}
-\mbox{\hyperlink{class_autoscope_picture_window_form}{Autoscope\+Picture\+Window\+Form}} 
+\hyperlink{class_autoscope_picture_window_form}{Autoscope\+Picture\+Window\+Form} 
 \end{DoxySeeAlso}
-\mbox{\Hypertarget{class_autoscope_abb67968cc6c6678995512aa1a05ad0e1}\label{class_autoscope_abb67968cc6c6678995512aa1a05ad0e1}} 
-\index{Autoscope@{Autoscope}!m\_autoscopePort@{m\_autoscopePort}}
-\index{m\_autoscopePort@{m\_autoscopePort}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{m\_autoscopePort}{m\_autoscopePort}}
-{\footnotesize\ttfamily int Autoscope\+::m\+\_\+autoscope\+Port = 4444\hspace{0.3cm}{\ttfamily [private]}}
-
-The \mbox{\hyperlink{class_autoscope}{Autoscope}} IP port \mbox{\Hypertarget{class_autoscope_a33104164061c784c65c1f94bfde26423}\label{class_autoscope_a33104164061c784c65c1f94bfde26423}} 
-\index{Autoscope@{Autoscope}!m\_autoscopeWindow@{m\_autoscopeWindow}}
-\index{m\_autoscopeWindow@{m\_autoscopeWindow}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{m\_autoscopeWindow}{m\_autoscopeWindow}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_autoscope_window_form}{Autoscope\+Window\+Form}}$\ast$ Autoscope\+::m\+\_\+autoscope\+Window\hspace{0.3cm}{\ttfamily [private]}}
+\index{Autoscope@{Autoscope}!m\+\_\+autoscope\+Port@{m\+\_\+autoscope\+Port}}
+\index{m\+\_\+autoscope\+Port@{m\+\_\+autoscope\+Port}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{m\+\_\+autoscope\+Port}{m_autoscopePort}}]{\setlength{\rightskip}{0pt plus 5cm}int Autoscope\+::m\+\_\+autoscope\+Port = 4444\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_autoscope_abb67968cc6c6678995512aa1a05ad0e1}{}\label{class_autoscope_abb67968cc6c6678995512aa1a05ad0e1}
+The \hyperlink{class_autoscope}{Autoscope} IP port \index{Autoscope@{Autoscope}!m\+\_\+autoscope\+Window@{m\+\_\+autoscope\+Window}}
+\index{m\+\_\+autoscope\+Window@{m\+\_\+autoscope\+Window}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{m\+\_\+autoscope\+Window}{m_autoscopeWindow}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Autoscope\+Window\+Form}$\ast$ Autoscope\+::m\+\_\+autoscope\+Window\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_autoscope_a33104164061c784c65c1f94bfde26423}{}\label{class_autoscope_a33104164061c784c65c1f94bfde26423}
 
 
-
-An instance of \mbox{\hyperlink{class_autoscope_window_form}{Autoscope\+Window\+Form}} class. 
+An instance of \hyperlink{class_autoscope_window_form}{Autoscope\+Window\+Form} class. 
 
 \begin{DoxySeeAlso}{See also}
-\mbox{\hyperlink{class_autoscope_window_form}{Autoscope\+Window\+Form}} 
+\hyperlink{class_autoscope_window_form}{Autoscope\+Window\+Form} 
 \end{DoxySeeAlso}
-\mbox{\Hypertarget{class_autoscope_af6e7a8d7cf7014e9b0f9296e2b7d7fd5}\label{class_autoscope_af6e7a8d7cf7014e9b0f9296e2b7d7fd5}} 
-\index{Autoscope@{Autoscope}!m\_client@{m\_client}}
-\index{m\_client@{m\_client}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{m\_client}{m\_client}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_tcp_client}{Tcp\+Client}}$\ast$ Autoscope\+::m\+\_\+client\hspace{0.3cm}{\ttfamily [private]}}
+\index{Autoscope@{Autoscope}!m\+\_\+client@{m\+\_\+client}}
+\index{m\+\_\+client@{m\+\_\+client}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{m\+\_\+client}{m_client}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tcp\+Client}$\ast$ Autoscope\+::m\+\_\+client\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_autoscope_af6e7a8d7cf7014e9b0f9296e2b7d7fd5}{}\label{class_autoscope_af6e7a8d7cf7014e9b0f9296e2b7d7fd5}
 
 
-
-An instance of \mbox{\hyperlink{class_tcp_client}{Tcp\+Client}} class. 
+An instance of \hyperlink{class_tcp_client}{Tcp\+Client} class. 
 
 \begin{DoxySeeAlso}{See also}
-\mbox{\hyperlink{class_tcp_client}{Tcp\+Client}} 
+\hyperlink{class_tcp_client}{Tcp\+Client} 
 \end{DoxySeeAlso}
-\mbox{\Hypertarget{class_autoscope_aa333cfe8f256f5698c686423cad648c2}\label{class_autoscope_aa333cfe8f256f5698c686423cad648c2}} 
-\index{Autoscope@{Autoscope}!m\_core@{m\_core}}
-\index{m\_core@{m\_core}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{m\_core}{m\_core}}
-{\footnotesize\ttfamily Stel\+Core$\ast$ Autoscope\+::m\+\_\+core\hspace{0.3cm}{\ttfamily [private]}}
-
+\index{Autoscope@{Autoscope}!m\+\_\+core@{m\+\_\+core}}
+\index{m\+\_\+core@{m\+\_\+core}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{m\+\_\+core}{m_core}}]{\setlength{\rightskip}{0pt plus 5cm}Stel\+Core$\ast$ Autoscope\+::m\+\_\+core\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_autoscope_aa333cfe8f256f5698c686423cad648c2}{}\label{class_autoscope_aa333cfe8f256f5698c686423cad648c2}
 
 
 An instance of Stel\+Core. 
 
-\mbox{\Hypertarget{class_autoscope_a003c73a069f579f831eeaa8f04cf2977}\label{class_autoscope_a003c73a069f579f831eeaa8f04cf2977}} 
-\index{Autoscope@{Autoscope}!m\_screenHeight@{m\_screenHeight}}
-\index{m\_screenHeight@{m\_screenHeight}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{m\_screenHeight}{m\_screenHeight}}
-{\footnotesize\ttfamily int Autoscope\+::m\+\_\+screen\+Height\hspace{0.3cm}{\ttfamily [private]}}
-
-The screen height \mbox{\Hypertarget{class_autoscope_afe92778dfed037b0ec41ad51f8086a56}\label{class_autoscope_afe92778dfed037b0ec41ad51f8086a56}} 
-\index{Autoscope@{Autoscope}!m\_screenWidth@{m\_screenWidth}}
-\index{m\_screenWidth@{m\_screenWidth}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{m\_screenWidth}{m\_screenWidth}}
-{\footnotesize\ttfamily int Autoscope\+::m\+\_\+screen\+Width\hspace{0.3cm}{\ttfamily [private]}}
-
-The screen width \mbox{\Hypertarget{class_autoscope_a58327daadc555f31fc62b6db85e3fcfa}\label{class_autoscope_a58327daadc555f31fc62b6db85e3fcfa}} 
-\index{Autoscope@{Autoscope}!markColor@{markColor}}
-\index{markColor@{markColor}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{markColor}{markColor}}
-{\footnotesize\ttfamily Vec3f Autoscope\+::mark\+Color\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{class_autoscope_a9c141894e06ed64f4131f1071e9e18af}\label{class_autoscope_a9c141894e06ed64f4131f1071e9e18af}} 
-\index{Autoscope@{Autoscope}!markFader@{markFader}}
-\index{markFader@{markFader}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{markFader}{markFader}}
-{\footnotesize\ttfamily Linear\+Fader Autoscope\+::mark\+Fader\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{class_autoscope_a5b14962697fbd8fffac986df08aee611}\label{class_autoscope_a5b14962697fbd8fffac986df08aee611}} 
-\index{Autoscope@{Autoscope}!menuButton@{menuButton}}
-\index{menuButton@{menuButton}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{menuButton}{menuButton}}
-{\footnotesize\ttfamily Stel\+Button$\ast$ Autoscope\+::menu\+Button\hspace{0.3cm}{\ttfamily [private]}}
-
-An instance of Stel\+Button \mbox{\Hypertarget{class_autoscope_ab34124a1179a937ac061bb4fa3faa2de}\label{class_autoscope_ab34124a1179a937ac061bb4fa3faa2de}} 
-\index{Autoscope@{Autoscope}!mvMgr@{mvMgr}}
-\index{mvMgr@{mvMgr}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{mvMgr}{mvMgr}}
-{\footnotesize\ttfamily Stel\+Movement\+Mgr$\ast$ Autoscope\+::mv\+Mgr}
-
+\index{Autoscope@{Autoscope}!m\+\_\+parser@{m\+\_\+parser}}
+\index{m\+\_\+parser@{m\+\_\+parser}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{m\+\_\+parser}{m_parser}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Command\+Parser}$\ast$ Autoscope\+::m\+\_\+parser\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_autoscope_ab4a9bf62ccbcf24b4a6e3752cff9f090}{}\label{class_autoscope_ab4a9bf62ccbcf24b4a6e3752cff9f090}
+\index{Autoscope@{Autoscope}!m\+\_\+screen\+Height@{m\+\_\+screen\+Height}}
+\index{m\+\_\+screen\+Height@{m\+\_\+screen\+Height}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{m\+\_\+screen\+Height}{m_screenHeight}}]{\setlength{\rightskip}{0pt plus 5cm}int Autoscope\+::m\+\_\+screen\+Height\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_autoscope_a003c73a069f579f831eeaa8f04cf2977}{}\label{class_autoscope_a003c73a069f579f831eeaa8f04cf2977}
+The screen height \index{Autoscope@{Autoscope}!m\+\_\+screen\+Width@{m\+\_\+screen\+Width}}
+\index{m\+\_\+screen\+Width@{m\+\_\+screen\+Width}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{m\+\_\+screen\+Width}{m_screenWidth}}]{\setlength{\rightskip}{0pt plus 5cm}int Autoscope\+::m\+\_\+screen\+Width\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_autoscope_afe92778dfed037b0ec41ad51f8086a56}{}\label{class_autoscope_afe92778dfed037b0ec41ad51f8086a56}
+The screen width \index{Autoscope@{Autoscope}!m\+\_\+timer@{m\+\_\+timer}}
+\index{m\+\_\+timer@{m\+\_\+timer}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{m\+\_\+timer}{m_timer}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Timer$\ast$ Autoscope\+::m\+\_\+timer\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_autoscope_a6d86ef1f5ea17f5175009a15004b2459}{}\label{class_autoscope_a6d86ef1f5ea17f5175009a15004b2459}
+\index{Autoscope@{Autoscope}!mark\+Color@{mark\+Color}}
+\index{mark\+Color@{mark\+Color}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{mark\+Color}{markColor}}]{\setlength{\rightskip}{0pt plus 5cm}Vec3f Autoscope\+::mark\+Color\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_autoscope_a58327daadc555f31fc62b6db85e3fcfa}{}\label{class_autoscope_a58327daadc555f31fc62b6db85e3fcfa}
+\index{Autoscope@{Autoscope}!mark\+Fader@{mark\+Fader}}
+\index{mark\+Fader@{mark\+Fader}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{mark\+Fader}{markFader}}]{\setlength{\rightskip}{0pt plus 5cm}Linear\+Fader Autoscope\+::mark\+Fader\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_autoscope_a9c141894e06ed64f4131f1071e9e18af}{}\label{class_autoscope_a9c141894e06ed64f4131f1071e9e18af}
+\index{Autoscope@{Autoscope}!menu\+Button@{menu\+Button}}
+\index{menu\+Button@{menu\+Button}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{menu\+Button}{menuButton}}]{\setlength{\rightskip}{0pt plus 5cm}Stel\+Button$\ast$ Autoscope\+::menu\+Button\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_autoscope_a5b14962697fbd8fffac986df08aee611}{}\label{class_autoscope_a5b14962697fbd8fffac986df08aee611}
+An instance of Stel\+Button \index{Autoscope@{Autoscope}!mv\+Mgr@{mv\+Mgr}}
+\index{mv\+Mgr@{mv\+Mgr}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{mv\+Mgr}{mvMgr}}]{\setlength{\rightskip}{0pt plus 5cm}Stel\+Movement\+Mgr$\ast$ Autoscope\+::mv\+Mgr}\hypertarget{class_autoscope_ab34124a1179a937ac061bb4fa3faa2de}{}\label{class_autoscope_ab34124a1179a937ac061bb4fa3faa2de}
 
 
 An instance of Stellarium movement manager and it\textquotesingle{}s use to move the view in Stellarium. 
@@ -695,18 +721,12 @@ An instance of Stellarium movement manager and it\textquotesingle{}s use to move
 \begin{DoxySeeAlso}{See also}
 Stel\+Movement\+Mgr 
 \end{DoxySeeAlso}
-\mbox{\Hypertarget{class_autoscope_aa02f096fc07e27ef3843eb4f8ba2c5a5}\label{class_autoscope_aa02f096fc07e27ef3843eb4f8ba2c5a5}} 
-\index{Autoscope@{Autoscope}!newSelected@{newSelected}}
-\index{newSelected@{newSelected}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{newSelected}{newSelected}}
-{\footnotesize\ttfamily Q\+List$<$Stel\+ObjectP$>$ Autoscope\+::new\+Selected\hspace{0.3cm}{\ttfamily [private]}}
-
-A list of Stel\+ObjectP \mbox{\Hypertarget{class_autoscope_aec2c452e45c0a7d045417a8656aa7c45}\label{class_autoscope_aec2c452e45c0a7d045417a8656aa7c45}} 
-\index{Autoscope@{Autoscope}!objectMgr@{objectMgr}}
-\index{objectMgr@{objectMgr}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{objectMgr}{objectMgr}}
-{\footnotesize\ttfamily Stel\+Object\+Mgr$\ast$ Autoscope\+::object\+Mgr}
-
+\index{Autoscope@{Autoscope}!new\+Selected@{new\+Selected}}
+\index{new\+Selected@{new\+Selected}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{new\+Selected}{newSelected}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+List$<$Stel\+ObjectP$>$ Autoscope\+::new\+Selected\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_autoscope_aa02f096fc07e27ef3843eb4f8ba2c5a5}{}\label{class_autoscope_aa02f096fc07e27ef3843eb4f8ba2c5a5}
+A list of Stel\+ObjectP \index{Autoscope@{Autoscope}!object\+Mgr@{object\+Mgr}}
+\index{object\+Mgr@{object\+Mgr}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{object\+Mgr}{objectMgr}}]{\setlength{\rightskip}{0pt plus 5cm}Stel\+Object\+Mgr$\ast$ Autoscope\+::object\+Mgr}\hypertarget{class_autoscope_aec2c452e45c0a7d045417a8656aa7c45}{}\label{class_autoscope_aec2c452e45c0a7d045417a8656aa7c45}
 
 
 An instance of Stellarium object manager and it\textquotesingle{}s use to retrieve selected object or search object by name. 
@@ -714,63 +734,36 @@ An instance of Stellarium object manager and it\textquotesingle{}s use to retrie
 \begin{DoxySeeAlso}{See also}
 Stel\+Object\+Mgr 
 \end{DoxySeeAlso}
-\mbox{\Hypertarget{class_autoscope_aff4d8365cc96689c79f3370ebde45b9e}\label{class_autoscope_aff4d8365cc96689c79f3370ebde45b9e}} 
-\index{Autoscope@{Autoscope}!objectPosition@{objectPosition}}
-\index{objectPosition@{objectPosition}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{objectPosition}{objectPosition}}
-{\footnotesize\ttfamily Vec3d Autoscope\+::object\+Position\hspace{0.3cm}{\ttfamily [private]}}
-
-An instance of Vec3d \mbox{\Hypertarget{class_autoscope_aba59abee95b4b5443709dce1d61a3498}\label{class_autoscope_aba59abee95b4b5443709dce1d61a3498}} 
-\index{Autoscope@{Autoscope}!searchedObject@{searchedObject}}
-\index{searchedObject@{searchedObject}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{searchedObject}{searchedObject}}
-{\footnotesize\ttfamily Stel\+ObjectP Autoscope\+::searched\+Object\hspace{0.3cm}{\ttfamily [private]}}
-
-An instance of Stel\+ObjectP \mbox{\Hypertarget{class_autoscope_adcd9ee42b339c3c526231ed97c0ef6fa}\label{class_autoscope_adcd9ee42b339c3c526231ed97c0ef6fa}} 
-\index{Autoscope@{Autoscope}!searchObjectFound@{searchObjectFound}}
-\index{searchObjectFound@{searchObjectFound}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{searchObjectFound}{searchObjectFound}}
-{\footnotesize\ttfamily bool Autoscope\+::search\+Object\+Found = false\hspace{0.3cm}{\ttfamily [private]}}
-
-A flag which indicates if the searched object has been found \mbox{\Hypertarget{class_autoscope_a954a97691346ff2fb0981877554c1ac3}\label{class_autoscope_a954a97691346ff2fb0981877554c1ac3}} 
-\index{Autoscope@{Autoscope}!selectedObject@{selectedObject}}
-\index{selectedObject@{selectedObject}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{selectedObject}{selectedObject}}
-{\footnotesize\ttfamily Stel\+ObjectP Autoscope\+::selected\+Object\hspace{0.3cm}{\ttfamily [private]}}
-
-An instance of Stel\+ObjectP \mbox{\Hypertarget{class_autoscope_a5bcfda333996f4fc3a959306be3e3d07}\label{class_autoscope_a5bcfda333996f4fc3a959306be3e3d07}} 
-\index{Autoscope@{Autoscope}!Sun@{Sun}}
+\index{Autoscope@{Autoscope}!object\+Position@{object\+Position}}
+\index{object\+Position@{object\+Position}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{object\+Position}{objectPosition}}]{\setlength{\rightskip}{0pt plus 5cm}Vec3d Autoscope\+::object\+Position\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_autoscope_aff4d8365cc96689c79f3370ebde45b9e}{}\label{class_autoscope_aff4d8365cc96689c79f3370ebde45b9e}
+An instance of Vec3d \index{Autoscope@{Autoscope}!searched\+Object@{searched\+Object}}
+\index{searched\+Object@{searched\+Object}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{searched\+Object}{searchedObject}}]{\setlength{\rightskip}{0pt plus 5cm}Stel\+ObjectP Autoscope\+::searched\+Object\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_autoscope_aba59abee95b4b5443709dce1d61a3498}{}\label{class_autoscope_aba59abee95b4b5443709dce1d61a3498}
+An instance of Stel\+ObjectP \index{Autoscope@{Autoscope}!search\+Object\+Found@{search\+Object\+Found}}
+\index{search\+Object\+Found@{search\+Object\+Found}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{search\+Object\+Found}{searchObjectFound}}]{\setlength{\rightskip}{0pt plus 5cm}bool Autoscope\+::search\+Object\+Found = false\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_autoscope_adcd9ee42b339c3c526231ed97c0ef6fa}{}\label{class_autoscope_adcd9ee42b339c3c526231ed97c0ef6fa}
+A flag which indicates if the searched object has been found \index{Autoscope@{Autoscope}!selected\+Object@{selected\+Object}}
+\index{selected\+Object@{selected\+Object}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{selected\+Object}{selectedObject}}]{\setlength{\rightskip}{0pt plus 5cm}Stel\+ObjectP Autoscope\+::selected\+Object\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_autoscope_a954a97691346ff2fb0981877554c1ac3}{}\label{class_autoscope_a954a97691346ff2fb0981877554c1ac3}
+An instance of Stel\+ObjectP \index{Autoscope@{Autoscope}!Sun@{Sun}}
 \index{Sun@{Sun}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{Sun}{Sun}}
-{\footnotesize\ttfamily Stel\+ObjectP Autoscope\+::\+Sun\hspace{0.3cm}{\ttfamily [private]}}
-
-An instance of Stel\+ObjectP \mbox{\Hypertarget{class_autoscope_a8f64e1d50e979751403a70008f0d01da}\label{class_autoscope_a8f64e1d50e979751403a70008f0d01da}} 
-\index{Autoscope@{Autoscope}!takePicture@{takePicture}}
-\index{takePicture@{takePicture}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{takePicture}{takePicture}}
-{\footnotesize\ttfamily Stel\+Button$\ast$ Autoscope\+::take\+Picture\hspace{0.3cm}{\ttfamily [private]}}
-
-An instance of Stel\+Button \mbox{\Hypertarget{class_autoscope_a816e3212639b4204e9917704e02b0d09}\label{class_autoscope_a816e3212639b4204e9917704e02b0d09}} 
-\index{Autoscope@{Autoscope}!trackButton@{trackButton}}
-\index{trackButton@{trackButton}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{trackButton}{trackButton}}
-{\footnotesize\ttfamily Stel\+Button$\ast$ Autoscope\+::track\+Button\hspace{0.3cm}{\ttfamily [private]}}
-
-An instance of Stel\+Button \mbox{\Hypertarget{class_autoscope_a170fbbc7b2a719517912aa3614727021}\label{class_autoscope_a170fbbc7b2a719517912aa3614727021}} 
-\index{Autoscope@{Autoscope}!trackObject@{trackObject}}
-\index{trackObject@{trackObject}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{trackObject}{trackObject}}
-{\footnotesize\ttfamily Stel\+ObjectP Autoscope\+::track\+Object\hspace{0.3cm}{\ttfamily [private]}}
-
-An instance of Stel\+ObjectP \mbox{\Hypertarget{class_autoscope_a5d3be6a8522dc18b921936b57c8e661c}\label{class_autoscope_a5d3be6a8522dc18b921936b57c8e661c}} 
-\index{Autoscope@{Autoscope}!unTrackButton@{unTrackButton}}
-\index{unTrackButton@{unTrackButton}!Autoscope@{Autoscope}}
-\subsubsection{\texorpdfstring{unTrackButton}{unTrackButton}}
-{\footnotesize\ttfamily Stel\+Button$\ast$ Autoscope\+::un\+Track\+Button\hspace{0.3cm}{\ttfamily [private]}}
-
+\subsubsection[{\texorpdfstring{Sun}{Sun}}]{\setlength{\rightskip}{0pt plus 5cm}Stel\+ObjectP Autoscope\+::\+Sun\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_autoscope_a5bcfda333996f4fc3a959306be3e3d07}{}\label{class_autoscope_a5bcfda333996f4fc3a959306be3e3d07}
+An instance of Stel\+ObjectP \index{Autoscope@{Autoscope}!take\+Picture@{take\+Picture}}
+\index{take\+Picture@{take\+Picture}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{take\+Picture}{takePicture}}]{\setlength{\rightskip}{0pt plus 5cm}Stel\+Button$\ast$ Autoscope\+::take\+Picture\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_autoscope_a8f64e1d50e979751403a70008f0d01da}{}\label{class_autoscope_a8f64e1d50e979751403a70008f0d01da}
+An instance of Stel\+Button \index{Autoscope@{Autoscope}!track\+Button@{track\+Button}}
+\index{track\+Button@{track\+Button}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{track\+Button}{trackButton}}]{\setlength{\rightskip}{0pt plus 5cm}Stel\+Button$\ast$ Autoscope\+::track\+Button\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_autoscope_a816e3212639b4204e9917704e02b0d09}{}\label{class_autoscope_a816e3212639b4204e9917704e02b0d09}
+An instance of Stel\+Button \index{Autoscope@{Autoscope}!track\+Object@{track\+Object}}
+\index{track\+Object@{track\+Object}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{track\+Object}{trackObject}}]{\setlength{\rightskip}{0pt plus 5cm}Stel\+ObjectP Autoscope\+::track\+Object\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_autoscope_a170fbbc7b2a719517912aa3614727021}{}\label{class_autoscope_a170fbbc7b2a719517912aa3614727021}
+An instance of Stel\+ObjectP \index{Autoscope@{Autoscope}!un\+Track\+Button@{un\+Track\+Button}}
+\index{un\+Track\+Button@{un\+Track\+Button}!Autoscope@{Autoscope}}
+\subsubsection[{\texorpdfstring{un\+Track\+Button}{unTrackButton}}]{\setlength{\rightskip}{0pt plus 5cm}Stel\+Button$\ast$ Autoscope\+::un\+Track\+Button\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_autoscope_a5d3be6a8522dc18b921936b57c8e661c}{}\label{class_autoscope_a5d3be6a8522dc18b921936b57c8e661c}
 An instance of Stel\+Button 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-src/\mbox{\hyperlink{_autoscope_8hpp}{Autoscope.\+hpp}}\item 
-src/\mbox{\hyperlink{_autoscope_8cpp}{Autoscope.\+cpp}}\end{DoxyCompactItemize}
+src/\hyperlink{_autoscope_8hpp}{Autoscope.\+hpp}\item 
+src/\hyperlink{_autoscope_8cpp}{Autoscope.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,9 @@
+<map id="src/network/CommandParser.hpp" name="src/network/CommandParser.hpp">
+<area shape="rect" id="node2" href="$_autoscope_8hpp.html" title="Main plugin class. " alt="" coords="172,80,303,107"/>
+<area shape="rect" id="node6" href="$_autoscope_window_form_8hpp.html" title="Header file including configuration window definition. " alt="" coords="260,244,489,271"/>
+<area shape="rect" id="node8" href="$_command_parser_8cpp.html" title="src/network/CommandParser.cpp" alt="" coords="413,80,630,107"/>
+<area shape="rect" id="node3" href="$_autoscope_8cpp.html" title="src/Autoscope.cpp" alt="" coords="5,326,136,353"/>
+<area shape="rect" id="node4" href="$_autoscope_picture_window_form_8hpp.html" title="Header file including the picture display window definition. " alt="" coords="119,155,287,196"/>
+<area shape="rect" id="node5" href="$_autoscope_picture_window_form_8cpp.html" title="src/gui/AutoscopePicture\lWindowForm.cpp" alt="" coords="160,319,328,360"/>
+<area shape="rect" id="node7" href="$_autoscope_window_form_8cpp.html" title="src/gui/AutoscopeWindowForm.cpp" alt="" coords="352,326,581,353"/>
+</map>
