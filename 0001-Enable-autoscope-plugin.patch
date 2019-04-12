@@ -1,0 +1,40 @@
+From 1be2f164d4e3489ea7dd0bcf718c8a576f291d17 Mon Sep 17 00:00:00 2001
+From: "tlepoix@localhost" <thomas.lepoix@gmail.com>
+Date: Fri, 5 Apr 2019 00:53:08 +0200
+Subject: [PATCH] Enable autoscope plugin
+
+---
+ CMakeLists.txt       | 1 +
+ src/core/StelApp.cpp | 4 ++++
+ 2 files changed, 5 insertions(+)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 398f0eb50f..14bb81a963 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -366,6 +366,7 @@ ADD_PLUGIN(SolarSystemEditor 1)
+ ADD_PLUGIN(Supernovae 1)
+ ADD_PLUGIN(TextUserInterface 1)
+ ADD_PLUGIN(TelescopeControl 1)
++ADD_PLUGIN(Autoscope 1)
+ 
+ ########## Static plugins need to define includes and libraries
+ ########## for the compilation of Stellarium itself
+diff --git a/src/core/StelApp.cpp b/src/core/StelApp.cpp
+index 7daf01de32..4a822df988 100644
+--- a/src/core/StelApp.cpp
++++ b/src/core/StelApp.cpp
+@@ -91,6 +91,10 @@
+ #include "SpoutSender.hpp"
+ #endif
+ 
++#ifdef USE_STATIC_PLUGIN_AUTOSCOPE
++Q_IMPORT_PLUGIN(AutoscopeStelPluginInterface)
++#endif
++
+ #ifdef USE_STATIC_PLUGIN_HELLOSTELMODULE
+ Q_IMPORT_PLUGIN(HelloStelModuleStelPluginInterface)
+ #endif
+-- 
+2.17.1
+
