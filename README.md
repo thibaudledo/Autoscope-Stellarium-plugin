@@ -10,21 +10,21 @@ More informations about this project on the main repository :
 
 ## Usage
 
-[//]: # (### Installation from binary package)
-[//]: # (Dowload package :)
+### Installation from binary package
+Dowload package :
 
-[//]: # (```)
-[//]: # (/opt/ #)
-[//]: # (    wget https://raw.githubusercontent.com/thibaudledo/Autoscope/master/Stellarium-0.19.0-Linux.tar.gz)
-[//]: # (    tar -xzf Stellarium-0.19.0-Linux.tar.gz)
-[//]: # (```)
+```
+/opt/ #
+    wget https://github.com/thibaudledo/Autoscope/releases/download/alpha/Stellarium-0.19.0-Linux.tar.gz
+    tar -xzf Stellarium-0.19.0-Linux.tar.gz
+```
   
-[//]: # (### Run Stellarium)
+### Run Stellarium
 
-[//]: # (```)
-[//]: # (~ $)
-[//]: # (    /opt/Stellarium-0.19.0-Linux/bin/stellarium)
-[//]: # (```)
+```
+~ $
+    /opt/Stellarium-0.19.0-Linux/bin/stellarium
+```
 
 ### Installation from sources
 
