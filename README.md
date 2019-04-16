@@ -83,7 +83,7 @@ Enable Autoscope plugin :
         #endif
 ```
 
-Export variables :
+Export Qt location :
 
 ```
     export QTDIR=/opt/Qt5.5.0/5.5/gcc_64
