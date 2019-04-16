@@ -36,7 +36,7 @@ Install dependancies (Debian/Ubuntu) :
     sudo apt-get install graphviz doxygen gettext git
 ```
 
-Build Qt dependancies :
+Install Qt dependancies :
 
 ```
 ~ $
