@@ -14,7 +14,7 @@ More informations about this project on the main repository :
 Dowload package :
 
 ```
-/opt/ #
+/opt #
     wget https://github.com/thibaudledo/Autoscope/releases/download/alpha/Stellarium-0.19.0-Linux.tar.gz
     tar -xzf Stellarium-0.19.0-Linux.tar.gz
 ```
@@ -59,7 +59,7 @@ Install Qt dependancies :
 Download Stellarium & Autoscope plugin sources :
 
 ```
-~/DEV/ $
+~/DEV $
     wget https://github.com/Stellarium/stellarium/releases/download/v0.19.0/stellarium-0.19.0.tar.gz
     tar -xzf stellarium-0.19.0.tar.gz
     cd stellarium-0.19.0/plugins/
@@ -69,7 +69,7 @@ Download Stellarium & Autoscope plugin sources :
 Enable Autoscope plugin :
 
 ```
-~/DEV/Stellarium-0.19.0/ $
+~/DEV/Stellarium-0.19.0 $
     git init
     git add CMakeLists.txt src/core/StelApp.cpp
     git apply plugins/Autoscope/0001-enable-autoscope-plugin.patch
@@ -94,7 +94,7 @@ Export Qt location :
 Build Stellarium :
 
 ```
-~/DEV/Stellarium-0.19.0/ $
+~/DEV/Stellarium-0.19.0 $
     mkdir -p builds/unix/
     cd builds/unix/
     cmake -DCMAKE_BUILD_MODE=Release -DCMAKE_INSTALL_PREFIX=/opt/stellarium ../../
